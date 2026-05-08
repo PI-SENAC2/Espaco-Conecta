@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background-color: #000;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LADO ESQUERDO (FORM) */
+.form-area {
+    width: 50%;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+.nav-logo img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+/* Título */
+h1 {
+    margin-bottom: 30px;
+}
+
+/* Form */
+form {
+    width: 375px;
+}
+
+/* Linha Nome + CPF */
+.linha {
+    display: flex;
+    gap: 10px;
+}
+
+/* Campos */
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.campo label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    background: transparent;
+    border: 1px solid #aaa;
+    padding: 10px;
+    color: #fff;
+    outline: none;
+}
+
+/* Termos + botão */
+.termos-cadastrar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.termos-cadastrar label {
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+}
+
+/* Botão */
+button {
+    background-color: #ccc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Link */
+form a {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+/* IMAGEM */
+.imagem {
+    height: 100vh;
+    width: 100%;
+}
+
+.imagem img {
+    width: 100vh;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Lembrar-me login*/
+
+.termos-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.termos-login label {
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+}
+
+.form-area button{
+width: 100%;
+    max-width: 375px;
+    margin-top: 20px;
+}
