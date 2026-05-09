@@ -88,22 +88,8 @@ header{
     position: relative;
     text-decoration: none;
 }
-.linha-id {
-    color: #E0712B;
-    font-weight: 700;
-}
 
-.linha-id::before{
-   color: #E0712B;
-   content: "";
-   position: absolute;
-   width: 0%;
-   height: 2px;
-   left: 0;
-   bottom: -5px;
-   background-color: #E0712B;
-   width: 100%;
-}
+
 
 .linha{
    color: white;
@@ -130,6 +116,7 @@ header{
     color: #E0712B;
     transition: 0.5s;
 }
+
 .hero{ 
   height: 600px; /* ocupa a tela toda */
   background-image: url("../../assets/img/IMGhero.png");

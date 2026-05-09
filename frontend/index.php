@@ -16,35 +16,8 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <header class="header">
-        <nav class="navbar">
-            <div class="nav-links">
-                <ul class="nav-list">
-                    <li><a href="#home" class="linha-id">Home</a></li>
-                    <li><a href="#reservas" class="linha">Reservas</a></li>
-                    <li><a href="#sobre" class="linha">Sobre</a></li>
-                </ul>
-            </div>
-            <div class="nav-logo">
-                <a href="#home" id="logo">
-                    <img src="./assets/img/logo-espaço-conecta.svg" alt="lOGO D">
-                </a>
-            </div>
-
-
-            <div class="nav-direita">
-                <a href="#" id="reservas" class="logo-perfl">
-                    <img src="../frontend/assets/img/Img-perfil.svg"
-                        alt="Imagem de uma silhueta de uma pessoal, para representar o perfil">
-                </a>
-                <a href="#" id="favoritos" class="logo-perfl">
-                    <img src="../frontend/assets/img/Favorite.svg"
-                        alt="Imagem de uma silhueta de uma pessoal, para representar o perfil">
-                </a>
-            </div>
-        </nav>
-    </header>
+     
+    <?php require_once "../backend/php/includes/navbar.inc.php"; ?>
 
     <!-- HERO (seção principal) -->
     <section id="home" class="hero">
@@ -167,45 +140,7 @@
         </main>
     </div>
 
-    <!-- 4️⃣ FOOTER -->
-    <footer>
-        <div class="nav-logo-footer">
-            <a href="#home" id="logo">
-                <img src="./assets/img/logo-espaço-conecta.svg" alt="lOGO D">
-            </a>
-        </div>
-        <div class="nav-footer">
-            <ul class="nav-ul-footer">
-                <li class="nav-links-footer">
-                    <a href="#home">Home</a>
-                    <a href="#reserva">Rerseva</a>
-                    <a href="#sobre">Sobre</a>
-                </li>
-            </ul>
-        </div>
-        <div class="nav-direita-footer">
-                <a href="#" class="logo-perfl-footer">
-                    <img src="../frontend/assets/img/instagram.icon.svg"
-                        alt="Logo do Instagram, para representar o perfil do Instagram do espaço conecta">
-                </a>
-                <a href="#" class="logo-perfl-footer">
-                    <img src="../frontend/assets/img/whatsapp.icon.svg"
-                        alt="logo do Whatsapp, para representar o perfil do Whatsapp do espaço conecta">
-                </a>
-                <a href="#" class="logo-perfl-footer">
-                    <img src="../frontend/assets/img/facebook.icon.svg"
-                        alt="logo do Facebook, para representar o perfil do Facebook do espaço conecta">
-                </a>
-                <a href="#" class="logo-perfl-footer">
-                    <img src="../frontend/assets/img/figma.icon.svg"
-                        alt="logo do Figma, para representar o perfil do Figma do espaço conecta">
-                </a>
-            </div>
-        <div class="conteiner-divisor">
-            <hr class="divisor">
-        </div>
-
-    </footer>
+    <?php require_once "../backend/php/includes/footer.inc.php"; ?>
 
 </body>
 

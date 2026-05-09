@@ -20,68 +20,55 @@ body{
     --font-family: "arimo", sans-serif;
 }
 
-.nav-list {
-    list-style: none;   /* remove bolinhas */
-    display: flex;
-    gap: 20px;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
-/* NAVBAR */
-header {
-    position: static; /* ou remove */
+header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 99;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
     background-color: #000;
     color: white;
     padding: 15px 80px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    height: 60px;
     z-index: 1000;
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.nav-logo img {
-    height: 40px;
-}
 
-/* ESQUERDA */
+/* esquerda */
 .nav-links {
     flex: 1;
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-.nav-logo {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+/* centro */
+.nav-logo{
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
-/*DIREITA*/
+
+/* direita */
 .nav-direita {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     gap: 15px;
 }
+
 .nav-direita img{
-    height: 40px;
+    height: 30px;
 }
 
 #favoritos img{
@@ -97,6 +84,57 @@ header {
    transform: scale(1.2);
    transition: transform 0.5s;
 }
+
+/* lista */
+.nav-list {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+    font-weight: 600;
+}
+
+/* logo */
+.nav-logo img {
+    height: 40px;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+}
+.linha-id {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+
+.linha{
+   color: white;
+}
+
+/* traço escondido */
+.linha::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #E0712B;
+    transition: width 0.5s ease;
+}
+
+/* animação ao passar o mouse */
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.linha:hover {
+    color: #E0712B;
+    transition: 0.5s;
+}
+
 
 
 
