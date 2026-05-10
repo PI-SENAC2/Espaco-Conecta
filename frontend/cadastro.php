@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="./src/style/login.css">
+    <link rel="stylesheet" href="./src/style/cadastro.css">
 
 </head>
 <body>
@@ -50,18 +50,21 @@
                     Termos e Condições de Uso
                 </label>
 
-                <button type="submit">Cadastrar</button>
+                
             </div>
-
-            <a href="#">Já tem uma conta? Logar</a>
-
+            
+            
         </form>
+
+        <button type="submit">
+            <a href="#">Cadastrar</a>
+        </button>
+        <a href="./login.php" class="link-msg">Já tem uma conta? Clique aqui!</a>
+
     </div>
 
     <!-- Lado direito (imagem) -->
-    <div class="imagem">
-        <img src="./assets/img/Cadastro.img.png" alt="Imagem ilustrativa">
-    </div>
+    <div class="image-area"></div>
 
 </div>
 
