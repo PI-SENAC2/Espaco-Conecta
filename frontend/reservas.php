@@ -70,13 +70,46 @@
     <h3>Espaços cadastrados</h3>
 </div>
         </section>
+
+
 <!--Preferências-->
-        <section class="preferencias">
-            <button>Adicionar Espaço</button>
-        </section>
+<section class="preferencias">
+    <div class="painel-preferencias">
+        <div class="titulo-preferencias">
+            <h3>Notificações</h3>
+        </div>
+        <div class="linha-preferencia">
+            <span>Email</span>
+            <input type="checkbox">
+        </div>
+        <div class="linha-preferencia">
+            <span>SMS</span>
+            <input type="checkbox">
+        </div>
+        <div class="titulo-preferencias">
+            <h3>Preferências</h3>
+        </div>
+        <div class="linha-preferencia">
+            <span>Idioma</span>
+        </div>
+        <div class="linha-preferencia">
+            <span>Política de reembolso</span>
+        </div>
+        <div class="linha-preferencia">
+            <span>Termos de uso</span>
+        </div>
+        <div class="linha-preferencia">
+            <span>Ajuda</span>
+        </div>
+    </div>
+
+    <button>Adicionar Espaço</button>
 </section>
 
-<?php require_once "../backend/php/includes/footer.inc.php"; ?>
+</section>
+<footer>
+    <?php require_once "../backend/php/includes/footer.inc.php"; ?>
+</footer>
 
 </body>
 </html>
