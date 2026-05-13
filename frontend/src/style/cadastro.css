@@ -147,6 +147,7 @@ form a {
     background-position: center;
     background-size: cover;
     position: relative;
+}
 
 .image-area::before{
     content: "";

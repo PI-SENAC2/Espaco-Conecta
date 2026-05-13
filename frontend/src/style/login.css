@@ -140,3 +140,10 @@ form a {
     background-size: cover;
     position: relative;
 }
+
+.image-area::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+}

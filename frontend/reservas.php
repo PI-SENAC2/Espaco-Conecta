@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="./src/style/reservas.css">
 </head>
 <body>
-
-<?php require_once "../backend/php/includes/navbar.inc.php"; ?>
-<!--Títulos-->
-<div class="titulos">
+    <!-- HEADER -->
+    <?php require_once "../backend/php/includes/navbar.inc.php"; ?>
+    <!--Títulos-->
+    <div class="titulos">
             <h2>Perfil</h2>
             <h1>Reservas</h1>
             <h2>Preferências</h2>
         </div>
 
-<section class="sections">
-<!--Perfil-->
+    <section class="sections">
+    <!--Perfil-->
         <section class="perfil">
             <!--Foto e nome-->
             <div class="usuario">
@@ -44,11 +44,11 @@
             <p>Nome da empresa ou local de trabalho</p>
             </div>
         </section>
-<!--Reservas-->
+    <!--Reservas-->
 
         <section class="reservas">
             <h2>Status do espaço</h2>
-<!--Cards com os status-->
+    <!--Cards com os status-->
             <div class="status">
                 <div class="feriados">
                     <h3>Feriados</h3>
@@ -63,20 +63,53 @@
                     <p>Dias em que não deseja a disponibilização do espaço.</p>
                 </div>
             </div>
-<!--Calendário-->
+    <!--Calendário-->
 
 <!--Espaços cadastrados-->
 <div class="espacos">
     <h3>Espaços cadastrados</h3>
 </div>
         </section>
+
+
 <!--Preferências-->
-        <section class="preferencias">
-            <button>Adicionar Espaço</button>
-        </section>
+<section class="preferencias">
+    <div class="painel-preferencias">
+        <div class="titulo-preferencias">
+            <h3>Notificações</h3>
+        </div>
+        <div class="linha-preferencia">
+            <span>Email</span>
+            <input type="checkbox">
+        </div>
+        <div class="linha-preferencia">
+            <span>SMS</span>
+            <input type="checkbox">
+        </div>
+        <div class="titulo-preferencias">
+            <h3>Preferências</h3>
+        </div>
+        <div class="linha-preferencia">
+            <span>Idioma</span>
+        </div>
+        <div class="linha-preferencia">
+            <span>Política de reembolso</span>
+        </div>
+        <div class="linha-preferencia">
+            <span>Termos de uso</span>
+        </div>
+        <div class="linha-preferencia">
+            <span>Ajuda</span>
+        </div>
+    </div>
+
+    <button>Adicionar Espaço</button>
 </section>
 
-<?php require_once "../backend/php/includes/footer.inc.php"; ?>
+</section>
+<footer>
+    <?php require_once "../backend/php/includes/footer.inc.php"; ?>
+</footer>
 
 </body>
 </html>

@@ -8,8 +8,8 @@
         <div class="nav-footer">
             <ul class="nav-ul-footer">
                 <li class="nav-links-footer">
-                    <a href="#home">Home</a>
-                    <a href="#reserva">Rerseva</a>
+                    <a href="index.php">Home</a>
+                    <a href="reservas.php">Rerseva</a>
                     <a href="#sobre">Sobre</a>
                 </li>
             </ul>
