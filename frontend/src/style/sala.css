@@ -1,0 +1,396 @@
+/* ZERA TUDO */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "arimo", sans-serif;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+}
+
+:root{
+    --primary-color: #E0712B;
+    --secondary-color: #1D1D1D;
+    --text-color: #FFFFFF;
+    --background-color: #000000;
+    --font-family: "arimo", sans-serif;
+}
+
+header{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   z-index: 99;
+}
+
+.navbar {
+    background-color: #000;
+    color: white;
+    padding: 15px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+/* esquerda */
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* centro */
+.nav-logo{
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* direita */
+.nav-direita {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.nav-direita img{
+    height: 30px;
+}
+
+#favoritos img{
+   height: 30px;
+}
+
+#favoritos img:hover{
+   transform: scale(1.2);
+   transition: transform 0.5s;
+}
+
+#reservas img:hover{
+   transform: scale(1.2);
+   transition: transform 0.5s;
+}
+
+/* lista */
+.nav-list {
+    display: flex;
+    gap: 70px;
+    list-style: none;
+    font-weight: 600;
+}
+
+/* logo */
+.nav-logo img {
+    height: 40px;
+}
+
+.navbar a {
+    position: relative;
+    text-decoration: none;
+}
+.linha-id {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+
+
+.linha{
+   color: white;
+}
+
+/* traço escondido */
+.linha::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background-color: #E0712B;
+    transition: width 0.5s ease;
+}
+
+/* animação ao passar o mouse */
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.linha:hover {
+    color: #E0712B;
+    transition: 0.5s;
+}
+
+
+
+/* CONTAINER PRINCIPAL */
+
+.detalhes-sala {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    gap: 30px;
+
+    padding: 140px 80px 50px;
+}
+
+/* ESQUERDA */
+
+.info-sala {
+    flex: 1;
+}
+
+/* GALERIA */
+
+.galeria {
+    display: flex;
+    gap: 15px;
+}
+
+.img-principal {
+    width: 70%;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.mini-galeria {
+    width: 30%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.mini-galeria img {
+    width: 100%;
+    height: 145px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+/* CONTEÚDO */
+
+.conteudo {
+    margin-top: 25px;
+}
+
+.conteudo h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.descricao-topo {
+    color: #c5c5c5;
+    line-height: 1.6;
+}
+
+/* CARDS */
+
+.cards-info {
+    display: flex;
+    gap: 20px;
+
+    margin: 30px 0;
+}
+
+.card-info {
+    background: #1a1a1a;
+
+    border: 1px solid #333;
+
+    padding: 15px 20px;
+
+    border-radius: 10px;
+
+    min-width: 140px;
+}
+
+.card-info span {
+    display: block;
+    color: #aaa;
+    margin-bottom: 8px;
+}
+
+/* LINHA */
+
+hr {
+    border: none;
+    height: 1px;
+    background: #333;
+
+    margin: 30px 0;
+}
+
+/* BENEFÍCIOS */
+
+.beneficios {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+/* DESCRIÇÃO */
+
+.descricao {
+    line-height: 1.7;
+    color: #c7c7c7;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    width: 320px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* CARD RESERVA */
+
+.card-reserva,
+.avaliacao-box,
+.mapa {
+    background: #171717;
+
+    border: 1px solid #2e2e2e;
+
+    border-radius: 15px;
+
+    padding: 20px;
+}
+
+/* CALENDÁRIO */
+
+.calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 5px;
+
+    margin: 20px 0;
+}
+
+.calendario div,
+.calendario span {
+    background: #242424;
+
+    padding: 10px;
+
+    text-align: center;
+
+    border-radius: 5px;
+
+    font-size: 12px;
+}
+
+.calendario span {
+    background: #ff7a00;
+}
+
+/* BOTÕES */
+
+button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff7a00;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* MAPA */
+
+.mapa img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* AVALIAÇÃO */
+
+.avaliacao-box {
+    text-align: center;
+}
+
+.avaliacao-box h1 {
+    font-size: 60px;
+    margin: 10px 0;
+}
+
+.avaliacao-box input {
+    width: 100%;
+
+    margin: 20px 0;
+
+    padding: 12px;
+
+    background: #242424;
+
+    border: 1px solid #333;
+
+    border-radius: 8px;
+
+    color: white;
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 1000px) {
+
+    .detalhes-sala {
+        flex-direction: column;
+        padding: 120px 20px 40px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .galeria {
+        flex-direction: column;
+    }
+
+    .img-principal,
+    .mini-galeria {
+        width: 100%;
+    }
+}

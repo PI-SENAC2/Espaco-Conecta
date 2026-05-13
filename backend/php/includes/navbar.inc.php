@@ -4,7 +4,7 @@
             <div class="nav-links">
                 <ul class="nav-list">
                     <li><a href="#home" class="linha">Home</a></li>
-                    <li><a href="#reservas" class="linha">Reservas</a></li>
+                    <li><a href="./reservas.php" class="linha">Reservas</a></li>
                     <li><a href="#sobre" class="linha">Sobre</a></li>
                 </ul>
             </div>
