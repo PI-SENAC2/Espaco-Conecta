@@ -3,8 +3,13 @@
         <nav class="navbar">
             <div class="nav-links">
                 <ul class="nav-list">
-                    <li><a href="index.php" class="linha">Home</a></li>
-                    <li><a href="reservas.php" class="linha">Reservas</a></li>
+
+                    <li><a href="./index.php" class="linha">Home</a></li>
+                    <li><a href="./reservas.php" class="linha">Reservas</a></li>
+
+                    <li><a href="./INDEX.php" class="linha">Home</a></li>
+                    <li><a href="./reservas.php" class="linha">Reservas</a></li>
+
                     <li><a href="#sobre" class="linha">Sobre</a></li>
                 </ul>
             </div>
