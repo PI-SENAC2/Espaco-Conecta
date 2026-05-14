@@ -24,14 +24,14 @@
 
         <div class="galeria">
             <img class="img-principal"
-                src="../frontend/assets/img/SalaReunião05.png"
+                src="../frontend/assets/img/Sala1.png"
                 alt="Sala">
 
             <div class="mini-galeria">
-                <img src="../frontend/assets/img/SalaReunião05.png" alt="">
-                <img src="../frontend/assets/img/SalaReunião05.png" alt="">
-                <img src="../frontend/assets/img/SalaReunião05.png" alt="">
-                <img src="../frontend/assets/img/SalaReunião05.png" alt="">
+                <img src="../frontend/assets/img/Sala2.png" alt="">
+                <img src="../frontend/assets/img/Sala3.png" alt="">
+                <img src="../frontend/assets/img/Sala4.png" alt="">
+                <img src="../frontend/assets/img/Sala5.png" alt="">
             </div>
         </div>
 
@@ -67,10 +67,10 @@
             <h2>O que o ambiente oferece:</h2>
 
             <ul class="beneficios">
-                <li>❄️ Ar-condicionado</li>
-                <li>📺 Televisão</li>
-                <li>🖨️ Impressora</li>
-                <li>🎒 Guarda-volume</li>
+                <li> Ar-condicionado</li>
+                <li> Televisão</li>
+                <li> Impressora</li>
+                <li> Guarda-volume</li>
             </ul>
 
             <hr>
@@ -111,6 +111,35 @@
                 <span>5</span>
                 <span>6</span>
                 <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span>10</span>
+                <span>11</span>
+                <span>12</span>
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+                <span>19</span>
+                <span>20</span>
+                <span>21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+                <span>26</span>
+                <span>27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+                <span class="proximo-dia">1</span>
+                <span class="proximo-dia">2</span>
+                <span class="proximo-dia">3</span>
+                <span class="proximo-dia">4</span>
+                </div>
 
             </div>
 

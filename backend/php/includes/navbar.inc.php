@@ -6,7 +6,7 @@
 
                     <li><a href="./index.php" class="linha">Home</a></li>
                     <li><a href="./reservas.php" class="linha">Reservas</a></li>
-                    <li><a href="#sobre" class="linha">Sobre</a></li>
+                    <li><a href="./sobre.php" class="linha">Sobre</a></li>
                 </ul>
             </div>
             <div class="nav-logo">

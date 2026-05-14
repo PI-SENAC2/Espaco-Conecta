@@ -9,7 +9,7 @@
 body{
     padding: 0;
     margin: 0;
-    background-color: #000;
+    background-color: #1D1D1D;
 }
 
 :root{
@@ -140,6 +140,7 @@ header{
 /* CONTAINER PRINCIPAL */
 
 .detalhes-sala {
+    background-color: var(--secondary-color);
     width: 100%;
     min-height: 100vh;
 
@@ -152,6 +153,7 @@ header{
 /* ESQUERDA */
 
 .info-sala {
+    width: 100%;
     flex: 1;
 }
 
@@ -164,7 +166,7 @@ header{
 
 .img-principal {
     width: 70%;
-    height: 300px;
+    height: 450px;
 
     object-fit: cover;
 
@@ -181,7 +183,7 @@ header{
 
 .mini-galeria img {
     width: 100%;
-    height: 145px;
+    height: 215px;
 
     object-fit: cover;
 
@@ -195,12 +197,18 @@ header{
 }
 
 .conteudo h1 {
-    font-size: 28px;
+    font-size: 35px;
+    color: var(--text-color);
+
+    font-weight: 700;
     margin-bottom: 15px;
 }
 
 .descricao-topo {
     color: #c5c5c5;
+
+    font-size: 18px;
+    font-weight: 400;
     line-height: 1.6;
 }
 
@@ -263,7 +271,7 @@ hr {
 /* SIDEBAR */
 
 .sidebar {
-    width: 320px;
+    width: 400px;
 
     display: flex;
     flex-direction: column;
@@ -289,6 +297,7 @@ hr {
 .calendario {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+
 
     gap: 5px;
 
