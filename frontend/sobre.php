@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/style/sobre.css">
+     <link rel="stylesheet" href="./src/style/global.css">
+    <link rel="shortcut icon" href="./assets/img/Favicon-espaçoConecta.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head> 
 <body>
     <!--------- Header ----------->
@@ -23,10 +30,7 @@
 </section>
    
 <!------ Sobre ------>
-<section id="sobre a gente" class="sobre-section">
-    <div class="sobre-content">
-    </div>
-   </section>
+
    <section class="else">
     <div class="sobre_else">
         <div class="card">
@@ -77,15 +81,15 @@
             </div>
         </div>
         <div class="quem-busca">
-            <div class="texto-2">
+            <div class="text-2">
             <h2>Para quem busca espaço</h2>
             <p>Profissionais autônomos que querem sair de casa sem ir até o centro
             Empreendedores que precisam de espaço
             Estudantes que buscam um ambiente tranquilo para estudar
             Grupos que precisam de local para reuniões ou eventos</p>
-            </div>
-            <img src="../frontend/assets/img/quem-busca1.png" alt="">
-            <img src="../frontend/assets/img/quem-busca2.png" alt="">
+        </div>
+        <img src="../frontend/assets/img/quem-busca1.png" alt="">
+        <img src="../frontend/assets/img/quem-busca2.png" alt="">
         </div>
 
     </section>
