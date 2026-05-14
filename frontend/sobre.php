@@ -53,6 +53,15 @@
 
 </section>
 
+    <section class="if">
+    <div class = "sobre">
+    <h1>A Historia da Espaço Conecta!</h1>
+    <p>A Espaço Conecta nasceu com um propósito simples, mas poderoso: criar oportunidades reais para quem está na correria do dia a dia e precisa de um lugar digno, acessível e inspirador para trabalhar.
+Localizada na periferia, a Espaço Conecta surge como um ponto de encontro entre sonhos e ação. Sabemos que grandes ideias não vêm apenas de grandes centros, elas vêm de pessoas determinadas, que fazem acontecer todos os dias.
+Por isso, criamos um ambiente moderno, funcional e acolhedor, pensado para quem empreende, estuda, cria e luta pelo seu crescimento. Aqui, cada conexão importa, cada projeto tem valor e cada pessoa tem espaço.</p>
+</div>
+</section>
+
 
 
 
@@ -87,9 +96,9 @@
             Empreendedores que precisam de espaço
             Estudantes que buscam um ambiente tranquilo para estudar
             Grupos que precisam de local para reuniões ou eventos</p>
-        </div>
-        <img src="../frontend/assets/img/quem-busca1.png" alt="">
-        <img src="../frontend/assets/img/quem-busca2.png" alt="">
+            </div>
+            <img src="../frontend/assets/img/quem-busca1.png" alt="">
+            <img src="../frontend/assets/img/quem-busca2.png" alt="">
         </div>
 
     </section>
