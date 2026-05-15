@@ -143,8 +143,4 @@
     <?php require_once "../backend/php/includes/footer.inc.php"; ?>
 
 </body>
-
-</html>
-</body>
-
 </html>

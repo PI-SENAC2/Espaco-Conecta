@@ -350,12 +350,19 @@ flex-direction: column;
 /* conteúdo por cima - tutilos e link */
 .card-conteiner{
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: white;
+  bottom: 30px;
+
+  width: 100%;
+
   display: flex;
   flex-direction: column;
-  padding-left: 10px;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  color: white;
 }
 
 .card-conteiner h3 {
@@ -382,15 +389,25 @@ flex-direction: column;
 }
 
 .button-card{
-   display: flex;
+  display: flex;
    justify-content: center;
    align-items: center;
+
+   width: 120px;
+   height: 40px;
+
+   margin-top: 15px;
+
    border-radius: 10px;
-   height: 35px;
-   width: 80px;
-   margin-top: 0px;
+
    background-color: #fff;
-   transition: background-color 0.3s ease, transform 0.09s ease;
+
+   transition: 0.3s ease;
+}
+
+.button-card a{
+   width: 100%;
+   text-align: center;
 }
 
 .button-card:hover{
@@ -465,16 +482,6 @@ flex-direction: column;
    font-size: 700;
    transform: scale(1.0);
    transition: background-color 0.3s ease, transform 0.09s ease;
-}
-
-.button-card{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 10px;
-   height: 35px;
-   width: 85px;
-   margin-top: 30px;
 }
 
 .conteiner-button{
@@ -575,6 +582,7 @@ main {
    display: flex;
    flex-direction: column;
    align-items: first baseline;
+   gap: 10px;
 }
 
 .colab-titulo button{
