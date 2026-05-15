@@ -142,18 +142,23 @@ header{
 .detalhes-sala {
     background-color: var(--secondary-color);
     width: 100%;
-    min-height: 100vh;
+    height: 650px;
 
     display: flex;
-    gap: 30px;
 
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
     padding: 140px 80px 50px;
 }
 
 /* ESQUERDA */
 
 .info-sala {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     flex: 1;
 }
 
@@ -161,6 +166,12 @@ header{
 
 .galeria {
     display: flex;
+    width: 85%;
+    height: 450px ;
+
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     gap: 15px;
 }
 
@@ -174,7 +185,7 @@ header{
 }
 
 .mini-galeria {
-    width: 30%;
+    width: 35%;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -183,18 +194,34 @@ header{
 
 .mini-galeria img {
     width: 100%;
-    height: 215px;
+    height: 220px;
 
     object-fit: cover;
 
     border-radius: 10px;
 }
 
-/* CONTEÚDO */
+/* alinhando os itens*/
 
-.conteudo {
-    margin-top: 25px;
+.divisões{
+    display: flex;
+
+    justify-content: center;
+    width: 100%;
+
+    gap: 135px;
+
 }
+
+.esquerda-info{
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+/* CONTEÚDO */
 
 .conteudo h1 {
     font-size: 35px;
@@ -212,39 +239,104 @@ header{
     line-height: 1.6;
 }
 
+.conteudo-2{
+    display: flex;
+    flex-direction: column;
+}
+
+.conteudo-2 h2 {
+    font-size: 25px;
+    color: var(--text-color);
+
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.beneficios {
+    display: flex;
+    color: #c5c5c5;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.icones-beneficio{
+    display: flex;
+
+    gap: 10px;
+
+    align-items: center;
+}
+
 /* CARDS */
+
+.card-info img{
+    display: flex;
+    height: 60px;
+}
+
+.card-info p{
+    justify-content: left;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--text-color);
+
+}
 
 .cards-info {
     display: flex;
-    gap: 20px;
+    gap: 12px;
 
-    margin: 30px 0;
+    margin: 25px 0;
 }
 
 .card-info {
+    display: flex;
     background: #1a1a1a;
 
-    border: 1px solid #333;
+    justify-content: space-around;
+
+    align-items: center;
+
+    height: 120px;
+    width: 700px;
+
+    border: 2px solid #ffffff;
 
     padding: 15px 20px;
 
-    border-radius: 10px;
+    border-radius: 0px 10px 10px 0px;
 
     min-width: 140px;
 }
 
-.card-info span {
-    display: block;
-    color: #aaa;
-    margin-bottom: 8px;
+.vertical {
+    border: 1px solid white;
+    height: 1px;
+    width: 100px;
+    background: #ffffff;
+
+    margin: 30px 0;
+    transform: rotate(90deg);
+}
+
+.avaliacao{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 /* LINHA */
 
 hr {
     border: none;
-    height: 1px;
-    background: #333;
+    height: 2px;
+    width: 900px;
+    background-color: #ffffff;
 
     margin: 30px 0;
 }
@@ -261,6 +353,20 @@ hr {
     margin-top: 20px;
 }
 
+.conteiner-espaco h2{
+    font-size: 25px;
+    color: var(--text-color);
+
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.conteiner-espaco p{
+    font-size: 18px;
+
+    color: #c5c5c5;
+}
+
 /* DESCRIÇÃO */
 
 .descricao {
@@ -271,14 +377,31 @@ hr {
 /* SIDEBAR */
 
 .sidebar {
+
     width: 400px;
 
     display: flex;
     flex-direction: column;
+
+    justify-content: center;
+    
+    text-align: center;
     gap: 20px;
 }
 
 /* CARD RESERVA */
+
+.card-reserva{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    justify-content: center;
+    text-align: center;
+}
+
 
 .card-reserva,
 .avaliacao-box,
@@ -317,8 +440,22 @@ hr {
     font-size: 12px;
 }
 
+.calendario div{
+    font-weight: 700;
+}
+
 .calendario span {
-    background: #ff7a00;
+    background-color: #ff7a00;
+    font-weight: 700;
+}
+.dia-proximo{
+    display: flex;
+}
+
+#proximo-dia{
+     background: #242424;
+     color: var(--primary-color);
+     font-weight: 700;
 }
 
 /* BOTÕES */
@@ -349,6 +486,10 @@ button:hover {
 
 /* MAPA */
 
+.mapa{
+    margin-bottom: 10px;
+}
+
 .mapa img {
     width: 100%;
     border-radius: 10px;
@@ -360,9 +501,20 @@ button:hover {
     text-align: center;
 }
 
+.avaliacao-box span{
+    font-size: 18px;
+    color: var(--text-color);
+}
+
 .avaliacao-box h1 {
+    color: var(--text-color);
     font-size: 60px;
     margin: 10px 0;
+}
+
+.avaliacao-box p{
+    font-size: 18px;
+    color: var(--text-color);
 }
 
 .avaliacao-box input {
@@ -380,6 +532,100 @@ button:hover {
 
     color: white;
 }
+
+/* FOOTER */
+
+footer{
+    background-color: #000000;
+    width: 100%;
+    height: 250px;
+    padding-top: 20px;
+}
+
+.nav-footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      list-style: none;
+      font-weight: 600;
+}
+
+.nav-ul-footer{
+   display: flex;
+   justify-content: center;
+   list-style: none;
+   font-weight: 600;
+}
+
+.nav-links-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.nav-links-footer a{
+   color: white;
+   text-decoration: none;
+}
+
+.nav-links-footer a:hover{
+   color: #E0712B;
+   transform: scale(1.1);
+   transition: var(--primary-color) transform 0.2s ease;
+   font-weight: 700;
+}
+
+.nav-logo-footer{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 50px;
+}
+
+.nav-logo-footer img{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 40px;
+}
+
+.conteiner-divisor{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   padding-bottom: 20px;
+}
+
+.divisor {
+  width: 80%;
+  border: 1px solid #E0712B;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.nav-direita-footer {
+   flex: 1;
+   margin-right: 160px;
+   margin-bottom: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-direita-footer img{
+    height: 22px;
+}
+
+.logo-perfil-footer img{
+   height: 35px;
+}
+
 
 /* RESPONSIVO */
 
@@ -403,3 +649,6 @@ button:hover {
         width: 100%;
     }
 }
+
+
+
