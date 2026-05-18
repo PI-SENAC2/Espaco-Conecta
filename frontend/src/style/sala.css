@@ -460,7 +460,7 @@ hr {
 
 /* BOTÕES */
 
-button {
+ .button-link{
     width: 100%;
 
     padding: 14px;
@@ -478,9 +478,11 @@ button {
     cursor: pointer;
 
     transition: 0.3s;
+
+    text-decoration: none;
 }
 
-button:hover {
+.button-link:hover {
     opacity: 0.8;
 }
 

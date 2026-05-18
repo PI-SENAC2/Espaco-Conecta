@@ -178,8 +178,9 @@
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
-
-                    <button>AGENDAR</button>
+                   
+                       <a href="./reservas.php" class="button-link">AGENDAR</a>
+                    
                 </div>
 
                 </div>
@@ -192,9 +193,9 @@
 
                     <input type="text" placeholder="Comentar">
 
-                    <button>ENVIAR</button>
                 </div>
-
+                <a href="#" class="button-link">ENVIE SUA AVALIAÇÃO</a>
+                
             </aside>
         </section>
 </section>
