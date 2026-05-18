@@ -428,7 +428,7 @@ hr {
 }
 
 .calendario div,
-.calendario span {
+.calendario a {
     background: #242424;
 
     padding: 10px;
@@ -444,10 +444,18 @@ hr {
     font-weight: 700;
 }
 
-.calendario span {
+.calendario a {
     background-color: #ff7a00;
     font-weight: 700;
+    text-decoration: none;
+    color: var(--text-color);
 }
+
+.calendario a:hover {
+     opacity: 0.8;
+     cursor: pointer;
+}
+
 .dia-proximo{
     display: flex;
 }
