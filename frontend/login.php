@@ -23,7 +23,7 @@
 
         <!-- Logo -->
         <div class="nav-logo">
-            <a href=""><img src="./assets/img/logo-espaço-conecta.svg" alt="Logo"></a>
+            <a href="#"><img src="./assets/img/logo-espaço-conecta.svg" alt="Logo espaço conecta"></a>
         </div>
 
         <h1>LOGIN</h1>

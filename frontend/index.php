@@ -50,7 +50,7 @@
 
     <h2 class="text-center">NOSSOS ESPAÇOS</h2>
     <section class="cards">
-        <div class="card">
+        <div class="card" id="card-main">
             <img src="../frontend/assets/img/SalaReunião05.png" alt="">
             <div class="card-conteiner">
                 <h2>Salas de Reunião</h2>
@@ -59,7 +59,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="card-main">
             <img src="../frontend/assets/img/SalaReunião03.png" alt="">
             <div class="card-conteiner">
                 <h2>Salas Individuais</h2>
@@ -68,7 +68,7 @@
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="card" id="card-main">
             <img src="../frontend/assets/img/SalaReunião04.png" alt="">
             <div class="card-conteiner">
                 <h2>Salas de Treinamento</h2>
@@ -119,20 +119,21 @@
 
             <div class="colab-card">
                 <div class="card" data-espaco="individual" data-capacidade="1-2">
-                    <img src="./assets/img/SalaReunião01.png">
+                    <img src="./assets/img/Sala5.png">
                     <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
+                        <h4>Salas de Reunião</h4>
                         <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-                        <button class="button-reserva">Reservar</button>
+                        <button class="button-card" href="./sala.php">
+                        <a href="./Sala.php">Reservar</a> </button>
                     </div>
                 </div>
     
                 <div class="card" data-espaco="reuniao" data-capacidade="3-5">
                     <img src="./assets/img/SalaReunião03.png">
                     <div class="colab-titulo">
-                        <h4>Reunião</h4>
+                        <h4>Sala Individua</h4>
                         <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-                        <button class="button-reserva">Reservar</button>
+                        <button class="button-card">Reservar</button>
                 </div>
             </div>
 
