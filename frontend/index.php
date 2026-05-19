@@ -35,7 +35,7 @@
             <p>O Espaço Conecta é um coworking comunitário localizado na periferia, criado para oferecer estrutura,
                 networking e oportunidades para empreendedores, estudantes e profissionais da comunidade, promovendo
                 inovação, colaboração e desenvolvimento local.</p>
-            <a href="#sobre" class="saiba-mais">SAIBA MAIS</a>
+            <a href="./sobre.php" class="saiba-mais">SAIBA MAIS</a>
         </div>
         <div class="adicional-text">
             <h2><span id="maior">+10</span> Espaços</h2>

@@ -172,10 +172,7 @@
 
                     </div>
                     <div class="mapa">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1213.138224705454!2d-46.76541312008867!3d-23.65997988435086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5388c4ee6147%3A0xf3190cacc306c077!2sFitClass%20CT%20de%20Lutas!5e0!3m2!1spt-BR!2sbr!4v1778815531345!5m2!1spt-BR!2sbr"
-                            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5567.088938102533!2d-46.767782!3d-23.665432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53b60e501d01%3A0x56ec6dd0cbdcf39!2sMPCont%20Escrit%C3%B3rio%20Cont%C3%A1bil!5e1!3m2!1spt-BR!2sbr!4v1779205049363!5m2!1spt-BR!2sbr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
                    
