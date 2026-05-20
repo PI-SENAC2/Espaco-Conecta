@@ -26,7 +26,7 @@
             <a href="#"><img src="./assets/img/logo-espaço-conecta.svg" alt="Logo espaço conecta"></a>
         </div>
 
-        <h1>LOGIN</h1>
+        <h1>LOGINN</h1>
 
         <form>
 
@@ -51,12 +51,10 @@
 
             
 
-        </form>
+</form>
 
-        <button type="submit">
-            <a href="./index.php">Acessar</a>
-        </button>
-        
+<a href="./index.php" class="btn-login">Acessar</a>
+
     </div>
 
     <!-- Lado direito (imagem) -->

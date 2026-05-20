@@ -21,7 +21,7 @@ body {
 .container {
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* LADO ESQUERDO */
@@ -104,22 +104,23 @@ form {
     cursor: pointer;
 }
 
-button {
+.btn-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    max-width: 375px;
+
+    margin-top: 20px;
+    padding: 12px;
+
+    border-radius: 10px;
+
     background-color: var(--primary-color);
-    color: var(--text-color);
-    font-size: 16px;
-    font-weight: 600;
-}
-
-button:hover {
-    background-color: #E0712B;
-    transform: scale(1.1);
-    transition: var(--primary-color) transform 0.2s ease;
-}
-
-button a {
-    color: var(--text-color);
+    color: #fff;
     text-decoration: none;
+    font-weight: 600;
 }
 
 /* LINK */
@@ -130,20 +131,100 @@ form a {
 }
 
 /* LADO DIREITO */
-.image-area {
+.image-area{
     width: 50%;
     height: 100vh;
 
-    background: url("../../assets/img/IMLogin.png");
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
     background-size: cover;
-    position: relative;
+    background-position: center;
 }
+
+
 
 .image-area::before{
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.03);
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 1024px){
+
+    .form-area{
+        padding: 30px;
+    }
+
+    .image-area{
+        width: 45%;
+    }
+}
+
+/* TABLETS */
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .form-area{
+        width: 100%;
+        min-height: 100vh;
+        padding: 40px 25px;
+    }
+
+    .image-area{
+        width: 100%;
+        height: 300px;
+    }
+
+    form{
+        max-width: 100%;
+    }
+
+    .form-area button{
+        max-width: 100%;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 480px){
+
+    .form-area{
+        padding: 30px 20px;
+    }
+
+    .nav-logo img{
+        width: 70px;
+        margin-bottom: 25px;
+    }
+
+    h1{
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+
+    .campo input{
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .termos-login{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .form-area button{
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .image-area{
+        height: 220px;
+    }
 }
