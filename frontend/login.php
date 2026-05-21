@@ -26,7 +26,7 @@
             <a href="#"><img src="./assets/img/logo-espaço-conecta.svg" alt="Logo espaço conecta"></a>
         </div>
 
-        <h1>LOGINN</h1>
+        <h1>LOGIN</h1>
 
         <form>
 

@@ -29,46 +29,62 @@ header{
 }
 
 .navbar {
-    background-color: #000;
-    color: white;
-    padding: 15px 80px;
+    background: #000;
+    width: 100%;
+    min-height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 4rem;
+    gap: 2rem;
+
+    flex-wrap: wrap;
+}
+
+/* LOGO */
+.nav-logo img {
+    height: 45px;
+}
+
+/* LINKS */
+.nav-links {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    position: fixed;
-    margin: 0 auto;
-    width: 100%;
-    height: 60px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-
-/* esquerda */
-.nav-links {
-    flex: 1;
+.nav-list {
     display: flex;
-    justify-content: flex-start;
+    gap: 2rem;
+    list-style: none;
 }
 
-/* centro */
-.nav-logo{
-   flex: 1;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+.nav-list a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
-/* direita */
+.nav-list a:hover {
+    color: var(--primary-color);
+}
+
+/* ÍCONES DIREITA */
 .nav-direita {
-    flex: 1;
     display: flex;
-    justify-content: flex-end;
-    gap: 15px;
+    align-items: center;
+    gap: 1rem;
 }
 
-.nav-direita img{
-    height: 30px;
+.nav-direita img {
+    width: 28px;
+    transition: 0.3s;
+}
+
+.nav-direita img:hover {
+    transform: scale(1.1);
 }
 
 #favoritos img{
@@ -90,7 +106,6 @@ header{
     display: flex;
     gap: 70px;
     list-style: none;
-    font-weight: 600;
 }
 
 /* logo */
@@ -101,10 +116,6 @@ header{
 .navbar a {
     position: relative;
     text-decoration: none;
-}
-.linha-id {
-    color: #ffffff;
-    font-weight: 700;
 }
 
 
@@ -136,18 +147,19 @@ header{
 }
 
 
-
-
 /*Titulos*/
 .titulos {
+    width: 100%;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* 3 colunas iguais */
 
     align-items: center;
+
     
     background-color: #d9d9d9;
     padding: 10px 20px;
-    margin-top: 60px;
+    margin-top: 75px;
 }
 
 .titulos h2:first-child {
@@ -171,9 +183,11 @@ header{
 /*LAYOUT PRINCIPAL*/
 .sections {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 20px;
-    max-width: 1800px;
+    width: 100%;
+    min-height: 100vh;
     margin: 0 auto;
     padding: 20px;
 }
@@ -188,9 +202,8 @@ header{
 
 .reservas {
     color: white;
-    padding: 0 20px;
     flex: 1;
-    min-width: 700px;
+    min-width: 0;
 }
 
 
@@ -469,4 +482,247 @@ footer{
 
 .logo-perfil-footer img{
    height: 35px;
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+/* NOTEBOOK */
+@media (max-width: 1200px){
+
+    .sections{
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .perfil{
+        width: 220px;
+    }
+
+    .preferencias{
+        width: 220px;
+    }
+
+    .reservas{
+        min-width: auto;
+    }
+
+    .nav-list{
+        gap: 40px;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 992px){
+
+    /* NAVBAR */
+    .navbar{
+        padding: 15px 30px;
+    }
+
+    .nav-list{
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .nav-logo img{
+        height: 35px;
+    }
+
+    /* TITULOS */
+    .titulos{
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .titulos h2:first-child,
+    .titulos h1,
+    .titulos h2:last-child{
+        justify-self: center;
+    }
+
+    /* LAYOUT */
+    .sections{
+        flex-direction: column;
+    }
+
+    .perfil,
+    .reservas,
+    .preferencias{
+        width: 100%;
+        border: none;
+        padding: 0;
+    }
+
+    .preferencias{
+        margin-top: 20px;
+    }
+
+    /* STATUS */
+    .status{
+        justify-content: center;
+    }
+
+    .status div{
+        width: 100%;
+        max-width: 250px;
+    }
+
+    /* FOOTER */
+    .nav-links-footer{
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .nav-direita-footer{
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px){
+
+    /* NAVBAR */
+    .navbar{
+        padding: 15px;
+        height: auto;
+
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links,
+    .nav-logo,
+    .nav-direita{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-list{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-direita{
+        gap: 20px;
+    }
+
+    /* TITULOS */
+    .titulos{
+        margin-top: 150px;
+        padding: 20px;
+    }
+
+    .titulos h1{
+        font-size: 26px;
+    }
+
+    .titulos h2{
+        font-size: 18px;
+    }
+
+    /* PERFIL */
+    .usuario{
+        margin-top: 10px;
+    }
+
+    .foto-perfil{
+        width: 70px;
+        height: 70px;
+    }
+
+    /* CARDS */
+    .card,
+    .card-empresa,
+    .painel-preferencias,
+    .espacos{
+        width: 100%;
+    }
+
+    /* STATUS */
+    .status{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .status div{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* BOTÃO */
+    .preferencias button{
+        font-size: 16px;
+        padding: 16px;
+    }
+
+    /* FOOTER */
+    footer{
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .nav-ul-footer{
+        flex-direction: column;
+    }
+
+    .nav-links-footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-logo-footer{
+        margin-bottom: 30px;
+    }
+
+    .nav-direita-footer{
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px){
+
+    .titulos h1{
+        font-size: 22px;
+    }
+
+    .titulos h2{
+        font-size: 16px;
+    }
+
+    .card p,
+    .linha-preferencia span{
+        font-size: 14px;
+    }
+
+    .status p{
+        font-size: 12px;
+    }
+
+    .preferencias button{
+        width: 100%;
+    }
+
+    .navbar{
+        gap: 15px;
+    }
+
+    .nav-list{
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .nav-direita img,
+    #favoritos img{
+        height: 24px;
+    }
 }

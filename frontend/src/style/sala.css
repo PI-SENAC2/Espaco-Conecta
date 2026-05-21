@@ -4,6 +4,10 @@
     box-sizing: border-box;
     font-family: "arimo", sans-serif;
 }
+img{
+    max-width: 100%;
+    display: block;
+}
 
 body {
     background-color: #1D1D1D;
@@ -137,7 +141,7 @@ header {
 .detalhes-sala {
     background-color: var(--secondary-color);
     width: 100%;
-    height: 650px;
+    min-height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -189,9 +193,16 @@ header {
 /* alinhando os itens*/
 .divisões {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-start;
+
     width: 100%;
-    gap: 145px;
+    max-width: 1600px;
+
+    margin: 0 auto;
+    padding: 40px 40px;
+
+    gap: 80px;
 }
 
 .esquerda-info {
@@ -203,7 +214,7 @@ header {
 
 /* CONTEÚDO */
 .conteudo h1 {
-    font-size: 35px;
+    font-size: 36px;
     color: var(--text-color);
     font-weight: 700;
     margin-bottom: 15px;
@@ -267,7 +278,8 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 120px;
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     border: 2px solid #ffffff;
     padding: 15px 20px;
     border-radius: 0px 10px 10px 0px;
@@ -301,9 +313,11 @@ header {
 hr {
     border: none;
     height: 2px;
-    width: 900px;
     background-color: #ffffff;
     margin: 30px 0;
+
+    width: 100%;
+    max-width: 900px;
 }
 
 /* BENEFÍCIOS */
@@ -469,123 +483,489 @@ hr {
     color: white;
 }
 
-/* FOOTER */
-footer {
-    background-color: #000000;
-    width: 100%;
-    height: 250px;
-    padding-top: 20px;
-    margin-top: 45px;
+/* ======================================
+   FOOTER
+====================================== */
+
+.footer{
+    background: #000;
+    padding: 70px 20px 30px;
+    margin-top: 80px;
+    border-top: 1px solid #1f1f1f;
 }
 
-#abaixo {
+.footer-container{
+    max-width: 1400px;
+    margin: 0 auto;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+
+    gap: 35px;
 }
 
-.nav-footer {
+/* TOPO */
+.footer-top{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 20px;
+
     text-align: center;
-    list-style: none;
-    font-weight: 600;
 }
 
-.nav-ul-footer {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    font-weight: 600;
+.nav-logo-footer img{
+    height: 50px;
 }
 
-.nav-links-footer {
+.footer-text{
+    color: #bdbdbd;
+    font-size: 16px;
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+/* LINKS */
+.footer-links{
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 60px;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 45px;
+
+    flex-wrap: wrap;
 }
 
-.nav-links-footer a {
+.footer-links a{
     color: white;
     text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    position: relative;
+
+    transition: 0.3s ease;
 }
 
-.nav-links-footer a:hover {
-    color: #E0712B;
-    transform: scale(1.1);
-    transition: var(--primary-color) transform 0.2s ease;
-    font-weight: 700;
-}
+/* LINHA ANIMADA */
+.footer-links a::after{
+    content: "";
 
-.nav-logo-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
+    position: absolute;
 
-.nav-logo-footer img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 40px;
-}
+    left: 0;
+    bottom: -6px;
 
-.conteiner-divisor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-bottom: 20px;
-}
-
-.divisor {
-    width: 80%;
-    border: 1px solid #E0712B;
+    width: 0%;
     height: 2px;
-    background-color: #ffffff;
+
+    background: #E0712B;
+
+    transition: width 0.3s ease;
 }
 
-.nav-direita-footer {
-    flex: 1;
-    margin-right: 160px;
-    margin-bottom: 10px;
+.footer-links a:hover{
+    color: #E0712B;
+}
+
+.footer-links a:hover::after{
+    width: 100%;
+}
+
+/* REDES */
+.footer-social{
     display: flex;
-    align-items: end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+
     gap: 20px;
 }
 
-.nav-direita-footer img {
-    height: 22px;
+.footer-social a{
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+
+    border: 1px solid #2a2a2a;
 }
 
-.logo-perfil-footer img {
-    height: 35px;
+.footer-social a:hover{
+    transform: translateY(-5px);
+    background: #E0712B;
+    border-color: #E0712B;
 }
 
-/* RESPONSIVO */
-@media(max-width: 1000px) {
-    .detalhes-sala {
-        flex-direction: column;
-        padding: 120px 20px 40px;
+.footer-social img{
+    width: 20px;
+    height: 20px;
+}
+
+/* DIVISOR */
+.conteiner-divisor{
+    width: 100%;
+}
+
+.divisor{
+    width: 100%;
+    border: none;
+    height: 1px;
+    background: #2a2a2a;
+}
+
+/* COPYRIGHT */
+.footer-bottom{
+    text-align: center;
+}
+
+.footer-bottom p{
+    color: #8b8b8b;
+    font-size: 14px;
+}
+
+/* ======================================
+   RESPONSIVO
+====================================== */
+
+@media (max-width: 768px){
+
+    .footer{
+        padding: 50px 20px 25px;
     }
 
-    .sidebar {
+    .footer-links{
+        gap: 20px;
+    }
+
+    .footer-text{
+        font-size: 14px;
+    }
+
+    .footer-links a{
+        font-size: 14px;
+    }
+
+    .footer-social a{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .footer-links{
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .footer-social{
+        gap: 15px;
+    }
+
+    .nav-logo-footer img{
+        height: 42px;
+    }
+}
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+/* NOTEBOOK */
+@media (max-width: 1200px){
+
+    .divisões{
+        gap: 50px;
+        padding: 0 20px;
+    }
+
+    .card-info{
         width: 100%;
     }
 
-    .galeria {
+    hr{
+        width: 100%;
+    }
+
+    .sidebar{
+        width: 320px;
+    }
+
+    .conteudo h1{
+        font-size: 30px;
+    }
+}
+
+
+/* TABLET */
+@media (max-width: 992px){
+
+    /* NAVBAR */
+    .navbar{
+        padding: 15px 20px;
+    }
+
+    .nav-list{
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    /* HERO/GALERIA */
+    .detalhes-sala{
+        height: auto;
+        padding: 130px 20px 40px;
+    }
+
+    .galeria{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .img-principal{
+        width: 100%;
+        height: 400px;
+    }
+
+    .mini-galeria{
+        width: 100%;
+    }
+
+    .mini-galeria img{
+        height: 180px;
+    }
+
+    /* CONTEÚDO */
+    .divisões{
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .esquerda-info{
+        width: 100%;
+    }
+
+    .sidebar{
+        width: 100%;
+    }
+
+    .card-info{
+        width: 100%;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    .conteudo h1{
+        font-size: 28px;
+    }
+
+    .descricao-topo,
+    .conteiner-espaco p{
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    .nav-links-footer{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .nav-direita-footer{
+        margin-right: 0;
+        justify-content: center;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px){
+
+    /* NAVBAR */
+    .navbar{
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .nav-links,
+    .nav-logo,
+    .nav-direita{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-list{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* GALERIA */
+    .detalhes-sala{
+        padding-top: 180px;
+    }
+
+    .img-principal{
+        height: 300px;
+    }
+
+    .mini-galeria{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mini-galeria img{
+        height: 140px;
+    }
+
+    /* TITULOS */
+    .conteudo h1{
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    .conteudo-2 h2,
+    .conteiner-espaco h2{
+        font-size: 22px;
+    }
+
+    /* CARD */
+    .card-info{
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .vertical{
+        display: none;
+    }
+
+    .card-info img{
+        height: 50px;
+    }
+
+    .card-info p{
+        font-size: 16px;
+    }
+
+    /* BENEFICIOS */
+    .beneficios{
+        gap: 20px;
+    }
+
+    .icones-beneficio{
+        align-items: flex-start;
+    }
+
+    /* CALENDARIO */
+    .calendario div,
+    .calendario a{
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    /* MAPA */
+    .mapa iframe{
+        width: 100%;
+        height: 250px;
+    }
+
+    /* AVALIAÇÃO */
+    .avaliacao-box h1{
+        font-size: 45px;
+    }
+
+    /* FOOTER */
+    footer{
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .nav-ul-footer{
         flex-direction: column;
     }
 
-    .img-principal,
-    .mini-galeria {
-        width: 100%;
+    .nav-links-footer{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-logo-footer{
+        margin-bottom: 30px;
+    }
+
+    .nav-direita-footer{
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+
+/* CELULARES PEQUENOS */
+@media (max-width: 480px){
+
+    .detalhes-sala{
+        padding-top: 200px;
+    }
+
+    .img-principal{
+        height: 220px;
+    }
+
+    .mini-galeria{
+        grid-template-columns: 1fr;
+    }
+
+    .mini-galeria img{
+        height: 180px;
+    }
+
+    .conteudo h1{
+        font-size: 20px;
+    }
+
+    .descricao-topo,
+    .descricao{
+        font-size: 14px;
+    }
+
+    .conteudo-2 h2,
+    .conteiner-espaco h2{
+        font-size: 20px;
+    }
+
+    .card-info{
+        border-radius: 10px;
+    }
+
+    .avaliacao-box h1{
+        font-size: 38px;
+    }
+
+    .button-link{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .nav-list{
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .nav-direita img{
+        height: 24px;
     }
 }

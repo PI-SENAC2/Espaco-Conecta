@@ -1,39 +1,57 @@
- <!-- 4️⃣ FOOTER -->
- <footer>
-        <div class="nav-logo-footer">
-            <a href="#home" id="logo">
-                <img src="./assets/img/logo-espaço-conecta.svg" alt="lOGO D">
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- LOGO -->
+        <div class="footer-top">
+            <a href="#home" class="nav-logo-footer">
+                <img src="./assets/img/logo-espaço-conecta.svg" alt="Logo Espaço Conecta">
             </a>
+
+            <p class="footer-text">
+                Espaços modernos para reuniões, coworking e eventos profissionais.
+            </p>
         </div>
-        <div class="nav-footer">
-            <ul class="nav-ul-footer">
-                <li class="nav-links-footer">
-                    <a href="index.php">Home</a>
-                    <a href="reservas.php">Rerseva</a>
-                    <a href="#sobre">Sobre</a>
-                </li>
-            </ul>
+
+        <!-- LINKS -->
+        <div class="footer-links">
+            <a href="index.php">Home</a>
+            <a href="reservas.php">Reservas</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#">Contato</a>
         </div>
-        <div class="nav-direita-footer">
-                <a href="#" class="logo-perfl-footer">
-                    <img src="../frontend/assets/img/instagram.icon.svg"
-                        alt="Logo do Instagram, para representar o perfil do Instagram do espaço conecta">
-                </a>
-                <a href="#" class="logo-perfl-footer">
-                    <img src="../frontend/assets/img/whatsapp.icon.svg"
-                        alt="logo do Whatsapp, para representar o perfil do Whatsapp do espaço conecta">
-                </a>
-                <a href="#" class="logo-perfl-footer">
-                    <img src="../frontend/assets/img/facebook.icon.svg"
-                        alt="logo do Facebook, para representar o perfil do Facebook do espaço conecta">
-                </a>
-                <a href="#" class="logo-perfl-footer">
-                    <img src="../frontend/assets/img/figma.icon.svg"
-                        alt="logo do Figma, para representar o perfil do Figma do espaço conecta">
-                </a>
-            </div>
+
+        <!-- REDES -->
+        <div class="footer-social">
+
+            <a href="#">
+                <img src="../frontend/assets/img/instagram.icon.svg" alt="Instagram">
+            </a>
+
+            <a href="#">
+                <img src="../frontend/assets/img/whatsapp.icon.svg" alt="Whatsapp">
+            </a>
+
+            <a href="#">
+                <img src="../frontend/assets/img/facebook.icon.svg" alt="Facebook">
+            </a>
+
+            <a href="#">
+                <img src="../frontend/assets/img/figma.icon.svg" alt="Figma">
+            </a>
+
+        </div>
+
+        <!-- LINHA -->
         <div class="conteiner-divisor">
             <hr class="divisor">
         </div>
 
-    </footer>
+        <!-- COPYRIGHT -->
+        <div class="footer-bottom">
+            <p>© 2026 Espaço Conecta. Todos os direitos reservados.</p>
+        </div>
+
+    </div>
+
+</footer>
