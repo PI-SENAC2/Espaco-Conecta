@@ -159,9 +159,9 @@ header {
 
 .hero{ 
   height: 600px; /* ocupa a tela toda */
-  background-image: url("../../assets/img/IMGhero.png");
+  background-image: url("../../assets/img/IMGhero3.png");
   background-size: cover;       /* cobre toda a área */
-  background-position: center;  /* centraliza */
+  background-position: 150px top;  /* centraliza */
   background-repeat: no-repeat;
 
   display: flex;
@@ -216,124 +216,20 @@ header {
 
 
 /* SOBRE NOS */
- .sobre-nos{
-   height: 350px;
-    padding: 0px 40px;
-    width: 100%;
-    background-color: #000;
-    display: flex;
+.informacoes{
+    margin: 0 auto;   /* centraliza */
+    padding: 0 20px;
+}
+.info{
     justify-content: center;
     align-items: center;
-    padding-top: 0px;
- }
-
- .sobre-text{
-    display: flex;
-    flex-direction: column;
-    text-align:left;
-    width: 50%;
-    padding: 30px 40px;
- }
-
- .sobre-text h2{
-    color: #fff;
-    font-size: 42px;
-    padding-bottom: 35px;
- }
-
- .sobre-text p{
-    color: #fff;
-    font-size: 18px;
-    padding-bottom: 35px;
- }
-
- .sobre-text a{
-    text-decoration: none;
-    color: white;
- }
-
- /* Botão saiba mais */
-
- .saiba-mais{
-   display: flex;
-   justify-content:baseline;
-   align-items:center;
-   width: 182px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #E0712B;
-    border: none;
-    font-weight: 700;
- }
-
-
- .saiba-mais{
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza verticalmente */
-    transition: background-color 0.4s ease, transform 0.10s ease;
- }
-
- .saiba-mais:hover{
-    background-color: #ffffff;
-    transform: scale(1.05);
- }
-
- .sobre-text a:hover{
-    color: #E0712B;
-    transform: 0.4s;
-    font-weight: 700;
- }
-
- /* Texto informativo ao lado de sobre nos */
-
- .adicional-text{
-    display: flex;
-    flex-direction: column;
     text-align: center;
-    height: 100%;
-    width: 50%;
-       padding: 30px 40px;
- }
- .adicional-text h2{
-    color: #fff;
-    font-size: 28px;
-    padding: 0;
- }
-
- #maior{
-    font-size: 80px;
- }
-
- .adicional-text p{
     color: white;
-    font-size: 18px;
-    font-weight: 100;
-    padding-bottom: 40px;
+}
 
- }
-
- .adicional-text2{
+.num{
     display: flex;
-    flex-direction: column;
-    text-align: center;
- }
- .adicional-text2 h2{
-    color: white;
-    font-size: 35px;
- }
-
- .adicional-text2 p{
-    color: white;
-    font-weight: 100;
-    font-size: 18px;
-    padding-bottom: 40px;
- }
-
-
-
-
-
+}
 
 
 /*-----------------MAYKON------------------*/
@@ -532,4 +428,204 @@ header {
 .informacoes button:hover {
     transform: scale(1.05);
     transition: 0.3s;
+}
+
+/* ======================================
+   FOOTER
+====================================== */
+
+.footer{
+    background: #000;
+    padding: 70px 20px 30px;
+    margin-top: 80px;
+    border-top: 1px solid #1f1f1f;
+}
+
+.footer-container{
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 35px;
+}
+
+/* TOPO */
+.footer-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    text-align: center;
+}
+
+.nav-logo-footer img{
+    margin-bottom: 25px;
+    height: 50px;
+}
+
+.footer-text{
+    color: #bdbdbd;
+    font-size: 16px;
+    max-width: 900px;
+    line-height: 1.6;
+}
+
+/* LINKS */
+.footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+
+    flex-wrap: wrap;
+}
+
+.footer-links a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+/* LINHA ANIMADA */
+.footer-links a::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -6px;
+
+    width: 0%;
+    height: 2px;
+
+    background: #E0712B;
+
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover{
+    color: #E0712B;
+}
+
+.footer-links a:hover::after{
+    width: 100%;
+}
+
+/* REDES */
+.footer-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.footer-social a{
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s ease;
+
+    border: 1px solid #2a2a2a;
+}
+
+.footer-social a:hover{
+    transform: translateY(-5px);
+    background: #E0712B;
+    border-color: #E0712B;
+}
+
+.footer-social img{
+    width: 20px;
+    height: 20px;
+}
+
+/* DIVISOR */
+.conteiner-divisor{
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divisor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: none;
+    height: 1px;
+    background: #2a2a2a;
+}
+
+/* COPYRIGHT */
+.footer-bottom{
+    text-align: center;
+}
+
+.footer-bottom p{
+    color: #8b8b8b;
+    font-size: 14px;
+}
+
+/* ======================================
+   RESPONSIVO
+====================================== */
+
+@media (max-width: 768px){
+
+    .footer{
+        padding: 50px 20px 25px;
+    }
+
+    .footer-links{
+        gap: 20px;
+    }
+
+    .footer-text{
+        font-size: 14px;
+    }
+
+    .footer-links a{
+        font-size: 14px;
+    }
+
+    .footer-social a{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .footer-links{
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .footer-social{
+        gap: 15px;
+    }
+
+    .nav-logo-footer img{
+        height: 42px;
+    }
 }
