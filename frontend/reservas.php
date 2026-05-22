@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
     <link rel="stylesheet" href="./src/style/reservas.css"><link rel="stylesheet" href="./src/style/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <link rel="shortcut icon" href="./assets/img/Favicon-espaçoConecta.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -70,6 +71,23 @@
                 </div>
             </div>
     <!--Calendário-->
+<div class="calendar">
+        <div class="titulo">
+            <div id="prev" class="btn"><i class="fa-solid fa-arrow-left"></i></div>
+            <div id="month-year"></div>
+            <div id="next" class="btn"><i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="weekdays">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+        </div>
+        <div class="days" id="days"></div>
+    </div>
 
 <!--Espaços cadastrados-->
 <div class="espacos">
@@ -119,4 +137,5 @@
 </footer>
 
 </body>
+<script src="./src/js/calendar.js"></script>
 </html>
