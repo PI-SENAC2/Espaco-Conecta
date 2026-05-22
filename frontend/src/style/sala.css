@@ -213,19 +213,21 @@ header {
     align-items: flex-start;
 
     width: 100%;
-    max-width: 1600px;
-
-    margin: 0 auto;
-    padding: 40px 40px;
+    padding: 40px 90px; /* mesmo padding da galeria */
 
     gap: 80px;
 }
 
-.esquerda-info {
+.esquerda-info{
+    flex: 1;
+    width: 50%;
+    justify-content: left;
+}
+
+.direita-info{
     width: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: left;
+    justify-content: right;
 }
 
 /* CONTEÚDO */
@@ -494,7 +496,7 @@ hr {
     margin: 20px 0;
     padding: 12px;
     background: #242424;
-    border: 1px solid #333;
+    border: 1px solid #2e2e2e;
     border-radius: 8px;
     color: white;
 }
@@ -593,12 +595,13 @@ hr {
 
 .nav-logo-footer img{
     height: 50px;
+    margin-bottom: 25px;
 }
 
 .footer-text{
     color: #bdbdbd;
     font-size: 16px;
-    max-width: 500px;
+    max-width: 900px;
     line-height: 1.6;
 }
 
@@ -766,7 +769,7 @@ hr {
 @media (max-width: 1200px){
 
     .divisões{
-        gap: 50px;
+        gap: 30px;
         padding: 0 20px;
     }
 

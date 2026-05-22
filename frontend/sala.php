@@ -216,7 +216,7 @@
 
                 </div>
                 <div class="avaliacao-box">
-                    <a herf="">Avaliações</a herf="">
+                    <span>Avaliações</span>
 
                     <h1>4.8</h1>
 

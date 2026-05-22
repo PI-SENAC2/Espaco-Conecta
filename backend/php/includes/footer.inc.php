@@ -9,7 +9,7 @@
             </a>
 
             <p class="footer-text">
-                Espaços modernos para reuniões, coworking e eventos profissionais.
+                Transformando ambientes em experiências produtivas, confortáveis e inspiradoras para empresas, equipes e profissionais que buscam excelência, inovação e conexão em cada reunião, evento ou momento de trabalho.
             </p>
         </div>
 
