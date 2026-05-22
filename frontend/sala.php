@@ -105,6 +105,37 @@
                             coworking foi pensado para oferecer praticidade, produtividade e bem-estar em um só lugar,
                             produtividade e bem-estar em um só lugar.
                         </p>
+
+                        <!-- AVALIAÇÕES DOS USUÁRIOS -->
+                        <div class="avaliacoes-usuarios">
+
+                            <h2>Avaliações dos Hóspedes</h2>
+
+                            <div class="comentario-user">
+                                <div class="user-topo">
+                                    <h3>Bruno Martins</h3>
+                                    <span>⭐ 5.0</span>
+                                </div>
+
+                                <p>
+                                    Ambiente excelente, muito confortável e organizado.
+                                    Internet rápida e ótimo atendimento.
+                                </p>
+                            </div>
+
+                            <div class="comentario-user">
+                                <div class="user-topo">
+                                    <h3>Ana Souza</h3>
+                                    <span>⭐ 4.8</span>
+                                </div>
+
+                                <p>
+                                    Espaço muito bonito e silencioso para reuniões.
+                                    Voltarei mais vezes!
+                                </p>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
 
@@ -172,12 +203,15 @@
 
                     </div>
                     <div class="mapa">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5567.088938102533!2d-46.767782!3d-23.665432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53b60e501d01%3A0x56ec6dd0cbdcf39!2sMPCont%20Escrit%C3%B3rio%20Cont%C3%A1bil!5e1!3m2!1spt-BR!2sbr!4v1779205049363!5m2!1spt-BR!2sbr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5567.088938102533!2d-46.767782!3d-23.665432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53b60e501d01%3A0x56ec6dd0cbdcf39!2sMPCont%20Escrit%C3%B3rio%20Cont%C3%A1bil!5e1!3m2!1spt-BR!2sbr!4v1779205049363!5m2!1spt-BR!2sbr"
+                            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                     </div>
-                   
-                       <a href="./reservas.php" class="button-link">AGENDAR</a>
-                    
+
+                    <a href="./reservas.php" class="button-link">AGENDAR</a>
+
                 </div>
 
                 </div>
@@ -192,16 +226,16 @@
 
                 </div>
                 <a href="#" class="button-link">ENVIE SUA AVALIAÇÃO</a>
-                
+
             </aside>
         </section>
-</section>
+    </section>
 
 
 
-        <footer id="abaixo">
-            <?php require_once "../backend/php/includes/footer.inc.php"; ?>
-        </footer>
+    <footer id="abaixo">
+        <?php require_once "../backend/php/includes/footer.inc.php"; ?>
+    </footer>
 
 
 </body>

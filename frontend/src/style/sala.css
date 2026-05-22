@@ -137,6 +137,22 @@ header {
     transition: 0.5s;
 }
 
+#box-laranja {
+    background-color: #E0712B;
+    font-weight: 700;
+
+    padding: 14px;
+
+    border-radius: 15px;
+}
+
+#box-laranja:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+     transform: scale(1.06);
+   transition: transform 0.20s ease;
+}
+
 /* CONTAINER PRINCIPAL */
 .detalhes-sala {
     background-color: var(--secondary-color);
@@ -279,7 +295,7 @@ header {
     align-items: center;
     height: 120px;
     width: 100%;
-    max-width: 700px;
+    max-width: 900px;
     border: 2px solid #ffffff;
     padding: 15px 20px;
     border-radius: 0px 10px 10px 0px;
@@ -484,6 +500,66 @@ hr {
 }
 
 /* ======================================
+   AVALIAÇÕES DOS USUÁRIOS
+====================================== */
+
+.avaliacoes-usuarios{
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comentario-user{
+    background: #171717;
+
+    border: 1px solid #2e2e2e;
+    border-radius: 12px;
+
+    padding: 20px;
+
+    transition: 0.3s ease;
+}
+
+.comentario-user:hover{
+    border-color: #E0712B;
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 20px rgba(224,113,43,0.15);
+}
+
+.user-topo{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.user-topo h3{
+    color: #fff;
+
+    font-size: 18px;
+}
+
+.user-topo span{
+    color: #E0712B;
+
+    font-weight: 700;
+}
+
+.comentario-user p{
+    color: #c5c5c5;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+}
+
+/* ======================================
    FOOTER
 ====================================== */
 
@@ -612,10 +688,16 @@ hr {
 
 /* DIVISOR */
 .conteiner-divisor{
-    width: 100%;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .divisor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     border: none;
     height: 1px;
