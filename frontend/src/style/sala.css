@@ -1054,3 +1054,199 @@ hr {
         height: 24px;
     }
 }
+
+/* =========================================
+   RESPONSIVIDADE FINAL CORRIGIDA
+========================================= */
+
+@media (max-width: 992px){
+
+    /* NAVBAR */
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+
+        padding: 20px;
+        min-height: auto;
+    }
+
+    .nav-links,
+    .nav-logo,
+    .nav-direita{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-list{
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .nav-logo img{
+        height: 55px;
+    }
+
+    /* GALERIA */
+    .detalhes-sala{
+        padding: 230px 20px 40px;
+    }
+
+    .galeria{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .img-principal{
+        width: 100%;
+        height: 350px;
+    }
+
+    .mini-galeria{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .mini-galeria img{
+        height: 180px;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    .divisões{
+        flex-direction: column;
+        padding: 20px;
+        gap: 40px;
+    }
+
+    .esquerda-info,
+    .direita-info{
+        width: 100%;
+    }
+
+    .direita-info{
+        justify-content: center;
+    }
+
+    .sidebar{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* CARD INFO */
+    .card-info{
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .vertical{
+        display: none;
+    }
+
+    /* CALENDÁRIO */
+    .calendario div,
+    .calendario a{
+        padding: 10px 5px;
+        font-size: 11px;
+    }
+
+    /* MAPA */
+    .mapa iframe{
+        width: 100%;
+        height: 260px;
+        border-radius: 10px;
+    }
+
+    /* INPUT */
+    .avaliacao-box input{
+        font-size: 16px;
+    }
+
+    /* TEXTOS */
+    .conteudo h1{
+        font-size: 28px;
+        line-height: 1.4;
+    }
+
+    .descricao-topo,
+    .descricao{
+        font-size: 16px;
+    }
+}
+
+
+/* MOBILE */
+@media (max-width: 600px){
+
+    .detalhes-sala{
+        padding-top: 260px;
+    }
+
+    .img-principal{
+        height: 250px;
+    }
+
+    .mini-galeria{
+        grid-template-columns: 1fr;
+    }
+
+    .mini-galeria img{
+        height: 180px;
+    }
+
+    .conteudo h1{
+        font-size: 22px;
+    }
+
+    .conteudo-2 h2,
+    .conteiner-espaco h2{
+        font-size: 20px;
+    }
+
+    .descricao-topo,
+    .descricao{
+        font-size: 14px;
+    }
+
+    .sidebar{
+        max-width: 100%;
+    }
+
+    .calendario{
+        gap: 4px;
+    }
+
+    .calendario div,
+    .calendario a{
+        padding: 8px 2px;
+        font-size: 10px;
+    }
+
+    .button-link{
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .avaliacao-box h1{
+        font-size: 42px;
+    }
+
+    .footer{
+        padding: 50px 20px;
+    }
+
+    .footer-text{
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .footer-links{
+        flex-direction: column;
+        gap: 15px;
+    }
+}
