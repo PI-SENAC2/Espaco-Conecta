@@ -1,181 +1,122 @@
-/* ZERA TUDO */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "arimo", sans-serif;
-}
-
-body{
-    padding: 0;
-    margin: 0;
-    background-color: #1D1D1D;
-}
-
-:root{
+:root {
     --primary-color: #E0712B;
     --secondary-color: #1D1D1D;
     --text-color: #FFFFFF;
     --background-color: #000000;
-    --font-family: "arimo", sans-serif;
+    --font-family: "Arimo", sans-serif;
 }
 
-.nav-list {
-    list-style: none;   /* remove bolinhas */
-    display: flex;
-    gap: 20px;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.nav-list a {
-    text-decoration: none;
-    color: white;
+body {
+    background: #000;
+    font-family: var(--font-family);
+    overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
 
+/* =========================
+   NAVBAR
+========================= */
 
-/* NAVBAR */
 header {
-    position: static; /* ou remove */
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 }
 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-
     background-color: #000;
     color: white;
-    padding: 15px 80px;
-
+    padding: 15px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    height: 60px;
+    width: 100%;
+    min-height: 70px;
+    position: fixed;
+    top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-
-
-.nav-logo img {
-    height: 40px;
-}
-
-/* ESQUERDA */
+/* esquerda */
 .nav-links {
     flex: 1;
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
 }
 
+/* centro */
 .nav-logo {
     flex: 1;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-/*DIREITA*/
+
+/* direita */
 .nav-direita {
     flex: 1;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     gap: 15px;
 }
-.nav-direita img{
-    height: 40px;
+
+.nav-direita img {
+    height: 30px;
 }
 
-#favoritos img{
-   height: 30px;
+#favoritos img {
+    height: 30px;
 }
 
-#favoritos img:hover{
-   transform: scale(1.2);
-   transition: transform 0.5s;
+#favoritos img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s;
 }
 
-#reservas img:hover{
-   transform: scale(1.2);
-   transition: transform 0.5s;
+#reservas img:hover {
+    transform: scale(1.2);
+    transition: transform 0.5s;
 }
 
-
-/*hero estilizado*/
-.hero{ 
-    height: 600px; /* ocupa a tela toda */
-    background-image: url("../../assets/img/IMGhero.png");
-    background-size: cover;       /* cobre toda a área */
-    background-position: center;  /* centraliza */
-    background-repeat: no-repeat;
-  
+/* lista */
+.nav-list {
     display: flex;
-    align-items: center;   /* centraliza vertical */
-    justify-content: center; /* texto ao centro */
-    padding: 0 80px;
-    position: relative;
-  }
+    gap: clamp(15px, 3vw, 50px);
+    list-style: none;
+    flex-wrap: wrap;
+}
 
-  .if {
-    display: flex;
-    margin: 25px;
-
-    justify-content: center;
-    text-align: center;
-  }
-
-  .sobre{
-    display: flex;
-    flex-direction: column;
-
-    gap: 18px;
-
-
-    color: #FFFFFF;
-    margin-top: 20px;
-    max-width: 1200px; /* largura máxima */
-    margin-bottom: 50px;   /* centraliza */
-    padding: 0 20px;
-
-  }
-
-  .sobre h1{
-    font-size: 42px;
-  }
-
-  .sobre p{
-    font-size: 18px;
-  }
-
-  
 /* logo */
 .nav-logo img {
     height: 40px;
 }
 
 .navbar a {
+    color: var(--text-color);
+    font-weight: 700;
     position: relative;
     text-decoration: none;
 }
+
 .linha-id {
-    color: #E0712B;
+    color: #ffffff;
     font-weight: 700;
 }
 
-.linha-id::before{
-   color: #E0712B;
-   content: "";
-   position: absolute;
-   width: 0%;
-   height: 2px;
-   left: 0;
-   bottom: -5px;
-   background-color: #E0712B;
-   width: 100%;
-}
-
-.linha{
-   color: white;
+.linha {
+    color: white;
 }
 
 /* traço escondido */
@@ -200,9 +141,36 @@ header {
     transition: 0.5s;
 }
 
+#box-laranja {
+    background-color: #E0712B;
+    font-weight: 700;
 
+    padding: 14px;
 
-/*Conteúdo do Hero */
+    border-radius: 15px;
+}
+
+#box-laranja:hover {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+     transform: scale(1.06);
+   transition: transform 0.20s ease;
+}
+
+.hero{ 
+  height: 600px; /* ocupa a tela toda */
+  background-image: url("../../assets/img/IMGhero.png");
+  background-size: cover;       /* cobre toda a área */
+  background-position: center;  /* centraliza */
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;   /* centraliza vertical */
+  justify-content: center; /* texto ao centro */
+  padding: 0 80px;
+  position: relative;
+}
+
 .hero-content {
   max-width: 500px;
   display: flex;
@@ -237,7 +205,18 @@ header {
   color: white;
 }
 
-.sobre-nos{
+
+
+.hero::before{
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* SOBRE NOS */
+ .sobre-nos{
    height: 350px;
     padding: 0px 40px;
     width: 100%;
@@ -256,154 +235,100 @@ header {
     padding: 30px 40px;
  }
 
+ .sobre-text h2{
+    color: #fff;
+    font-size: 42px;
+    padding-bottom: 35px;
+ }
+
  .sobre-text p{
     color: #fff;
     font-size: 18px;
     padding-bottom: 35px;
-    text-align: justify;
  }
 
- .else{
-    display: flex;
-    
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom:90px;
-
- }
-
- .sobre_else{
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-}
-
-
-.sobre-text h2, .else h2{
-    color: #FFFFFF;
-    font-size: 40px;
-    font-weight: 700;
-    padding-bottom: 20px;
- }
-
- .sobre-text h2::after, .else h2::after{
-    content: "";
-    width: 50px;
-    height: 4px;
-    background-color: #E0712B;
-    display: block;
-    margin-top: 10px;
- }
-
-    .sobre-text h2::after{
-        margin-left: 0;
-    }
-
-    .sobre-text h2, .else h2{
-    color: #FFFFFF;
-    font-size: 40px;
-    font-weight: 700;
-    padding-bottom: 20px;
- }
-
- .sobre-text h2::after, .else h2::after{
-    content: "";
-    width: 50px;
-    height: 4px;
-    background-color: #E0712B;
-    display: block;
-    margin-top: 10px;
- }
-
-    .sobre-text h2::after{
-        margin-left: 0;
-    }
-.sobre-text h3, .else h3{
-    color: #FFFFFF;
-    font-size: 40px;
-    font-weight: 700;
-    padding-bottom: 20px;
- }
-
- .sobre-text h3::after, .else h3::after{
-    content: "";
-    width: 50px;
-    height: 4px;
-    background-color: #E0712B;
-    display: block;
-    margin-top: 10px;
- }
-
-    .sobre-text h3::after{
-        margin-left: 0;
-    }
-.sobre-text h4, .else h4{
-    color: #FFFFFF;
-    font-size: 40px;
-    font-weight: 700;
-    padding-bottom: 20px;
- }
-
- .sobre-text h4::after, .else h4::after{
-    content: "";
-    width: 50px;
-    height: 4px;
-    background-color: #E0712B;
-    display: block;
-    margin-top: 10px;
- }
-
-    .sobre-text h4::after{
-        margin-left: 0;
-    }
-.sobre-text h5, .else h5{
-    color: #FFFFFF;
-    font-size: 40px;
-    font-weight: 700;
-    padding-bottom: 20px;
- }
-
- .sobre-text h5::after, .else h5::after{
-    content: "";
-    width: 50px;
-    height: 4px;
-    background-color: #E0712B;
-    display: block;
-    margin-top: 10px;
- }
-
-    .sobre-text h5::after{
-        margin-left: 0;
-    }
-/*Centralizar todos os elementos do sobre else*/
-
-.card{
-    width: 220px;
-    text-align: center;
+ .sobre-text a{
+    text-decoration: none;
     color: white;
-}
+ }
 
-.card span{
-    display: block;
-    font-size: 60px;
+ /* Botão saiba mais */
+
+ .saiba-mais{
+   display: flex;
+   justify-content:baseline;
+   align-items:center;
+   width: 182px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #E0712B;
+    border: none;
     font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.card p{
-    font-size: 22px;
-    font-weight: 600;
-    line-height: 1.3;
-    
-    /* IMPORTANTE */
-    display: block;
-}
+ }
 
 
+ .saiba-mais{
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    text-align: center; /* Centraliza verticalmente */
+    transition: background-color 0.4s ease, transform 0.10s ease;
+ }
 
+ .saiba-mais:hover{
+    background-color: #ffffff;
+    transform: scale(1.05);
+ }
 
+ .sobre-text a:hover{
+    color: #E0712B;
+    transform: 0.4s;
+    font-weight: 700;
+ }
 
+ /* Texto informativo ao lado de sobre nos */
+
+ .adicional-text{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    width: 50%;
+       padding: 30px 40px;
+ }
+ .adicional-text h2{
+    color: #fff;
+    font-size: 28px;
+    padding: 0;
+ }
+
+ #maior{
+    font-size: 80px;
+ }
+
+ .adicional-text p{
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    padding-bottom: 40px;
+
+ }
+
+ .adicional-text2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+ }
+ .adicional-text2 h2{
+    color: white;
+    font-size: 35px;
+ }
+
+ .adicional-text2 p{
+    color: white;
+    font-weight: 100;
+    font-size: 18px;
+    padding-bottom: 40px;
+ }
 
 
 

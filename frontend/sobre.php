@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./src/style/sobre.css">
-     <link rel="stylesheet" href="./src/style/global.css">
+    <link rel="stylesheet" href="./src/style/global.css">
     <link rel="shortcut icon" href="./assets/img/Favicon-espaçoConecta.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,41 +17,35 @@
     <!--------- Header ----------->
     <?php require_once "../backend/php/includes/navbar.inc.php"; ?>
 
-    <!------ Hero ------>
-    <section id="home" class="hero">
+     <section id="home" class="hero">
         <div class="hero-content">
+            <h1><span id="laranja">ESPAÇO </span> CONECTA</h1>
+            <p>Conectando Quem Faz o Corre!</p>
         </div>
     </section>
-    <section class="if">
-    <div class = "sobre">
-    <h1>Muito além de um espaço de trabalho!</h1>
-    <p>Descubra um ambiente pensado para inspirar, conectar e proporcionar experiências completas. Aqui, você encontra não só áreas para trabalhar, mas também espaços para eventos, convivência, criação de conteúdo, encontros sociais e momentos especiais.</p>
-</div>
-</section>
-   
-<!------ Sobre ------>
 
-   <section class="else">
-    <div class="sobre_else">
-        <div class="card">
-            <span>+6</span>
-            <p>Espaços para Reuniões & Treinamentos</p>
-        </div>
-        <div class="card">
-            <span>+4</span>
-            <p>Espaços para Eventos & festas</p>
-        </div>
-        <div class="card">
-            <span>+3</span>
-            <p>Espaços para Produção & Conteúdo</p>
-        </div>
-        <div class="card">
-            <span>+10</span>
-            <p>Espaços para Trabalhos individuais ou em equipe</p>
-        </div>
-    </div>
 
-</section>
+    <!-- Sobre nos -->
+    <section id="sobre" class="sobre-nos">
+        <div class="sobre-text">
+            <h2>SOBRE NÓS</h2>
+            <p>O Espaço Conecta é um coworking comunitário localizado na periferia, criado para oferecer estrutura,
+                networking e oportunidades para empreendedores, estudantes e profissionais da comunidade, promovendo
+                inovação, colaboração e desenvolvimento local.</p>
+            <a href="./sobre.php" class="saiba-mais">SAIBA MAIS</a>
+        </div>
+        <div class="adicional-text">
+            <h2><span id="maior">+10</span> Espaços</h2>
+            <p>Para Trabalhos Individuais Ou Em Equipe</p>
+            <div class="adicional-text2">
+                <h2><span id="maior">+3</span> Espaços</h2>
+                <p>Para Produção & Conteúdo</p>
+            </div>
+        </div>
+
+    </section>
+
+  
 
     <section class="if">
     <div class = "sobre">

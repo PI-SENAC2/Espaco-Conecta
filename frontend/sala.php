@@ -61,8 +61,8 @@
 
                         <hr class="vertical">
                         <div class="avaliacao">
-                            <p>20</p>
-                            <p>Avaliaações</p>
+                            <p>2</p>
+                            <p>Avaliações</p>
                         </div>
 
                     </div>
@@ -125,7 +125,7 @@
 
                             <div class="comentario-user">
                                 <div class="user-topo">
-                                    <h3>Ana Souza</h3>
+                                    <h3>Letica Sousa</h3>
                                     <span>⭐ 4.8</span>
                                 </div>
 

@@ -15,23 +15,23 @@
 body{
     background-color: #080809;
     font-family: var(--font-family);
+    overflow-x: hidden;
 }
 
-/* CONTAINER PRINCIPAL */
-.container {
+/* CONTAINER */
+.container{
     display: flex;
+    min-height: 100vh;
     width: 100%;
-    height: 100vh;
 }
 
-/* LADO ESQUERDO */
-.form-area {
+/* FORMULÁRIO */
+.form-area{
     width: 50%;
     color: #fff;
 
     display: flex;
     flex-direction: column;
-
     justify-content: center;
     align-items: center;
 
@@ -39,113 +39,123 @@ body{
 }
 
 /* LOGO */
-.nav-logo img {
+.nav-logo img{
     width: 90px;
-    margin-bottom: 40px;
-}
-
-/* TITULO */
-h1 {
     margin-bottom: 30px;
 }
 
+/* TITULO */
+h1{
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+
 /* FORM */
-form {
+form{
     width: 100%;
-    max-width: 375px;
+    max-width: 450px;
+}
+
+/* DUAS COLUNAS */
+.linha{
+    display: flex;
+    gap: 15px;
 }
 
 /* CAMPOS */
-.campo {
+.campo{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
+    width: 100%;
 }
 
-.campo label {
+.campo label{
     font-size: 14px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
-.campo input {
+.campo input{
+    width: 100%;
+
     background: transparent;
-    border: 1px solid #aaa;
-    padding: 12px;
+    border: 1px solid #555;
+
+    padding: 14px;
+
     color: #fff;
+
     outline: none;
-    border-radius: 8px;
+    border-radius: 10px;
+
+    transition: 0.3s;
 }
 
-/* LEMBRAR-ME */
-.termos-login {
+.campo input:focus{
+    border-color: #E0712B;
+}
+
+/* TERMOS */
+.termos-cadastrar{
+    margin-top: 10px;
+}
+
+.termos-cadastrar label{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
-}
+    gap: 8px;
 
-.termos-login label {
-    font-size: 12px;
-    display: flex;
-    gap: 5px;
+    font-size: 13px;
+    color: #ccc;
 }
 
 /* BOTÃO */
-.form-area button{
-    width: 100%;
-    max-width: 375px;
+button{
+    width: 450px;
 
     margin-top: 20px;
-    padding: 12px;
+    padding: 14px;
 
     border: none;
     border-radius: 10px;
 
     cursor: pointer;
-}
 
-button {
     background-color: var(--primary-color);
-    color: var(--text-color);
+
+    color: #fff;
+
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
+
+    transition: 0.3s;
 }
 
-button:hover {
-    background-color: #E0712B;
-    transform: scale(1.1);
-    transition: var(--primary-color) transform 0.2s ease;
+button:hover{
+    transform: translateY(-3px);
+    opacity: 0.9;
 }
 
-button a {
-    color: var(--text-color);
+button a{
+    color: white;
     text-decoration: none;
 }
-
-.link-msg{
-    padding-top: 5px;
-    font-size: 12px;
-    color: #aaa;
-    text-decoration: none;
-}
-
 
 /* LINK */
-form a {
-    font-size: 12px;
+.link-msg{
+    padding-top: 15px;
+    font-size: 13px;
     color: #aaa;
     text-decoration: none;
 }
 
-/* LADO DIREITO */
-.image-area {
+/* IMAGEM */
+.image-area{
     width: 50%;
-    height: 100vh;
+    min-height: 100vh;
 
-    background: url("../../assets/img/IMLogin2.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: url("../../assets/img/IMLogin2.png") center center/cover no-repeat;
+
     position: relative;
 }
 
@@ -153,12 +163,17 @@ form a {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.03);
 }
+
+/* ======================================
+   NOTEBOOK
+====================================== */
 
 @media (max-width: 1024px){
 
     .form-area{
+        width: 55%;
         padding: 30px;
     }
 
@@ -167,7 +182,10 @@ form a {
     }
 }
 
-/* TABLETS */
+/* ======================================
+   TABLET
+====================================== */
+
 @media (max-width: 768px){
 
     .container{
@@ -176,58 +194,61 @@ form a {
 
     .form-area{
         width: 100%;
-        min-height: 100vh;
-        padding: 40px 25px;
+        min-height: auto;
+        padding: 50px 25px;
     }
 
     .image-area{
         width: 100%;
-        height: 300px;
+        height: 250px;
+        min-height: 250px;
+        order: -1;
     }
 
     form{
         max-width: 100%;
     }
 
-    .form-area button{
-        max-width: 100%;
+    .linha{
+        flex-direction: column;
+        gap: 0;
     }
 }
 
-/* CELULARES */
+/* ======================================
+   MOBILE
+====================================== */
+
 @media (max-width: 480px){
 
     .form-area{
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
 
     .nav-logo img{
         width: 70px;
-        margin-bottom: 25px;
     }
 
     h1{
-        font-size: 28px;
-        margin-bottom: 25px;
+        font-size: 30px;
     }
 
     .campo input{
-        padding: 10px;
+        padding: 12px;
         font-size: 14px;
     }
 
-    .termos-login{
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    .form-area button{
-        padding: 14px;
+    button{
+        padding: 13px;
         font-size: 15px;
     }
 
     .image-area{
-        height: 220px;
+        height: 200px;
+        min-height: 200px;
+    }
+
+    .termos-cadastrar label{
+        font-size: 12px;
     }
 }

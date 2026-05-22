@@ -140,8 +140,10 @@
             <script src="./src/js/pesquisa.js"></script>
         </main>
     </div>
-
+    
+<footer>
     <?php require_once "../backend/php/includes/footer.inc.php"; ?>
+</footer>
 
 </body>
 </html>

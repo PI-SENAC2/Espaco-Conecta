@@ -113,6 +113,7 @@
 </section>
 
 </section>
+
 <footer>
     <?php require_once "../backend/php/includes/footer.inc.php"; ?>
 </footer>

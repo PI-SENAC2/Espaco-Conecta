@@ -90,6 +90,7 @@ form {
     gap: 5px;
 }
 
+
 /* BOTÃO */
 .form-area button{
     width: 100%;
@@ -102,6 +103,39 @@ form {
     border-radius: 10px;
 
     cursor: pointer;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #E0712B;
+    transform: scale(1.1);
+    transition: var(--primary-color) transform 0.2s ease;
+}
+
+button a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.link-msg{
+    padding-top: 5px;
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+
+/* LINK */
+form a {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: none;
 }
 
 .btn-login{
@@ -123,24 +157,17 @@ form {
     font-weight: 600;
 }
 
-/* LINK */
-form a {
-    font-size: 12px;
-    color: #aaa;
-    text-decoration: none;
-}
-
 /* LADO DIREITO */
-.image-area{
+.image-area {
     width: 50%;
     height: 100vh;
 
-    background-image: url(../../assets/img/IMLogin.png);
-    background-size: cover;
+    background: url("../../assets/img/IMLogin.png");
+    background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
+    position: relative;
 }
-
-
 
 .image-area::before{
     content: "";
