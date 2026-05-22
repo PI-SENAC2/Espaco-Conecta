@@ -159,7 +159,7 @@ header {
 
 .hero{ 
   height: 600px; /* ocupa a tela toda */
-  background-image: url("../../assets/img/IMGhero.png");
+  background-image: url("../../assets/img/IMGhero3.png");
   background-size: cover;       /* cobre toda a área */
   background-position: center;  /* centraliza */
   background-repeat: no-repeat;
@@ -217,13 +217,16 @@ header {
 
 /* SOBRE NOS */
  .sobre-nos{
-   height: 350px;
+    width: 100%;
+   height: 100vh;
     padding: 0px 40px;
     width: 100%;
     background-color: #000;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding-top: 0px;
  }
 
@@ -252,50 +255,18 @@ header {
     color: white;
  }
 
- /* Botão saiba mais */
-
- .saiba-mais{
-   display: flex;
-   justify-content:baseline;
-   align-items:center;
-   width: 182px;
-    height: 40px;
-    border-radius: 10px;
-    background-color: #E0712B;
-    border: none;
-    font-weight: 700;
- }
-
-
- .saiba-mais{
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    text-align: center; /* Centraliza verticalmente */
-    transition: background-color 0.4s ease, transform 0.10s ease;
- }
-
- .saiba-mais:hover{
-    background-color: #ffffff;
-    transform: scale(1.05);
- }
-
- .sobre-text a:hover{
-    color: #E0712B;
-    transform: 0.4s;
-    font-weight: 700;
- }
 
  /* Texto informativo ao lado de sobre nos */
 
  .adicional-text{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     text-align: center;
     height: 100%;
     width: 50%;
        padding: 30px 40px;
  }
- .adicional-text h2{
+ .adicional-text3 h2{
     color: #fff;
     font-size: 28px;
     padding: 0;
@@ -305,7 +276,9 @@ header {
     font-size: 80px;
  }
 
- .adicional-text p{
+ .adicional-text3 p{
+    display: flex;
+    flex-direction: column;
     color: white;
     font-size: 18px;
     font-weight: 100;
@@ -315,8 +288,10 @@ header {
 
  .adicional-text2{
     display: flex;
-    flex-direction: column;
     text-align: center;
+
+    gap:50px;
+     padding: 30px 40px;
  }
  .adicional-text2 h2{
     color: white;
