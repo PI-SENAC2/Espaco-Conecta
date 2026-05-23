@@ -20,8 +20,6 @@
      <section id="home" class="hero">
         <div class="hero-content">
 
-            <h1><span id="laranja">SOBRE</span>NÓS</h1>
-
             <h1><span id="laranja">SOBRE</span> COWORKING</h1>
             <p>Conectando Quem Faz o Corre!</p>
         </div>
@@ -30,51 +28,27 @@
     <!-- Sobre nos -->
 
     <section class="informacoes">
-    <div class="info">
-        <h1>Muito além de um espaço</h1>
+        <div class="info">
+        <h1>Muito Além de Um Espaço de Trabalho </h1>
+
         <p>Descubra um ambiente pensado para inspirar, conectar e proporcionar experiências completas. Aqui, você encontra não só áreas para trabalhar, mas também espaços para eventos, convivência, criação de conteúdo, encontros sociais e momentos especiais.</p>
-    </div>
+        </div>
     
     <div class="num">
         <div class="num1">
-        <h2>+6</h2>
+        <h2>+ 6</h2>
         <p><b>Espaços para Reuniões & Treinamentos</b></p>
         </div>
         <div class="num2">
-        <h2>+4</h2>
+        <h2>+ 4</h2>
         <p><b>Espaços para Evetos & festas</b></p>
-
-    <section id="sobre" class="sobre-nos">
-        <div class="sobre-text">
-            <h2>Muito Além de um Espaço de Trabalho </h2>
-            <p>Descubra um ambiente pensado para inspirar, conectar e proporcionar experiências completas. Aqui, você encontra não só áreas para trabalhar, mas também espaços para eventos, convivência, criação de conteúdo, encontros sociais e momentos especiais.</p>
-        </div>
-        <div class="center-text">
-            <div class="adicional-text2">
-                <h2><span id="maior" class="adicional-text3">+ 6</span></h2>
-                <p>Espaços para Reuniões & Treinamentos</p>
-                <div class="adicional-text3">
-                    <h2><span id="maior">+ 4</span></h2>
-                    <p>Espaços para Evetos & festas</p>
-                </div>
-                <div class="adicional-text3">
-                    <h2><span id="maior">+ 3</span></h2>
-                    <p>Espaços para Produção & Conteúdo</p>
-                </div>
-                <div class="adicional-text3">
-                    <h2><span id="maior">+ 10</span></h2>
-                    <p>Espaços para Trabalhos individuais ou em equipe</p>
-                </div>
-            </div>
-
-
         </div>
         <div class="num3">
-        <h2>+3</h2>
+        <h2>+ 3</h2>
         <p><b>Espaços para Produção & Conteúdo</b></p>
         </div>
         <div class="num4">
-        <h2>+10</h2>
+        <h2>+ 10</h2>
         <p><b>Espaços para Trabalhos individualis ou em equipe</b></p>
         </div>
     </div>
@@ -153,7 +127,7 @@
                 <textarea placeholder="Mensagem"></textarea>>
             </div>
 
-        <div class="informacoes">
+        <div class="">
             <h2>Entre em contato</h2>
             <p>Precisa de suporte, tem alguma dúvida sobre reservas ou quer se tornar um parceiro? Nossa eque está à disposição.</p>
             <button>ENVIAR</button>
