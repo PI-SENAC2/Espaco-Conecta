@@ -13,7 +13,7 @@ Separação entre frontend, backend e banco de dados
 
 🏗️ Estrutura do Projeto
 
-/nome-do-projeto
+/Espaco-Conecta
 
 ├── /frontend
 
@@ -43,31 +43,37 @@ Gerenciamento de horários
 
 Integração com banco de dados
 
-📂 Como executar o projeto
+## 📊 Modelo Entidade Relacionamento
 
-1. Clonar o repositório
+```mermaid
+erDiagram
 
-2. git clone https://github.com/seu-usuario/nome-do-repositorio.git
+    PERFIL {
+        int id PK
+        varchar nome
+        varchar email
+        varchar senha_hash
+    }
 
-3. Acessar as pastas
+    ESPACO {
+        int id_espaco PK
+        int perfil_id FK
+        varchar nome
+        varchar endereco
+    }
 
-cd nome-do-repositorio
+    RESERVA {
+        int id_reserva PK
+        int perfil_id FK
+        int espaco_id FK
+        datetime inicio
+        datetime fim
+    }
 
-4. Configurar o banco de dados
-
-Execute os scripts da pasta /database
-
-5. Rodar o backend
-
-cd backend
-
-# comando depende da tecnologia usada
-
-5. Rodar o frontend
-
-cd frontend
-
-# abrir index.html ou rodar servidor local
+    PERFIL ||--o{ ESPACO : possui
+    PERFIL ||--o{ RESERVA : realiza
+    ESPACO ||--o{ RESERVA : recebe
+```
 
 📚 Aprendizados
 
@@ -80,11 +86,12 @@ Integração com banco de dados
 
 Organização de projetos
 
-👨‍💻 Participantes:
 
+👨‍💻 Participantes:
 
 [Maykon Rodrigues](https://github.com/Dev-Maykon)
 
 [Augusto Mangano Costa](https://github.com/mangacosta4-ai)
 
 [Bruno Martins](https://github.com/Brunomartins-web)
+
