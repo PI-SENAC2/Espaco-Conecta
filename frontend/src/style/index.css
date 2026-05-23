@@ -465,89 +465,26 @@ flex-direction: column;
    color: var(--text-color);
 }
 
+
+
+/* BARRA PESQUISA */
 .conteiner-filtros {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 70px;
+  align-items: center;
+
   padding: 30px 50px;
   background: #1d1d1d;
   color: white;
 }
 
-/* SIDEBAR */
-.filtros {
-   margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: left;
-  height: 720px;
-  width: 300px;
-  background-color: #111;
-  padding: 30px 40px;
-  border-radius: 10px;
-  border: 2px solid #E0712B;
-}
-
-.conteiner-space{
-   display: flex;
-   flex-direction: column;
-   gap: 20px;
-}
-
-.conteiner-space h2{
-   font-size: 40px;
-   font-weight: 700;
-}
-
-.conteiner-space h3{
-   font-size: 26px;
-   font-weight: 700;
-}
-
-.conteiner-space label{
-    color: white;
-   font-size: 18px;
-   font-weight: 100;
-}
-
-#limpar{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
-   text-decoration: none;
-   border-radius: 10px;
-   height: 40px;
-   width: 150px;
-   background-color: #E0712B;
-   color: white;
-   font-weight: 700;
-   border: none;
-}
-
-#limpar a:hover{
-   background-color: #ffffff;
-   color: #E0712B;
-   font-size: 700;
-   transform: scale(1.0);
-   transition: background-color 0.3s ease, transform 0.09s ease;
-}
-
-.conteiner-button{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   height: 100%;
-   width: 100%;
-}
-
-/* BARRA PESQUISA */
 main {
   display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 50px;
+
+  gap: 50px;
 }
 
 #listaProdutos {
