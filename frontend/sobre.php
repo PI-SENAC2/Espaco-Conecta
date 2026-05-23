@@ -19,13 +19,31 @@
 
      <section id="home" class="hero">
         <div class="hero-content">
+
+            <h1><span id="laranja">SOBRE</span>NÓS</h1>
+
             <h1><span id="laranja">SOBRE</span> COWORKING</h1>
             <p>Conectando Quem Faz o Corre!</p>
         </div>
     </section>
 
-
     <!-- Sobre nos -->
+
+    <section class="informacoes">
+    <div class="info">
+        <h1>Muito além de um espaço</h1>
+        <p>Descubra um ambiente pensado para inspirar, conectar e proporcionar experiências completas. Aqui, você encontra não só áreas para trabalhar, mas também espaços para eventos, convivência, criação de conteúdo, encontros sociais e momentos especiais.</p>
+    </div>
+    
+    <div class="num">
+        <div class="num1">
+        <h2>+6</h2>
+        <p><b>Espaços para Reuniões & Treinamentos</b></p>
+        </div>
+        <div class="num2">
+        <h2>+4</h2>
+        <p><b>Espaços para Evetos & festas</b></p>
+
     <section id="sobre" class="sobre-nos">
         <div class="sobre-text">
             <h2>Muito Além de um Espaço de Trabalho </h2>
@@ -49,22 +67,27 @@
                 </div>
             </div>
 
+
+        </div>
+        <div class="num3">
+        <h2>+3</h2>
+        <p><b>Espaços para Produção & Conteúdo</b></p>
+        </div>
+        <div class="num4">
+        <h2>+10</h2>
+        <p><b>Espaços para Trabalhos individualis ou em equipe</b></p>
+        </div>
+    </div>
+
+        <div class="historia">
+            <h2>A Historia da Espaço Conecta!</h2>
+            <p>A Espaço Conecta nasceu com um propósito simples, mas poderoso: criar oportunidades reais para quem está na correria do dia a dia e precisa de um lugar digno, acessível e inspirador para trabalhar.
+            Localizada na periferia, a Espaço Conecta surge como um ponto de encontro entre sonhos e ação. Sabemos que grandes ideias não vêm apenas de grandes centros, elas vêm de pessoas determinadas, que fazem acontecer todos os dias.
+            Por isso, criamos um ambiente moderno, funcional e acolhedor, pensado para quem empreende, estuda, cria e luta pelo seu crescimento. Aqui, cada conexão importa, cada projeto tem valor e cada pessoa tem espaço.</p>
         </div>
 
+    
     </section>
-
-  
-
-    <section class="if">
-    <div class = "sobre">
-    <h1>A Historia da Espaço Conecta!</h1>
-    <p>A Espaço Conecta nasceu com um propósito simples, mas poderoso: criar oportunidades reais para quem está na correria do dia a dia e precisa de um lugar digno, acessível e inspirador para trabalhar.
-Localizada na periferia, a Espaço Conecta surge como um ponto de encontro entre sonhos e ação. Sabemos que grandes ideias não vêm apenas de grandes centros, elas vêm de pessoas determinadas, que fazem acontecer todos os dias.
-Por isso, criamos um ambiente moderno, funcional e acolhedor, pensado para quem empreende, estuda, cria e luta pelo seu crescimento. Aqui, cada conexão importa, cada projeto tem valor e cada pessoa tem espaço.</p>
-</div>
-</section>
-
-
 
 
 
