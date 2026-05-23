@@ -83,8 +83,8 @@ Organização de projetos
 👨‍💻 Participantes:
 
 
-Maykon Rodrigues
+[Maykon Rodrigues](https://github.com/Dev-Maykon)
 
-Augusto Mangano Costa
+[Augusto Mangano Costa](https://github.com/mangacosta4-ai)
 
-Bruno Martins
+[Bruno Martins](https://github.com/Brunomartins-web)
