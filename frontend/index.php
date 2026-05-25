@@ -83,33 +83,6 @@
 
     <div class="conteiner-filtros">
 
-        <aside class="filtros">
-            <div class="conteiner-space">
-                <h2>Filtros</h2>
-                <h3>Espaços</h3>
-                <label><input type="checkbox" id="checxkbox" value="individual"> Individual</label>
-                <label><input type="checkbox" value="reuniao"> Sala de Reunião</label>
-                <label><input type="checkbox" value="equipe"> Equipe</label>
-
-                <h3>Infraestrutura</h3>
-                <label><input type="checkbox" value="wifi"> Wi-Fi</label>
-                <label><input type="checkbox" value="cozinha"> Cozinha</label>
-                <label><input type="checkbox" value="projetor"> Projetor</label>
-                <label><input type="checkbox" value="ar"> Ar-Condicionado</label>
-                <label><input type="checkbox" value="impressora"> Impressora</label>
-
-                <h3>Capacidade</h3>
-                <label><input type="checkbox" value="1-2"> 1-2 Pessoas</label>
-                <label><input type="checkbox" value="3-5"> 3-5 Pessoas</label>
-
-            </div>
-            <button id="limpar" class="button-card">
-                <div class="conteiner-button">
-                    <a href="#" id="limpar">Limpar Filtros</a>
-                </div>
-            </button>
-        </aside>
-
         <main class="produtos" id="listaProdutos">
 
             <div class="top-bar">

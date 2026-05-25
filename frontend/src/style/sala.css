@@ -213,13 +213,12 @@ header {
     align-items: flex-start;
 
     width: 100%;
-    padding: 40px 90px; /* mesmo padding da galeria */
+    padding: 40px 80px; /* mesmo padding da galeria */
 
     gap: 80px;
 }
 
 .esquerda-info{
-    flex: 1;
     width: 50%;
     justify-content: left;
 }
