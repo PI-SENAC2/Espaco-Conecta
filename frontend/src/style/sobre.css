@@ -504,8 +504,9 @@ header {
 
 /*----------------CONTATOS---------------*/
 .contatos{
+    width: 100%;
     background-color: var(--background-color);
-    padding: 60px 0;
+    padding: 60px;
 
     display: flex;
 
@@ -515,7 +516,7 @@ header {
     align-items: center;
 
 
-    gap: 100px;
+    gap: 50px;
 }
 
 .contatos h1{
@@ -574,26 +575,25 @@ header {
 
 /*----------------FORMULÁRIO---------------*/
 .formulario {
-    background-color: #1D1D1D;
-    width: 90%;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--text-color);
+    width: 100%;
     max-width: 1214px;
-    margin: 60px auto;
     padding: 20px;
     display: flex;
     justify-content: center;
-    border-radius: 5px;
+    align-items: center;
+    border-radius: 18px;
 }
 
 .fundo {
-    background-color: #0D0D0D;
-    border: 3px solid #000;
-    width: 90%;
+    background: var(--secondary-color);
+    width: 100%;
     max-width: 1100px;
     padding: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
     border-color: #000;
     border-radius: 5px;
 }
@@ -602,27 +602,38 @@ header {
 .formularios {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
-    width: 45%;
+}
+
+.formularios h2 {
+    color: var(--text-color);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-decoration: underline;
 }
 
 .formularios input {
-    background-color: #111;
+    background-color: #ffffff;
     border: 3px solid #000;
+    border-radius: 10px;
     padding: 15px;
-    color: white;
+    color: var(--background-color);
     width: 518px;
     outline: none;
 }
 
 /* deixa o último maior tipo mensagem */
 .formularios textarea {
-    background-color: #111;
-    border: 3px solid #000;
+    background-color: #000000;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
     padding: 15px;
-    color: white;
+    color: var(--primary-color);
+    font-weight: 700;
     outline: none;
-    height: 151px;
+    height: 100px;
     width: 518px;
     resize: none;
 }
@@ -646,7 +657,10 @@ header {
 }
 
 /* BOTÃO */
-.informacoes button {
+.enviar-button {
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
     width: 180px;
     padding: 12px;
 
@@ -660,7 +674,7 @@ header {
     cursor: pointer;
 }
 
-.informacoes button:hover {
+.enviar-button:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }

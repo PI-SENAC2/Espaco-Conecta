@@ -183,16 +183,11 @@
         <div class="formulario">
             <div class="fundo">
                 <div class="formularios">
+                    <h2>ENTRE EM CONTATO</h2>
                     <input type="text" placeholder="Nome">
                     <input type="text" placeholder="Email">
-                    <textarea placeholder="Mensagem"></textarea>>
-                </div>
-
-                <div class="">
-                    <h2>Entre em contato</h2>
-                    <p>Precisa de suporte, tem alguma dúvida sobre reservas ou quer se tornar um parceiro? Nossa eque
-                        está à disposição.</p>
-                    <button>ENVIAR</button>
+                    <textarea placeholder="Mensagem"></textarea>
+                    <a href="" class="enviar-button">ENVIAR</a>
                 </div>
             </div>
         </div>
