@@ -29,7 +29,8 @@ hr {
     height: 2px;
     background-color: #ffffff;
 
-    width: 1400PX;
+    width: 100%;
+    max-width: 1400px;
 }
 
 /* =========================
@@ -193,16 +194,18 @@ header {
 
 #laranja {
    display: flex;
-  font-size: 95px;
+  font-size: clamp(42px, 8vw, 95px);
   font-weight: 700;
   color: #E0712B;
 }
 
 .hero-content h1{
    display: flex;
-   gap: 30px;
-   font-size: 90px;
-   font-weight: 700;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 15px;
+   font-size: clamp(42px, 8vw, 90px);
+   text-align: center;
    color: white;
 }
 
@@ -263,9 +266,10 @@ header {
 }
 
 .info p{
-    width: 1200px;
+    width: 100%;
     color: #bdbdbd;
     font-size: 20px;
+    max-width: 1200px;
 }
 
 .num{
@@ -427,39 +431,31 @@ header {
 /*----------------PARA-QUEM---------------*/
 .para-quem{
     color: white;
-    height: 100vh;
     width: 100%;
-
     display: flex;
     flex-direction: column;
-
-    gap: 18px;
-
+    gap: 40px;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    margin: 0 auto;   /* centraliza */
-    padding: 110px 20px;
+    padding: 80px 20px;
 }
 
 .quem-tem{
     display: flex;
-    margin: 0px 50px 0px 50px;
-    max-width: 1200px;
-    height: 100vh;
-
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-    margin-bottom: 25px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .quem-busca{
     display: flex;
-    height: 100vh;
-    max-width: 1200px;
-    margin: 0px 50px 0px 50px;
-
+    align-items: center;
+    justify-content: center;
     gap: 20px;
-
+    width: 100%;
+    max-width: 1200px;
 }
 
 .text-1 {
@@ -531,7 +527,6 @@ header {
     max-width: 1200px;
     display: flex;
     margin: 0 auto;
-
     gap: 50px;
 }
 
@@ -620,7 +615,8 @@ header {
     border-radius: 10px;
     padding: 15px;
     color: var(--background-color);
-    width: 518px;
+    width: 100%;
+    max-width: 518px;
     outline: none;
 }
 
@@ -634,7 +630,8 @@ header {
     font-weight: 700;
     outline: none;
     height: 100px;
-    width: 518px;
+    width: 100%;
+    max-width: 518px;
     resize: none;
 }
 
@@ -876,5 +873,180 @@ header {
 
     .nav-logo-footer img{
         height: 42px;
+    }
+}
+
+/* =========================
+   RESPONSIVO MOBILE
+========================= */
+
+@media (max-width: 768px){
+
+    /* HERO */
+    .hero{
+        padding: 0 20px;
+        height: auto;
+        min-height: 500px;
+    }
+
+    .hero-content p{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* SOBRE */
+    .informacoes{
+        padding: 40px 20px;
+    }
+
+    .info h1{
+        font-size: 32px;
+    }
+
+    .info p{
+        font-size: 16px;
+    }
+
+    .num{
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    /* HISTÓRIA */
+    .historia{
+        padding: 30px 10px;
+    }
+
+    .historia h2{
+        font-size: 32px;
+    }
+
+    .historia p{
+        font-size: 16px;
+    }
+
+    /* MISSÃO */
+    .missao-visao-valores{
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .texto h2{
+        font-size: 36px;
+    }
+
+    /* PARA QUEM */
+    .quem-tem,
+    .quem-busca{
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .text-1,
+    .text-2{
+        text-align: center;
+    }
+
+    .text-1 h2,
+    .text-2 h2{
+        font-size: 32px;
+    }
+
+    .text-1 p,
+    .text-2 p{
+        font-size: 18px;
+    }
+
+    /* CONTATOS */
+    .contatos{
+        padding: 40px 20px;
+    }
+
+    .contatos h1{
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .icones{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .telefone,
+    .whatsapp,
+    .localizacao{
+        width: 100%;
+        max-width: 350px;
+        height: 220px;
+    }
+
+    /* FORM */
+    .formulario{
+        padding: 15px;
+    }
+
+    .fundo{
+        padding: 20px;
+    }
+
+    .formularios{
+        width: 100%;
+    }
+
+    .formularios input,
+    .formularios textarea{
+        width: 100%;
+    }
+
+    .formularios h2{
+        text-align: center;
+        font-size: 28px;
+    }
+
+    /* NAVBAR */
+    .navbar{
+        padding: 15px 20px;
+    }
+
+    .nav-list{
+        gap: 15px;
+    }
+}
+@media (max-width: 768px){
+
+    .quem-tem,
+    .quem-busca{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quem-busca{
+        flex-direction: column-reverse;
+    }
+
+    .quem-tem img,
+    .quem-busca img{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .text-1,
+    .text-2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-1 h2,
+    .text-2 h2{
+        font-size: 28px;
+    }
+
+    .text-1 p,
+    .text-2 p{
+        font-size: 16px;
+        line-height: 1.6;
     }
 }
