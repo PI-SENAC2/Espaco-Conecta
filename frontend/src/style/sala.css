@@ -210,20 +210,17 @@ header {
 .divisões {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 
     width: 100%;
-    min-height: 100vh;
-    padding: 15px 110px; /* mesmo padding da galeria */
+    padding: 40px 80px; /* mesmo padding da galeria */
 
     gap: 80px;
 }
 
 .esquerda-info{
-    display: flex;
     width: 50%;
     justify-content: left;
-    align-items: center;
 }
 
 .direita-info{
@@ -235,7 +232,6 @@ header {
 /* CONTEÚDO */
 .conteudo h1 {
     font-size: 36px;
-    min-width: 1200px;
     color: var(--text-color);
     font-weight: 700;
     margin-bottom: 15px;
