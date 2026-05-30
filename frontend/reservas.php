@@ -100,34 +100,72 @@
 <section class="preferencias">
     <div class="painel-preferencias">
         <div class="titulo-preferencias">
-            <h3>Notificações</h3>
+            <h3>Filtros</h3>
         </div>
-        <div class="linha-preferencia">
-            <span>Email</span>
-            <input type="checkbox">
+
+        <div class="horarios">
+            <span>Horários</span>
+            <p>Manhã</p>
+            <div class="manha">
+            <button class="horario">07:00</button>
+            <button class="horario">08:00</button>
+            <button class="horario">09:00</button>
+            <button class="horario">10:00</button>
+            <button class="horario">Todos</button>
+
+            </div>
+            <div class="tarde">
+            <button class="horario">12:00</button>
+            <button class="horario">14:00</button>
+            <button class="horario">16:00</button>
+            <button class="horario">18:00</button>
+            <button class="horario">Todos</button>
+            </div>
+            <div class="noite">
+            <button class="horario">19:00</button>
+            <button class="horario">20:00</button>
+            <button class="horario">21:00</button>
+            <button class="horario">22:00</button>
+            <button class="horario">Todos</button>
+            </div>
+           
         </div>
-        <div class="linha-preferencia">
-            <span>SMS</span>
-            <input type="checkbox">
+
+        <div class="tipo-espaco">
+            <h3>Tipo do espaço</h3>
+            <div class="privado">
+                <h4>Privado</h4>
+                <p>Um ambiente reservado e confortável para quem busca foco, privacidade e máxima produtividade. Ideal para reuniões online, estudos ou trabalho individual sem distrações.</p>
+            </div>
+            <div class="grupo">
+                <h4>Grupo</h4>
+                <p>Um espaço pensado para colaboração, criatividade e conexão entre equipes. Perfeito para reuniões, brainstorms, networking e projetos em grupo em um ambiente moderno e inspirador.</p>
+            </div>
         </div>
-        <div class="titulo-preferencias">
-            <h3>Preferências</h3>
+
+        <div class="dia">
+            <h3>Dia</h3>
+            <input type="date">
         </div>
-        <div class="linha-preferencia">
-            <span>Idioma</span>
+
+        <div class="tipo-espaco">
+            <span>Tipo do Espaço</span>
+            <button class="horario"><img src="./assets/img/ar-condicionado.svg" alt=""></button>
+            <button class="horario"><img src="./assets/img/cafe.svg" alt=""></button>
+            <button class="horario"><img src="./assets/img/guarda-volume.svg" alt=""></button>
+            <button class="horario"><img src="./assets/img/projetor.svg" alt=""></button>
+            <button class="horario"><img src="./assets/img/acessibilidade.svg" alt=""></button>
+            <button class="horario"><img src="./assets/img/impressora.svg" alt=""></button>
+            <button class="horario"><img src="./assets/img/garagem.svg" alt=""></button>
+            <button class="horario"><img src="./assets/img/cozinha.svg" alt=""></button>
         </div>
-        <div class="linha-preferencia">
-            <span>Política de reembolso</span>
-        </div>
-        <div class="linha-preferencia">
-            <span>Termos de uso</span>
-        </div>
-        <div class="linha-preferencia">
-            <span>Ajuda</span>
+        <div class="botoes">
+        <button>Limpar Filtros</button>
+        <button>Adicionar Espaço</button>
         </div>
     </div>
 
-    <button>Adicionar Espaço</button>
+    
 </section>
 
 </section>
