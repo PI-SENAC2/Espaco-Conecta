@@ -126,16 +126,6 @@
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
     <!----------------------------MAYKON---------------------------->
     <section class="para-quem">
         <div class="quem-tem">
@@ -179,7 +169,6 @@
                 <h3>18688-970</h3>
             </div>
         </div>
-        <!----------FORMULÁRIO---------->
         <div class="formulario">
             <div class="fundo">
                 <div class="formularios">
@@ -191,6 +180,7 @@
                 </div>
             </div>
         </div>
+        <!----------FORMULÁRIO---------->
     </section>
 
     <!----------FOOTER---------->
