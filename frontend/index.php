@@ -48,7 +48,7 @@
 
     </section>
 
-    <h2 class="text-center">NOSSOS ESPAÇOS</h2>
+    <h2 class="text-center">TIPOS DE ESPAÇOS</h2>
     <section class="cards">
         <div class="card" id="card-main">
             <img src="../frontend/assets/img/SalaReunião05.png" alt="">

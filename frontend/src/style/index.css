@@ -500,7 +500,7 @@ main {
 }
 
 .top-bar {
-  width: 80%;
+  width: 64%;
   display: flex;
   gap: 15px;
   margin-bottom: 0px;
@@ -524,6 +524,7 @@ main {
   border: none;
   background-color: #E0712B;
   color: white;
+  font-weight: 700;
   cursor: pointer;
 }
 
