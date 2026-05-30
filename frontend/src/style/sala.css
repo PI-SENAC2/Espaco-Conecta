@@ -213,7 +213,7 @@ header {
     align-items: flex-start;
 
     width: 100%;
-    padding: 40px 80px; /* mesmo padding da galeria */
+    padding: 40px 115px; /* mesmo padding da galeria */
 
     gap: 80px;
 }
