@@ -7,7 +7,6 @@
                     <li><a href="./index.php" class="linha">Home</a></li>
                     <li><a href="./reservas.php" class="linha">Reservas</a></li>
                     <li><a href="./sobre.php" class="linha">Sobre</a></li>
-                    <li><a href="./sobre.php" id="box-laranja">Contato</a></li>
                 </ul>
             </div>
             <div class="nav-logo">
@@ -22,10 +21,7 @@
                     <img src="../frontend/assets/img/Img-perfil.svg"
                         alt="Imagem de uma silhueta de uma pessoal, para representar o perfil">
                 </a>
-                <a href="#" id="favoritos" class="logo-perfl">
-                    <img src="../frontend/assets/img/Favorite.svg"
-                        alt="Imagem de uma silhueta de uma pessoal, para representar o perfil">
-                </a>
+            
             </div>
         </nav>
     </header>

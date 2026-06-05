@@ -16,7 +16,7 @@
 </head>
 
 <body>
-     
+
     <?php require_once "../backend/php/includes/navbar.inc.php"; ?>
 
     <!-- HERO (seção principal) -->
@@ -48,7 +48,7 @@
 
     </section>
 
-    <h2 class="text-center">NOSSOS ESPAÇOS</h2>
+    <h2 class="text-center">TIPOS DE ESPAÇOS</h2>
     <section class="cards">
         <div class="card" id="card-main">
             <img src="../frontend/assets/img/SalaReunião05.png" alt="">
@@ -97,26 +97,124 @@
                         <h4>Salas de Reunião</h4>
                         <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
                         <button class="button-card" href="./sala.php">
-                        <a href="./Sala.php">Reservar</a> </button>
+                            <a href="./Sala.php">Reservar</a> </button>
                     </div>
                 </div>
-    
+
                 <div class="card" data-espaco="reuniao" data-capacidade="3-5">
                     <img src="./assets/img/SalaReunião03.png">
+
                     <div class="colab-titulo">
-                        <h4>Sala Individua</h4>
+                        <h4>Sala Individual</h4>
                         <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-                        <button class="button-card">Reservar</button>
+
+                        <button class="button-card">
+                            <a href="./Sala.php">Reservar</a>
+                        </button>
+                    </div>
                 </div>
+                
+                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
+                    <img src="./assets/img/SalaReunião03.png">
+
+                    <div class="colab-titulo">
+                        <h4>Sala Individual</h4>
+                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+
+                        <button class="button-card">
+                            <a href="./Sala.php">Reservar</a>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
+                    <img src="./assets/img/SalaReunião03.png">
+
+                    <div class="colab-titulo">
+                        <h4>Sala Individual</h4>
+                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+
+                        <button class="button-card">
+                            <a href="./Sala.php">Reservar</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
+                    <img src="./assets/img/SalaReunião03.png">
+
+                    <div class="colab-titulo">
+                        <h4>Sala Individual</h4>
+                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+
+                        <button class="button-card">
+                            <a href="./Sala.php">Reservar</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
+                    <img src="./assets/img/SalaReunião03.png">
+
+                    <div class="colab-titulo">
+                        <h4>Sala Individual</h4>
+                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+
+                        <button class="button-card">
+                            <a href="./Sala.php">Reservar</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
+                    <img src="./assets/img/SalaReunião03.png">
+
+                    <div class="colab-titulo">
+                        <h4>Sala Individual</h4>
+                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+
+                        <button class="button-card">
+                            <a href="./Sala.php">Reservar</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
+                    <img src="./assets/img/SalaReunião03.png">
+
+                    <div class="colab-titulo">
+                        <h4>Sala Individual</h4>
+                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+
+                        <button class="button-card">
+                            <a href="./Sala.php">Reservar</a>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
+                    <img src="./assets/img/SalaReunião03.png">
+
+                    <div class="colab-titulo">
+                        <h4>Sala Individual</h4>
+                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+
+                        <button class="button-card">
+                            <a href="./Sala.php">Reservar</a>
+                        </button>
+                    </div>
+                </div>
+
             </div>
 
             <script src="./src/js/pesquisa.js"></script>
         </main>
     </div>
-    
-<footer>
-    <?php require_once "../backend/php/includes/footer.inc.php"; ?>
-</footer>
+
+    <footer>
+        <?php require_once "../backend/php/includes/footer.inc.php"; ?>
+    </footer>
 
 </body>
+
 </html>

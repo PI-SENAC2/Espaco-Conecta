@@ -375,79 +375,135 @@ header{
 
 
 /*PREFERÊNCIAS*/
-.preferencias {
+.preferencias{
+    width: 280px;
     border-left: 1px solid #444;
     padding-left: 20px;
-
-    width: 260px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    color: white;
 }
 
-/* PAINEL */
-.painel-preferencias {
+.painel-preferencias{
     border: 1px solid #888;
     border-radius: 15px;
     overflow: hidden;
-    color: white;
+    background: #1D1D1D;
 }
 
-/* TITULOS */
-.titulo-preferencias {
-    padding: 15px;
+.titulo-preferencias{
     text-align: center;
+    padding: 15px;
+    font-size: 20px;
     font-weight: bold;
     border-bottom: 1px solid #555;
 }
-
-/* LINHAS */
-.linha-preferencia {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+.horarios{
     padding: 15px;
-
     border-bottom: 1px solid #555;
 }
 
-/* REMOVE BORDA DA ÚLTIMA */
-.linha-preferencia:last-child {
-    border-bottom: none;
+.horarios span{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-/* TEXTO */
-.linha-preferencia span {
-    font-size: 16px;
+.horarios p{
+    margin: 10px 0;
+    font-size: 14px;
+}
+.manha, .tarde, .noite{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+}
+.horario{
+    border: none;
+    background: #d9d9d9;
+    color: black;
+    border-radius: 999px;
+    padding: 5px 8px;
+    font-size: 11px;
+    font-weight: bold;
 }
 
-/* CHECKBOX */
-.linha-preferencia input {
-    width: 18px;
-    height: 18px;
-}
-
-.preferencias button {
-    width: 100%;
-    padding: 20px;
-    background-color: transparent;
-    border: 1px solid #888;
+.horario:hover{
+    background: #E0712B;
     color: white;
+}
+.horario.ativo{
+    background: #E0712B;
+    color: white;
+}
+/*TIPO DO ESPAÇO*/
+.tipo-espaco{
+    padding: 15px;
+    border-bottom: 1px solid #555;
+    
+}
+.privado, .grupo{
+    border: 1px solid #555;
     border-radius: 10px;
-    font-size: 18px;
+    padding: 10px;
+    margin-top: 10px;
+    background: #222;
+}
+.privado h4, .grupo h4{
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+.privado p, .grupo p{
+    font-size: 12px;
+    line-height: 1.3;
+}
+/*DIA*/
+.dia{
+    padding: 15px;
+    border-bottom: 1px solid #555;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dia h3{
+    margin: 0;
+    white-space: nowrap;
+}
+
+.dia input{
+    flex: 1;
+    margin-top: 0;
+    padding: 8px;
+    background: transparent;
+    color: white;
+    border: 1px solid #555;
+    border-radius: 8px;
+}
+
+/*BOTÕES*/
+.botoes{
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+}
+.botoes button{
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
     cursor: pointer;
-    margin-top: 60px;
+    font-weight: bold;
 }
-
-.preferencias button:hover {
-    background-color: #E0712B;
-    transform: scale(1.1);
-    transition: transform 0.20s ease;
-    margin-top: 60px;
+.botoes button:first-child{
+    background: transparent;
+    color: white;
+    border: 1px solid #888;
 }
-
+.botoes button:last-child{
+    background: #E0712B;
+    color: white;
+}
 
 /* ======================================
    FOOTER

@@ -482,7 +482,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 
   gap: 50px;
 }
@@ -501,7 +500,7 @@ main {
 }
 
 .top-bar {
-  width: 80%;
+  width: 64%;
   display: flex;
   gap: 15px;
   margin-bottom: 0px;
@@ -525,13 +524,16 @@ main {
   border: none;
   background-color: #E0712B;
   color: white;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .colab-card{
-  display: flex;
-  gap: 20px;
-  color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    color: #ffffff;
+    justify-items: center;
 }
 
 /* GRID */
@@ -930,8 +932,7 @@ main {
     }
 
     .colab-card {
-        flex-wrap: wrap;
-        justify-content: center;
+       grid-template-columns: repeat(2, 1fr);
     }
 
     .card {
@@ -1057,8 +1058,7 @@ main {
 
     /* PRODUTOS */
     .colab-card {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
 
     .colab-titulo {
