@@ -258,8 +258,8 @@ header{
     max-width: 670px;          /* limite para não ficar gigante */
     min-height: 350px;         /* altura mínima, cresce se precisar */
     color: white;
-    padding: 10px;
     margin: 0 auto;
+    padding-bottom: 190px;
 }
         .titulo {
             display: flex;

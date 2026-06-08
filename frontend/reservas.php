@@ -71,11 +71,13 @@
 
         <div class="regiao">
             <form method="post" action="cadastrar-enquete.php">
+                <label for="nome">Região</label>
                 <select name="time">
-                    <option value="bota">Botafogo</option>
-                    <option value="fla">Flamengo</option>
-                    <option value="flu">Fluminense</option>
-                    <option value="vasco">Vasco da Gama</option>
+                    <option value="Norte">Norte</option>
+                    <option value="Nordeste">Nordeste</option>
+                    <option value="Centro-Oeste">Centro-Oeste</option>
+                    <option value="Sudeste">Sudeste</option>
+                    <option value="Sul">Sul</option>
                 </select>
                 <div class="botoes">
                     <input type="submit" id="enviar" value="Enviar" />
