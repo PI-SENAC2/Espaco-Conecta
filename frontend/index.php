@@ -211,6 +211,56 @@
         </main>
     </div>
 
+    
+<div class="card-sala">
+
+    <img src="./assets/img/Sala1.png" alt="Sala de Treinamento" class="card-img">
+
+    <div class="card-info">
+        <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
+
+        <p>
+            Espaço para locação, ideal para reuniões, eventos,
+            workshops ou atividades profissionais.
+        </p>
+
+        <div class="preco">
+            <span>Preço mínimo:</span>
+            <strong>R$5,00</strong>
+        </div>
+
+        <div class="comodidades">
+
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider">
+            <img src="./assets/img/ar-condicionado.svg" alt="">
+        </span>
+    </label>
+
+    <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider">
+            <img src="./assets/img/cafe.svg" alt="">
+        </span>
+    </label>
+
+    <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider">
+            <img src="./assets/img/guarda-volume.svg" alt="">
+        </span>
+    </label>
+
+</div>
+    </div>
+
+    <button class="btn-buscar">
+        Buscar
+    </button>
+
+</div>
+
     <footer>
         <?php require_once "../backend/php/includes/footer.inc.php"; ?>
     </footer>

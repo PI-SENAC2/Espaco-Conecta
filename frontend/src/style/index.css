@@ -595,6 +595,158 @@ main {
    border: none;
 }
 
+
+/*CARDS NOVOS*/
+
+.card-sala {
+    width: 100%;
+    max-width: 1200px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    padding: 20px;
+
+    background-color: #000;
+    border: 2px solid #E0712B;
+    border-radius: 15px;
+}
+
+.card-img {
+    width: 400px;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+    border: 2px solid #FFF;
+}
+
+.card-info {
+    flex: 1;
+}
+
+.card-info h3 {
+    color: #FFF;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.card-info p {
+    color: #BDBDBD;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.preco {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.preco span {
+    color: #8A8A8A;
+}
+
+.preco strong {
+    color: #00C853;
+    font-size: 18px;
+}
+
+.comodidades {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px 12px;
+
+    border: 2px solid #FFF;
+    border-radius: 30px;
+}
+
+.item img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.btn-buscar {
+    width: 120px;
+    height: 50px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #D9D9D9;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+
+    width: 70px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-right: 8px;
+
+    border: 2px solid #FFF;
+    border-radius: 50px;
+
+    cursor: pointer;
+}
+
+.slider::before {
+    content: "";
+
+    position: absolute;
+    left: 4px;
+    top: 4px;
+
+    width: 22px;
+    height: 22px;
+
+    background: #FFF;
+    border-radius: 50%;
+
+    transition: 0.3s ease;
+}
+
+.slider img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Ativado */
+
+.switch input:checked + .slider::before {
+    transform: translateX(36px);
+}
+
 /* ======================================
    FOOTER
 ====================================== */
