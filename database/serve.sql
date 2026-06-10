@@ -1,0 +1,12 @@
+create database espaco_conecta;
+
+use espaco_conecta;
+
+-- TABELA PERFIL 
+create table perfil (
+id int primary key NOT NULL AUTO_INCREMENT,
+nome varchar(100)NOT NULL,
+cpf varchar(12)NOT NULL UNIQUE,
+email varchar(100) NOT NULL UNIQUE,
+senha varchar(20) NOT NULL
+);
