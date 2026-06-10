@@ -25,13 +25,13 @@
         <section class="info-sala">
 
             <div class="galeria">
-                <img class="img-principal" src="../frontend/assets/img/SalaReunião06.png" alt="Sala">
+                <img class="img-principal" src="../frontend/assets/img/SalaReunião02.png" alt="Sala">
 
                 <div class="mini-galeria">
-                    <img src="../frontend/assets/img/SalaReunião07.png" alt="">
-                    <img src="../frontend/assets/img/SalaReunião08.png" alt="">
-                    <img src="../frontend/assets/img/SalaReunião09.png" alt="">
-                    <img src="../frontend/assets/img/SalaReunião10.png" alt="">
+                    <img src="../frontend/assets/img/SalaReunião01.png" alt="">
+                    <img src="../frontend/assets/img/SalaReunião03.png" alt="">
+                    <img src="../frontend/assets/img/SalaReunião04.png" alt="">
+                    <img src="../frontend/assets/img/SalaReunião05.png" alt="">
                 </div>
             </div>
         </section>
@@ -43,7 +43,7 @@
         <section class="esquerda-info">
 
             <div class="conteudo">
-                <h1>Avenida Carlos Caldeira Filho, 177 Jardim Ângela - São Paulo</h1>
+                <h1>Rua das Acácias, 157 – Campo Limpo - São Paulo</h1>
 
                 <p class="descricao-topo">
                     Espaço para locação, ideal para reuniões,
@@ -105,10 +105,9 @@
                             coworking foi pensado para oferecer praticidade, produtividade e bem-estar em um só lugar,
                             produtividade e bem-estar em um só lugar.
                         </p>
-                        
 
                         <!-- AVALIAÇÕES DOS USUÁRIOS -->
-                        <div class="avaliacoes-usuarios" id="listaAvaliacoes">
+                        <div class="avaliacoes-usuarios">
 
                             <h2>Avaliações dos Hóspedes</h2>
 
@@ -143,6 +142,7 @@
 
             </div>
         </section>
+
 
         <!-- LADO DIREITO -->
         <section class="direita-info">
@@ -222,12 +222,10 @@
 
                     <p>Faça a sua avaliação!</p>
 
-                    <input type="text" id="comentarioInput" placeholder="Comentar">
+                    <input type="text" placeholder="Comentar">
 
                 </div>
-                <button id="btnAvaliar" class="button-link">
-                    ENVIE SUA AVALIAÇÃO
-                </button>
+                <a href="#" class="button-link">ENVIE SUA AVALIAÇÃO</a>
 
             </aside>
         </section>
@@ -239,33 +237,7 @@
         <?php require_once "../backend/php/includes/footer.inc.php"; ?>
     </footer>
 
-<script>
-document.getElementById("btnAvaliar").addEventListener("click", function () {
 
-    const comentario = document.getElementById("comentarioInput").value;
-
-    if(comentario.trim() === ""){
-        alert("Digite um comentário!");
-        return;
-    }
-
-    const novaAvaliacao = document.createElement("div");
-    novaAvaliacao.classList.add("comentario-user");
-
-    novaAvaliacao.innerHTML = `
-        <div class="user-topo">
-            <h3>Visitante</h3>
-            <span>⭐ 5.0</span>
-        </div>
-
-        <p>${comentario}</p>
-    `;
-
-    document.getElementById("listaAvaliacoes").appendChild(novaAvaliacao);
-
-    document.getElementById("comentarioInput").value = "";
-});
-</script>
 </body>
 
 </html>
