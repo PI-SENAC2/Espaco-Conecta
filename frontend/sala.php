@@ -105,35 +105,37 @@
                             coworking foi pensado para oferecer praticidade, produtividade e bem-estar em um só lugar,
                             produtividade e bem-estar em um só lugar.
                         </p>
-                        
+
 
                         <!-- AVALIAÇÕES DOS USUÁRIOS -->
-                        <div class="avaliacoes-usuarios" id="listaAvaliacoes">
+                        <div class="avaliacoes-usuarios">
 
-                            <h2>Avaliações dos Hóspedes</h2>
+                            <h2>Avaliações</h2>
 
-                            <div class="comentario-user">
-                                <div class="user-topo">
-                                    <h3>Bruno Martins</h3>
-                                    <span>⭐ 5.0</span>
+                            <div id="listaAvaliacoes" class="lista-avaliacoes">
+
+                                <div class="comentario-user">
+                                    <div class="user-topo">
+                                        <h3>Bruno Martins</h3>
+                                        <span>⭐ 5.0</span>
+                                    </div>
+
+                                    <p>
+                                        Ambiente excelente, muito confortável e organizado.
+                                    </p>
                                 </div>
 
-                                <p>
-                                    Ambiente excelente, muito confortável e organizado.
-                                    Internet rápida e ótimo atendimento.
-                                </p>
-                            </div>
+                                <div class="comentario-user">
+                                    <div class="user-topo">
+                                        <h3>Letica Sousa</h3>
+                                        <span>⭐ 4.8</span>
+                                    </div>
 
-                            <div class="comentario-user">
-                                <div class="user-topo">
-                                    <h3>Letica Sousa</h3>
-                                    <span>⭐ 4.8</span>
+                                    <p>
+                                        Espaço muito bonito e silencioso para reuniões.
+                                    </p>
                                 </div>
 
-                                <p>
-                                    Espaço muito bonito e silencioso para reuniões.
-                                    Voltarei mais vezes!
-                                </p>
                             </div>
 
                         </div>
@@ -222,9 +224,19 @@
 
                     <p>Faça a sua avaliação!</p>
 
-                    <input type="text" id="comentarioInput" placeholder="Comentar">
+                    <input type="text" id="nomeInput" placeholder="Seu nome">
 
+                    <textarea id="comentarioInput" placeholder="Digite seu comentário" rows="4"></textarea>
+
+                    <select id="notaInput">
+                        <option value="5.0">⭐ 5</option>
+                        <option value="4.0">⭐ 4</option>
+                        <option value="3.0">⭐ 3</option>
+                        <option value="2.0">⭐ 2</option>
+                        <option value="1.0">⭐ 1</option>
+                    </select>
                 </div>
+
                 <button id="btnAvaliar" class="button-link">
                     ENVIE SUA AVALIAÇÃO
                 </button>
@@ -239,33 +251,45 @@
         <?php require_once "../backend/php/includes/footer.inc.php"; ?>
     </footer>
 
-<script>
-document.getElementById("btnAvaliar").addEventListener("click", function () {
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
 
-    const comentario = document.getElementById("comentarioInput").value;
+        const btn = document.getElementById("btnAvaliar");
 
-    if(comentario.trim() === ""){
-        alert("Digite um comentário!");
-        return;
-    }
+        btn.addEventListener("click", () => {
 
-    const novaAvaliacao = document.createElement("div");
-    novaAvaliacao.classList.add("comentario-user");
+            const nome = document.getElementById("nomeInput").value.trim();
+            const comentario = document.getElementById("comentarioInput").value.trim();
+            const nota = document.getElementById("notaInput").value;
 
-    novaAvaliacao.innerHTML = `
-        <div class="user-topo">
-            <h3>Visitante</h3>
-            <span>⭐ 5.0</span>
-        </div>
+            if (nome === "" || comentario === "") {
+                alert("Preencha nome e comentário!");
+                return;
+            }
 
-        <p>${comentario}</p>
-    `;
+            const novaAvaliacao = document.createElement("div");
 
-    document.getElementById("listaAvaliacoes").appendChild(novaAvaliacao);
+            novaAvaliacao.classList.add("comentario-user");
 
-    document.getElementById("comentarioInput").value = "";
-});
-</script>
+            novaAvaliacao.innerHTML = `
+            <div class="user-topo">
+                <h3>${nome}</h3>
+                <span>⭐ ${nota}</span>
+            </div>
+
+            <p>${comentario}</p>
+        `;
+
+            document.getElementById("listaAvaliacoes")
+                .prepend(novaAvaliacao);
+
+            document.getElementById("nomeInput").value = "";
+            document.getElementById("comentarioInput").value = "";
+            document.getElementById("notaInput").value = "5.0";
+        });
+
+    });
+    </script>
 </body>
 
 </html>

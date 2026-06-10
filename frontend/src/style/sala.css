@@ -560,6 +560,49 @@ hr {
     font-size: 15px;
 }
 
+.avaliacao-box textarea,
+.avaliacao-box select,
+.avaliacao-box input{
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+
+    background: #242424;
+    border: 1px solid #2e2e2e;
+    border-radius: 8px;
+
+    color: white;
+    font-size: 15px;
+}
+
+.avaliacao-box textarea{
+    resize: none;
+}
+
+#listaAvaliacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lista-avaliacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.lista-avaliacoes{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.comentario-user{
+    padding: 24px;
+}
+
 /* ======================================
    FOOTER
 ====================================== */
