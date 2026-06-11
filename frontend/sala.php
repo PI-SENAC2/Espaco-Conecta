@@ -60,6 +60,23 @@ $salas = [
         "Salaunica04.png",
         "Salaunica05.png"
     ]
+],
+    "5" => [
+    "endereco" => "Rua Antônio de Barros Neto, 188 - Cidade Tiradentes, São Paulo - SP",
+
+    "descricaoTopo" => "Um ambiente que conecta profissionalismo, oportunidade e transformação.",
+
+    "descricao" => "Sala privativa desenvolvida para empreendedores, estudantes, freelancers e profissionais que buscam um local inspirador para produzir, atender clientes ou realizar reuniões. Com design moderno, estrutura premium e elementos que valorizam a identidade das periferias paulistanas, o espaço oferece conforto, tecnologia e tranquilidade para impulsionar projetos, ideias e negócios.",
+
+    "avaliacao" => "4.9",
+
+    "imagens" => [
+        "Salatreinamento1.png",
+        "Salatreinamento2.png",
+        "Salatreinamento3.png",
+        "Salatreinamento4.png",
+        "Salatreinamento5.png"
+    ]
 ]
 
 ];
