@@ -50,7 +50,6 @@
 }
 
 </style>
-<p style="color:red;">NAVBAR TESTE</p>
 <!-- NAVBAR -->
 
 <header class="header">

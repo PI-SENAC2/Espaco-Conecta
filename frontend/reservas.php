@@ -67,36 +67,40 @@
     </div>
 
     <!-- FILTRO + REGIÃO (estrutura corrigida) -->
+    <form method="GET" action="reservas.php">
     <div class="filtro">
         <h3>Tipo do espaço</h3>
         <div class="tipos">
-            <div class="privado">
+            <label class="privado">
+                <input type="radio" name="tipo" id="privado" value="Privado">
+                <label for="privado" class="privado">
                 <h4>Privado</h4>
-                <p>Um ambiente reservado e confortável para quem busca foco, privacidade e máxima produtividade. Ideal para reuniões online, estudos ou trabalho individual sem distrações.</p>
-            </div>
-            <div class="grupo">
-                <h4>Grupo</h4>
-                <p>Um espaço pensado para colaboração, criatividade e conexão entre equipes. Perfeito para reuniões, brainstorming, networking e projetos em grupo em um ambiente moderno e inspirador.</p>
-            </div>
+                <p>Um ambiente reservado e confortável para quem busca foco,privacidade e máxima produtividade.</p>
+            </label>
+            <input type="radio" name="tipo" id="grupo" value="Grupo">
+            <label for="grupo" class="grupo">
+            <h4>Grupo</h4>
+                <p>Um espaço pensado para colaboração, criatividade e conexãoentre equipes.</p>
+            </label>
         </div>
 
         <div class="regiao">
-            <form method="post" action="cadastrar-enquete.php">
-                <label for="nome">Região</label>
-                <select name="time">
-                    <option value="Norte">Norte</option>
-                    <option value="Nordeste">Nordeste</option>
-                    <option value="Centro-Oeste">Centro-Oeste</option>
-                    <option value="Sudeste">Sudeste</option>
-                    <option value="Sul">Sul</option>
-                </select>
-                <div class="botoes">
-                    <input type="submit" id="enviar" value="Enviar" />
-                    <input type="reset" id="cancelar" value="Cancelar" />
-                </div>
-            </form>
-        </div>
-    </div>
+            <label for="regiao">Região</label>
+            <select name="regiao" id="regiao">
+                <option value="">Todas as regiões</option>
+                <option value="Norte">Norte</option>
+                <option value="Nordeste">Nordeste</option>
+                <option value="Centro-Oeste">Centro-Oeste</option>
+                <option value="Sudeste">Sudeste</option>
+                <option value="Sul">Sul</option>
+            </select>
+
+            <div class="botoes">
+                <input type="submit" id="enviar" value="Buscar">
+                <input type="reset" id="cancelar" value="Limpar filtros">
+            </div>
+    </form>
+
 </section>
 </section>
 <!--------------------------------FOOTER------------------------------------>

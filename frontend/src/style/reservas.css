@@ -318,6 +318,11 @@ header{
     flex-wrap: wrap;           /* permite quebra em telas pequenas */
 }
 
+.privado input,
+.grupo input {
+    display: none;
+}
+
 .filtro {
     width: 280px;
     border: 1px solid #555;
@@ -334,11 +339,24 @@ header{
 }
 
 .privado, .grupo {
-    border: 1px solid #555;
-    border-radius: 8px;
-    padding: 10px;
+    display: block;
+    border: 2px solid #555;
+    border-radius: 20px;
+    padding: 15px;
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
+
+input[type="radio"]{
+    display:none;
+}
+#privado:checked + .privado,
+#grupo:checked + .grupo{
+    border: 2px solid #E0712B;
+    box-shadow: 0 0 10px rgba(224,113,43,.4);
+}
+
 
 .privado p, .grupo p {
     font-size: 14px;

@@ -3,6 +3,8 @@
 $salas = [
 
     "1" => [
+        "tipo" => "Grupo",
+        "regiao" => "Sudeste",
         "endereco" => "Avenida Carlos Caldeira Filho, 177 Jardim Ângela - São Paulo",
         "descricaoTopo" => "Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.",
         "descricao" => "Descubra um ambiente moderno e funcional, ideal para profissionais, empresas e equipes que buscam um local confortável e inspirador para trabalhar e realizar reuniões. Nosso espaço de coworking foi pensado para oferecer praticidade, produtividade e bem-estar em um só lugar.",
@@ -17,6 +19,9 @@ $salas = [
     ],
 
     "2" => [
+        "tipo" => "Privado",
+        "regiao" => "Sul",
+
         "endereco" => "Estrada do Campo Limpo, 1200 Campo Limpo - São Paulo",
         "descricaoTopo" => "Sala executiva moderna, ideal para reuniões rápidas, entrevistas e atendimentos profissionais.",
         "descricao" => "Ambiente confortável, silencioso e bem equipado para profissionais que precisam de praticidade, privacidade e boa estrutura.",
@@ -31,6 +36,9 @@ $salas = [
     ],
 
     "3" => [
+        "tipo" => "Grupo",
+        "regiao" => "Norte",
+
         "endereco" => "Rua Luís Mateus, 1200 Cidade Tiradentes - São Paulo",
         "descricaoTopo" => "Ambiente compartilhado para trabalho, estudos, networking e produtividade.",
         "descricao" => "Espaço colaborativo pensado para profissionais autônomos, estudantes, freelancers e pequenas equipes.",
@@ -45,7 +53,9 @@ $salas = [
     ],
 
     "4" => [
-    "endereco" => "Rua José Francisco dos Santos, 245 - Vila Carmosina, São Paulo - SP",
+        "tipo" => "Privado",
+        "regiao" => "Sudeste",
+        "endereco" => "Rua José Francisco dos Santos, 245 - Vila Carmosina, São Paulo - SP",
 
     "descricaoTopo" => "Sala privativa ideal para trabalho individual, reuniões online, estudos e atendimento profissional.",
 
@@ -62,6 +72,8 @@ $salas = [
     ]
 ],
     "5" => [
+        "tipo" => "Grupo",
+        "regiao" => "Centro-Oeste",
     "endereco" => "Rua Antônio de Barros Neto, 188 - Cidade Tiradentes, São Paulo - SP",
 
     "descricaoTopo" => "Um ambiente que conecta profissionalismo, oportunidade e transformação.",
