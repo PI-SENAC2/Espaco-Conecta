@@ -83,139 +83,164 @@ include '../backend/php/includes/navbar.inc.php';
 
     <!-- FILTROS -->
 
-    <div class="conteiner-filtros">
+    
+<div class="center-cartoes">
+    <div class="card-conteirner"> 
+        <div class="top-bar">
+           <input type="text" id="searchInput" placeholder="Localização">
+           <button id="btnPesquisar">Pesquisar</button>
+        </div>
+   
+        
+        
+        <div class="card-sala">
+          
+          <img src="./assets/img/Sala1.png" alt="Sala de Treinamento" class="card-img">
+          
+          <div class="card-info">
+              <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
+          
+              <p>
+                  Espaço para locação, ideal para reuniões, eventos,
+                  workshops ou atividades profissionais.
+              </p>
+          
+              <div class="preco">
+                  <span>Preço mínimo:</span>
+                  <strong>R$5,00</strong>
+              </div>
+          
+              <div class="comodidades">
+          
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider">
+                  <img src="./assets/img/ar-condicionado.svg" alt="">
+              </span>
+          </label>
+          
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider">
+                  <img src="./assets/img/cafe.svg" alt="">
+              </span>
+          </label>
+          
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider">
+                  <img src="./assets/img/guarda-volume.svg" alt="">
+              </span>
+          </label>
+          
+          </div>
+          </div>
+          
+          <button class="btn-buscar">
+              Buscar
+          </button>
+       </div>
+        <div class="card-sala">
+          
+          <img src="./assets/img/Sala1.png" alt="Sala de Treinamento" class="card-img">
+          
+          <div class="card-info">
+              <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
+          
+              <p>
+                  Espaço para locação, ideal para reuniões, eventos,
+                  workshops ou atividades profissionais.
+              </p>
+          
+              <div class="preco">
+                  <span>Preço mínimo:</span>
+                  <strong>R$5,00</strong>
+              </div>
+          
+              <div class="comodidades">
+          
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider">
+                  <img src="./assets/img/ar-condicionado.svg" alt="">
+              </span>
+          </label>
+          
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider">
+                  <img src="./assets/img/cafe.svg" alt="">
+              </span>
+          </label>
+          
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider">
+                  <img src="./assets/img/guarda-volume.svg" alt="">
+              </span>
+          </label>
+          
+          </div>
+          </div>
+          
+          <button class="btn-buscar">
+              Buscar
+          </button>
+       </div>
+        <div class="card-sala">
+          
+          <img src="./assets/img/Sala1.png" alt="Sala de Treinamento" class="card-img">
+          
+          <div class="card-info">
+              <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
+          
+              <p>
+                  Espaço para locação, ideal para reuniões, eventos,
+                  workshops ou atividades profissionais.
+              </p>
+          
+              <div class="preco">
+                  <span>Preço mínimo:</span>
+                  <strong>R$5,00</strong>
+              </div>
+          
+              <div class="comodidades">
+          
+          <label class="switch">
+              <input type="checkbox">
+              <span class="slider">
+                  <img src="./assets/img/ar-condicionado.svg" alt="">
+              </span>
+          </label>
+          
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider">
+                  <img src="./assets/img/cafe.svg" alt="">
+              </span>
+          </label>
+          
+          <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider">
+                  <img src="./assets/img/guarda-volume.svg" alt="">
+              </span>
+          </label>
+          
+          </div>
+          </div>
+          
+          <button class="btn-buscar">
+              Buscar
+          </button>
+       </div>
+   </div>
 
-        <main class="produtos" id="listaProdutos">
+</div>
 
-            <div class="top-bar">
-                <input type="text" id="searchInput" placeholder="Localização">
-                <button id="btnPesquisar">Pesquisar</button>
-            </div>
-
-            <div class="colab-card">
-                <div class="card" data-espaco="individual" data-capacidade="1-2">
-                    <img src="./assets/img/Sala5.png">
-                    <div class="colab-titulo">
-                        <h4>Salas de Reunião</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-                        <button class="button-card" href="./sala.php">
-                            <a href="./Sala.php">Reservar</a> </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-            </div>
-
-            <script src="./src/js/pesquisa.js"></script>
-        </main>
-    </div>
-
-    <footer>
-        <?php require_once "../backend/php/includes/footer.inc.php"; ?>
-    </footer>
+<footer>
+    <?php require_once "../backend/php/includes/footer.inc.php"; ?>
+</footer>
 
 </body>
 <script src="./src/js/perfil.js"></script>
