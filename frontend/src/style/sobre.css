@@ -14,7 +14,7 @@
 }
 
 body {
-    background: #000;
+    background: var(--background-color);
     font-family: var(--font-family);
     overflow-x: hidden;
 }
@@ -430,6 +430,7 @@ header {
 
 /*----------------PARA-QUEM---------------*/
 .para-quem{
+    background-color: var(--background-color);
     color: white;
     width: 100%;
     display: flex;

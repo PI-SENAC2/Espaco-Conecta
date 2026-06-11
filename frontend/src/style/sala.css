@@ -476,17 +476,20 @@ hr {
 
 .avaliacao-box span {
     font-size: 18px;
+    font-weight: 700;
     color: var(--text-color);
 }
 
 .avaliacao-box h1 {
     color: var(--text-color);
+    font-weight: 700;
     font-size: 60px;
     margin: 10px 0;
 }
 
 .avaliacao-box p {
     font-size: 18px;
+    font-weight: 700;
     color: var(--text-color);
 }
 

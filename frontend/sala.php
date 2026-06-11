@@ -61,8 +61,8 @@
 
                         <hr class="vertical">
                         <div class="avaliacao">
-                            <p>2</p>
-                            <p>Avaliações</p>
+                            <p>Conectando</p>
+                            <p>Quem faz o corre!</p>
                         </div>
 
                     </div>
