@@ -1,3 +1,8 @@
+<?php
+session_start();
+include '../backend/php/includes/navbar.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -16,9 +21,6 @@
 </head>
 
 <body>
-
-    <?php require_once "../backend/php/includes/navbar.inc.php"; ?>
-
     <!-- HERO (seção principal) -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -216,5 +218,5 @@
     </footer>
 
 </body>
-
+<script src="./src/js/perfil.js"></script>
 </html>

@@ -86,6 +86,40 @@ header {
     transition: transform 0.5s;
 }
 
+.nav-direita{
+    position: relative;
+}
+
+.menu-perfil{
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 150px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.menu-perfil.ativo{
+    display: block;
+}
+
+.menu-perfil a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+}
+
+.menu-perfil a:hover{
+    background-color: #f2f2f2;
+    border-radius: 4px;
+}
 /* lista */
 .nav-list {
     display: flex;

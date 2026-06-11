@@ -99,6 +99,10 @@ header {
     transition: transform 0.5s;
 }
 
+.nav-direita{
+    position: relative;
+}
+
 /* lista */
 .nav-list {
     display: flex;

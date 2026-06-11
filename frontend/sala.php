@@ -239,5 +239,5 @@
 
 
 </body>
-
+<script src="./src/js/perfil.js"></script>
 </html>

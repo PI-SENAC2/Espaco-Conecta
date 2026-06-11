@@ -1,4 +1,58 @@
+
+<!-- TESTE NAVBAR -->
+
+<style>
+.nav-direita{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    position: relative;
+}
+
+.menu-perfil{
+    display: block;
+    
+    position: absolute;
+    top: 45px;
+    right: 0;
+
+    min-width: 140px;
+
+    background-color: #fff;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.menu-perfil.ativo{
+    display: block;
+}
+
+.menu-perfil a{
+    display: block;
+
+    padding: 12px 16px;
+
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: background-color 0.3s;
+}
+
+.menu-perfil a:hover{
+    background-color: #f2f2f2;
+    color: black;
+}
+
+</style>
+<p style="color:red;">NAVBAR TESTE</p>
 <!-- NAVBAR -->
+
 <header class="header">
         <nav class="navbar">
             <div class="nav-links">
@@ -16,12 +70,18 @@
             </div>
 
 
-            <div class="nav-direita">
-                <a href="#" id="reservas" class="logo-perfl">
-                    <img src="../frontend/assets/img/Img-perfil.svg"
-                        alt="Imagem de uma silhueta de uma pessoal, para representar o perfil">
-                </a>
-            
-            </div>
+        <div class="nav-direita">
+
+    <a href="#" id="perfil-btn" class="logo-perfil">
+        <img src="../frontend/assets/img/Img-perfil.svg" alt="Perfil">
+    </a>
+    <div id="menu-perfil" class="menu-perfil">
+        <?php if(isset($_SESSION['email'])): ?>
+            <a href="sair.php" class="btn btn-danger me-5">Sair</a>
+        <?php else: ?>
+            <a href="./login.php">Logar</a>
+        <?php endif; ?>
+    </div>
+</div>
         </nav>
     </header>

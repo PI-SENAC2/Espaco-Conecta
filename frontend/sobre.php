@@ -1,3 +1,7 @@
+<?php
+session_start();
+include '../backend/php/includes/navbar.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -186,3 +190,4 @@
     <!----------FOOTER---------->
     <?php require_once "../backend/php/includes/footer.inc.php"; ?>
 </body>
+<script src="./src/js/perfil.js"></script>
