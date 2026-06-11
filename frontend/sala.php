@@ -1,13 +1,91 @@
+<?php
+
+$salas = [
+
+    "1" => [
+        "endereco" => "Avenida Carlos Caldeira Filho, 177 Jardim Ângela - São Paulo",
+        "descricaoTopo" => "Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.",
+        "descricao" => "Descubra um ambiente moderno e funcional, ideal para profissionais, empresas e equipes que buscam um local confortável e inspirador para trabalhar e realizar reuniões. Nosso espaço de coworking foi pensado para oferecer praticidade, produtividade e bem-estar em um só lugar.",
+        "avaliacao" => "4.8",
+        "imagens" => [
+            "SalaReunião06.png",
+            "SalaReunião07.png",
+            "SalaReunião08.png",
+            "SalaReunião09.png",
+            "SalaReunião10.png"
+        ]
+    ],
+
+    "2" => [
+        "endereco" => "Estrada do Campo Limpo, 1200 Campo Limpo - São Paulo",
+        "descricaoTopo" => "Sala executiva moderna, ideal para reuniões rápidas, entrevistas e atendimentos profissionais.",
+        "descricao" => "Ambiente confortável, silencioso e bem equipado para profissionais que precisam de praticidade, privacidade e boa estrutura.",
+        "avaliacao" => "5.0",
+        "imagens" => [
+            "Sala1.png",
+            "Sala2.png",
+            "Sala3.png",
+            "Sala4.png",
+            "Sala5.png"
+        ]
+    ],
+
+    "3" => [
+        "endereco" => "Rua Luís Mateus, 1200 Cidade Tiradentes - São Paulo",
+        "descricaoTopo" => "Ambiente compartilhado para trabalho, estudos, networking e produtividade.",
+        "descricao" => "Espaço colaborativo pensado para profissionais autônomos, estudantes, freelancers e pequenas equipes.",
+        "avaliacao" => "4.9",
+        "imagens" => [
+            "SalaReunião02.png",
+            "SalaReunião02.png",
+            "SalaReunião03.png",
+            "SalaReunião04.png",
+            "SalaReunião05.png"
+        ]
+    ],
+
+    "4" => [
+    "endereco" => "Rua José Francisco dos Santos, 245 - Vila Carmosina, São Paulo - SP",
+
+    "descricaoTopo" => "Sala privativa ideal para trabalho individual, reuniões online, estudos e atendimento profissional.",
+
+    "descricao" => "Ambiente moderno, confortável e totalmente equipado para quem busca privacidade, concentração e produtividade. A sala conta com estação de trabalho ergonômica, internet de alta velocidade, ar-condicionado, televisão para apresentações, quadro branco e iluminação planejada, proporcionando uma experiência profissional em um espaço acolhedor e funcional.",
+
+    "avaliacao" => "4.9",
+
+    "imagens" => [
+        "Salaunica02.png",
+        "Salaunica01.png",
+        "Salaunica03.png",
+        "Salaunica04.png",
+        "Salaunica05.png"
+    ]
+]
+
+];
+
+$slug = $_GET["sala"] ?? "1";
+
+if (!isset($salas[$slug])) {
+    $slug = "1";
+}
+
+$sala = $salas[$slug];
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sala de Treinamento</title>
+
     <link rel="stylesheet" href="./src/style/global.css">
     <link rel="stylesheet" href="./src/style/sala.css">
     <link rel="shortcut icon" href="./assets/img/Favicon-espaçoConecta.png" type="image/x-icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,19 +99,29 @@
 
     <main class="detalhes-sala">
 
-        <!-- LADO ESQUERDO -->
         <section class="info-sala">
 
             <div class="galeria">
-                <img class="img-principal" src="../frontend/assets/img/SalaReunião06.png" alt="Sala">
+
+                <img
+                    class="img-principal"
+                    src="../frontend/assets/img/<?= $sala['imagens'][0]; ?>"
+                    alt="Sala">
 
                 <div class="mini-galeria">
-                    <img src="../frontend/assets/img/SalaReunião07.png" alt="">
-                    <img src="../frontend/assets/img/SalaReunião08.png" alt="">
-                    <img src="../frontend/assets/img/SalaReunião09.png" alt="">
-                    <img src="../frontend/assets/img/SalaReunião10.png" alt="">
+
+                    <?php for ($i = 1; $i < count($sala['imagens']); $i++): ?>
+
+                        <img
+                            src="../frontend/assets/img/<?= $sala['imagens'][$i]; ?>"
+                            alt="Imagem da sala">
+
+                    <?php endfor; ?>
+
                 </div>
+
             </div>
+
         </section>
 
     </main>
@@ -43,23 +131,27 @@
         <section class="esquerda-info">
 
             <div class="conteudo">
-                <h1>Avenida Carlos Caldeira Filho, 177 Jardim Ângela - São Paulo</h1>
+
+                <h1><?= $sala['endereco']; ?></h1>
 
                 <p class="descricao-topo">
-                    Espaço para locação, ideal para reuniões,
-                    eventos, workshops ou atividades profissionais.
+                    <?= $sala['descricaoTopo']; ?>
                 </p>
 
                 <div class="cards-info">
 
                     <div class="card-info">
-                        <img src="../frontend/assets/img/logo-espaço-conecta.svg" alt="">
+
+                        <img src="../frontend/assets/img/logo-espaço-conecta.svg" alt="Logo Espaço Conecta">
 
                         <p>
-                            Espaço preferido<br> dos nossos<br> clientes!
+                            Espaço preferido<br>
+                            dos nossos<br>
+                            clientes!
                         </p>
 
                         <hr class="vertical">
+
                         <div class="avaliacao">
                             <p>Conectando</p>
                             <p>Quem faz o corre!</p>
@@ -72,45 +164,46 @@
                 <hr>
 
                 <div class="conteudo-2">
+
                     <h2>O que o ambiente oferece!</h2>
 
-
                     <ul class="beneficios">
+
                         <div class="icones-beneficio">
                             <img src="../frontend/assets/img/icon-ar.png" alt="">
-                            <li> Ar-condicionado</li>
+                            <li>Ar-condicionado</li>
                         </div>
+
                         <div class="icones-beneficio">
                             <img src="../frontend/assets/img/Icon-TV.png" alt="">
-                            <li> Televisão</li>
+                            <li>Televisão</li>
                         </div>
+
                         <div class="icones-beneficio">
                             <img src="../frontend/assets/img/Icon-Print.png" alt="">
-                            <li> Impressora</li>
+                            <li>Impressora</li>
                         </div>
+
                         <div class="icones-beneficio">
                             <img src="../frontend/assets/img/Icon-Filing-Cabinet.png" alt="">
-                            <li> Guarda-Volume</li>
+                            <li>Guarda-Volume</li>
                         </div>
+
                     </ul>
 
                     <hr>
 
                     <div class="conteiner-espaco">
+
                         <h2>Descrição do Espaço</h2>
 
                         <p class="descricao">
-                            Descubra um ambiente moderno e funcional, ideal para profissionais, empresas e equipes que
-                            buscam um local confortável e inspirador para trabalhar e realizar reuniões. Nosso espaço de
-                            coworking foi pensado para oferecer praticidade, produtividade e bem-estar em um só lugar,
-                            produtividade e bem-estar em um só lugar.
+                            <?= $sala['descricao']; ?>
                         </p>
 
-
-                        <!-- AVALIAÇÕES DOS USUÁRIOS -->
                         <div class="avaliacoes-usuarios">
 
-                            <h2>Avaliações</h2>
+                            <h2>Avaliações dos Hóspedes</h2>
 
                             <div id="listaAvaliacoes" class="lista-avaliacoes">
 
@@ -139,20 +232,21 @@
                             </div>
 
                         </div>
+
                     </div>
+
                 </div>
 
-
             </div>
+
         </section>
 
-        <!-- LADO DIREITO -->
         <section class="direita-info">
-
 
             <aside class="sidebar">
 
                 <div class="card-reserva">
+
                     <h3>RESERVA</h3>
                     <p>7H-18H</p>
 
@@ -166,49 +260,28 @@
                         <div>SEX</div>
                         <div>SAB</div>
 
-                        <!-- Dias -->
-                        <a href="">1</a>
-                        <a href="">2</a>
-                        <a href="">3</a>
-                        <a href="">4</a>
-                        <a href="">5</a>
-                        <a href="">6</a>
-                        <a href="">7</a>
-                        <a href="">8</a>
-                        <a href="">9</a>
-                        <a herf="">10</a>
-                        <a herf="">11</a>
-                        <a herf="">12</a>
-                        <a herf="">13</a>
-                        <a herf="">14</a>
-                        <a herf="">15</a>
-                        <a herf="">16</a>
-                        <a herf="">17</a>
-                        <a herf="">18</a>
-                        <a herf="">19</a>
-                        <a herf="">20</a>
-                        <a herf="">21</a>
-                        <a herf="">22</a>
-                        <a herf="">23</a>
-                        <a herf="">24</a>
-                        <a herf="">25</a>
-                        <a herf="">26</a>
-                        <a herf="">27</a>
-                        <a herf="">28</a>
-                        <a herf="">29</a>
-                        <a herf="">30</a>
-                        <a herf="">31</a>
-                        <a herf="" id="proximo-dia">1</a>
-                        <a herf="" id="proximo-dia">2</a>
-                        <a herf="" id="proximo-dia">3</a>
-                        <a herf="" id="proximo-dia">4</a>
+                        <?php for ($dia = 1; $dia <= 31; $dia++): ?>
+                            <a href="#"><?= $dia; ?></a>
+                        <?php endfor; ?>
+
+                        <a href="#" id="proximo-dia">1</a>
+                        <a href="#" id="proximo-dia">2</a>
+                        <a href="#" id="proximo-dia">3</a>
+                        <a href="#" id="proximo-dia">4</a>
 
                     </div>
+
                     <div class="mapa">
+
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5567.088938102533!2d-46.767782!3d-23.665432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53b60e501d01%3A0x56ec6dd0cbdcf39!2sMPCont%20Escrit%C3%B3rio%20Cont%C3%A1bil!5e1!3m2!1spt-BR!2sbr!4v1779205049363!5m2!1spt-BR!2sbr"
-                            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            width="300"
+                            height="300"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
 
                     </div>
 
@@ -216,11 +289,11 @@
 
                 </div>
 
-                </div>
                 <div class="avaliacao-box">
+
                     <span>Avaliações</span>
 
-                    <h1>4.8</h1>
+                    <h1><?= $sala['avaliacao']; ?></h1>
 
                     <p>Faça a sua avaliação!</p>
 
@@ -229,67 +302,95 @@
                     <textarea id="comentarioInput" placeholder="Digite seu comentário" rows="4"></textarea>
 
                     <select id="notaInput">
-                        <option value="5.0">⭐ 5</option>
-                        <option value="4.0">⭐ 4</option>
-                        <option value="3.0">⭐ 3</option>
-                        <option value="2.0">⭐ 2</option>
-                        <option value="1.0">⭐ 1</option>
+                        <option value="5.0">⭐ 5.0</option>
+                        <option value="4.0">⭐ 4.0</option>
+                        <option value="3.0">⭐ 3.0</option>
+                        <option value="2.0">⭐ 2.0</option>
+                        <option value="1.0">⭐ 1.0</option>
                     </select>
+
+                    <button id="btnAvaliar" class="button-link">
+                        ENVIE SUA AVALIAÇÃO
+                    </button>
                 </div>
 
-                <button id="btnAvaliar" class="button-link">
-                    ENVIE SUA AVALIAÇÃO
-                </button>
 
             </aside>
+
         </section>
+
     </section>
-
-
 
     <footer id="abaixo">
         <?php require_once "../backend/php/includes/footer.inc.php"; ?>
     </footer>
 
     <script>
-    document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("DOMContentLoaded", () => {
 
-        const btn = document.getElementById("btnAvaliar");
+            const salaAtual = "<?= $slug; ?>";
+            const chaveStorage = "avaliacoes_" + salaAtual;
 
-        btn.addEventListener("click", () => {
+            const listaAvaliacoes = document.getElementById("listaAvaliacoes");
+            const btnAvaliar = document.getElementById("btnAvaliar");
 
-            const nome = document.getElementById("nomeInput").value.trim();
-            const comentario = document.getElementById("comentarioInput").value.trim();
-            const nota = document.getElementById("notaInput").value;
+            function criarAvaliacao(nome, comentario, nota) {
+                const novaAvaliacao = document.createElement("div");
+                novaAvaliacao.classList.add("comentario-user");
 
-            if (nome === "" || comentario === "") {
-                alert("Preencha nome e comentário!");
-                return;
+                novaAvaliacao.innerHTML = `
+                    <div class="user-topo">
+                        <h3>${nome}</h3>
+                        <span>⭐ ${nota}</span>
+                    </div>
+
+                    <p>${comentario}</p>
+                `;
+
+                listaAvaliacoes.prepend(novaAvaliacao);
             }
 
-            const novaAvaliacao = document.createElement("div");
+            function carregarAvaliacoes() {
+                const avaliacoesSalvas = JSON.parse(localStorage.getItem(chaveStorage)) || [];
 
-            novaAvaliacao.classList.add("comentario-user");
+                avaliacoesSalvas.forEach(avaliacao => {
+                    criarAvaliacao(avaliacao.nome, avaliacao.comentario, avaliacao.nota);
+                });
+            }
 
-            novaAvaliacao.innerHTML = `
-            <div class="user-topo">
-                <h3>${nome}</h3>
-                <span>⭐ ${nota}</span>
-            </div>
+            btnAvaliar.addEventListener("click", () => {
 
-            <p>${comentario}</p>
-        `;
+                const nome = document.getElementById("nomeInput").value.trim();
+                const comentario = document.getElementById("comentarioInput").value.trim();
+                const nota = document.getElementById("notaInput").value;
 
-            document.getElementById("listaAvaliacoes")
-                .prepend(novaAvaliacao);
+                if (nome === "" || comentario === "") {
+                    alert("Preencha nome e comentário!");
+                    return;
+                }
 
-            document.getElementById("nomeInput").value = "";
-            document.getElementById("comentarioInput").value = "";
-            document.getElementById("notaInput").value = "5.0";
+                criarAvaliacao(nome, comentario, nota);
+
+                const avaliacoesSalvas = JSON.parse(localStorage.getItem(chaveStorage)) || [];
+
+                avaliacoesSalvas.push({
+                    nome: nome,
+                    comentario: comentario,
+                    nota: nota
+                });
+
+                localStorage.setItem(chaveStorage, JSON.stringify(avaliacoesSalvas));
+
+                document.getElementById("nomeInput").value = "";
+                document.getElementById("comentarioInput").value = "";
+                document.getElementById("notaInput").value = "5.0";
+            });
+
+            carregarAvaliacoes();
+
         });
-
-    });
     </script>
+
 </body>
 
 </html>
