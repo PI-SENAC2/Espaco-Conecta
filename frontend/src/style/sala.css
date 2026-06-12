@@ -668,6 +668,229 @@ hr {
     resize: none;
 }
 
+/*AGENDAMENTO*/
+
+.dia-reserva.selecionado {
+    background: #00C853 !important;
+}
+
+#horarioReserva {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+
+    background: #242424;
+    color: white;
+
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.modal-reserva {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,.8);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+.modal-box {
+    width: 450px;
+
+    background: #171717;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.modal-box h2 {
+    color: white;
+    text-align: center;
+}
+
+.modal-box input {
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #242424;
+    color: white;
+}
+
+.reserva-confirmada{
+
+    margin-top:20px;
+
+    background:#111;
+
+    border:2px solid #00C853;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    color:#FFF;
+
+    text-align:center;
+}
+
+.reserva-confirmada h3{
+
+    color:#00C853;
+
+    margin-bottom:10px;
+
+    font-size:22px;
+}
+
+.reserva-confirmada p{
+
+    color:#BDBDBD;
+
+    margin-bottom:20px;
+}
+
+.dados-reserva{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.dados-reserva div{
+
+    background:#1D1D1D;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.dados-reserva strong{
+    color:#E0712B;
+}
+
+.dados-reserva span{
+    color:#FFF;
+}
+
+.comprovante-reserva {
+    text-align: center;
+    color: #fff;
+}
+
+.icone-sucesso {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: #00C853;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.comprovante-reserva h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.sub-confirmacao {
+    color: #bdbdbd;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+.codigo-reserva {
+    background: #242424;
+
+    border: 1px dashed #E0712B;
+    border-radius: 12px;
+
+    padding: 15px;
+    margin-bottom: 20px;
+
+    color: #bdbdbd;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.codigo-reserva strong {
+    color: #E0712B;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.resumo-reserva {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: 22px;
+}
+
+.resumo-reserva div {
+    background: #202020;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    padding: 12px 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.resumo-reserva span {
+    color: #9c9c9c;
+    font-size: 14px;
+}
+
+.resumo-reserva strong {
+    color: #fff;
+    font-size: 14px;
+    text-align: right;
+}
+
+.status-confirmado {
+    color: #00C853 !important;
+}
 /* ======================================
    FOOTER
 ====================================== */

@@ -500,6 +500,8 @@ flex-direction: column;
   margin-top: 50px;
   margin-bottom: 20px;
   color: white;
+  justify-content: center;
+  text-align: center;
 }
 
 #searchInput {
@@ -669,9 +671,24 @@ flex-direction: column;
     object-fit: contain;
 }
 
+.box-btn{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 .btn-buscar {
     width: 120px;
     height: 50px;
+    display: flex;
+
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 700;
+    align-items: center;
 
     border: none;
     border-radius: 10px;
@@ -680,6 +697,7 @@ flex-direction: column;
     font-weight: bold;
     cursor: pointer;
 }
+
 
 .switch {
     position: relative;

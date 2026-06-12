@@ -71,6 +71,7 @@ $salas = [
         "Salaunica05.png"
     ]
 ],
+
     "5" => [
         "tipo" => "Grupo",
         "regiao" => "Centro-Oeste",
@@ -89,7 +90,26 @@ $salas = [
         "Salatreinamento4.png",
         "Salatreinamento5.png"
     ]
-]
+],
+    "6" => [
+        "tipo" => "Grupo",
+        "regiao" => "Centro-Oeste",
+     "endereco" => "Avenida dos Metalúrgicos, 1450 - Cidade Tiradentes, São Paulo - SP",
+
+    "descricaoTopo" => "Ambiente privativo desenvolvido para quem precisa de conforto, tecnologia e produtividade.",
+
+    "descricao" => "Sala executiva individual equipada com computador de alto desempenho, mesa ampla, cadeira ergonômica, internet de alta velocidade, ar-condicionado e iluminação planejada. Um espaço pensado para profissionais, empreendedores, estudantes e freelancers que desejam trabalhar com tranquilidade, organização e estrutura profissional.",
+
+    "avaliacao" => "5.0",
+
+    "imagens" => [
+        "Salaunica01.png",
+        "Salaunica02.png",
+        "Salaunica03.png",
+        "Salaunica04.png",
+        "Salaunica05.png"
+    ]
+],
 
 ];
 
@@ -132,18 +152,13 @@ $sala = $salas[$slug];
 
             <div class="galeria">
 
-                <img
-                    class="img-principal"
-                    src="../frontend/assets/img/<?= $sala['imagens'][0]; ?>"
-                    alt="Sala">
+                <img class="img-principal" src="../frontend/assets/img/<?= $sala['imagens'][0]; ?>" alt="Sala">
 
                 <div class="mini-galeria">
 
                     <?php for ($i = 1; $i < count($sala['imagens']); $i++): ?>
 
-                        <img
-                            src="../frontend/assets/img/<?= $sala['imagens'][$i]; ?>"
-                            alt="Imagem da sala">
+                    <img src="../frontend/assets/img/<?= $sala['imagens'][$i]; ?>" alt="Imagem da sala">
 
                     <?php endfor; ?>
 
@@ -280,7 +295,6 @@ $sala = $salas[$slug];
                     <p>7H-18H</p>
 
                     <div class="calendario">
-
                         <div>DOM</div>
                         <div>SEG</div>
                         <div>TER</div>
@@ -290,33 +304,50 @@ $sala = $salas[$slug];
                         <div>SAB</div>
 
                         <?php for ($dia = 1; $dia <= 31; $dia++): ?>
-                            <a href="#"><?= $dia; ?></a>
+                        <a href="#" class="dia-reserva"><?= $dia ?></a>
                         <?php endfor; ?>
-
-                        <a href="#" id="proximo-dia">1</a>
-                        <a href="#" id="proximo-dia">2</a>
-                        <a href="#" id="proximo-dia">3</a>
-                        <a href="#" id="proximo-dia">4</a>
-
                     </div>
+
+                    <select id="horarioReserva">
+                        <option value="">Selecione um horário</option>
+
+                        <?php for($hora = 7; $hora <= 18; $hora++): ?>
+                        <option value="<?= sprintf('%02d:00', $hora) ?>">
+                            <?= sprintf('%02d:00', $hora) ?>
+                        </option>
+                        <?php endfor; ?>
+                    </select>
 
                     <div class="mapa">
-
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5567.088938102533!2d-46.767782!3d-23.665432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce53b60e501d01%3A0x56ec6dd0cbdcf39!2sMPCont%20Escrit%C3%B3rio%20Cont%C3%A1bil!5e1!3m2!1spt-BR!2sbr!4v1779205049363!5m2!1spt-BR!2sbr"
-                            width="300"
-                            height="300"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
+                            width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy">
                         </iframe>
-
                     </div>
 
-                    <a href="./reservas.php" class="button-link">AGENDAR</a>
+                    <button id="btnAgendar" class="button-link">
+                        AGENDAR
+                    </button>
 
                 </div>
+
+                <div id="modalReserva" class="modal-reserva">
+                    <div class="modal-box">
+
+                        <h2>Finalizar Reserva</h2>
+
+                        <input type="text" id="nomeReserva" placeholder="Nome completo">
+                        <input type="text" id="cpfReserva" placeholder="CPF">
+                        <input type="email" id="emailReserva" placeholder="E-mail">
+
+                        <button id="finalizarReserva" class="button-link">
+                            FINALIZAR RESERVA
+                        </button>
+
+                    </div>
+                </div>
+
+                <div id="resultadoReserva"></div>
 
                 <div class="avaliacao-box">
 
@@ -355,19 +386,19 @@ $sala = $salas[$slug];
     </footer>
 
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("DOMContentLoaded", () => {
 
-            const salaAtual = "<?= $slug; ?>";
-            const chaveStorage = "avaliacoes_" + salaAtual;
+        const salaAtual = "<?= $slug; ?>";
+        const chaveStorage = "avaliacoes_" + salaAtual;
 
-            const listaAvaliacoes = document.getElementById("listaAvaliacoes");
-            const btnAvaliar = document.getElementById("btnAvaliar");
+        const listaAvaliacoes = document.getElementById("listaAvaliacoes");
+        const btnAvaliar = document.getElementById("btnAvaliar");
 
-            function criarAvaliacao(nome, comentario, nota) {
-                const novaAvaliacao = document.createElement("div");
-                novaAvaliacao.classList.add("comentario-user");
+        function criarAvaliacao(nome, comentario, nota) {
+            const novaAvaliacao = document.createElement("div");
+            novaAvaliacao.classList.add("comentario-user");
 
-                novaAvaliacao.innerHTML = `
+            novaAvaliacao.innerHTML = `
                     <div class="user-topo">
                         <h3>${nome}</h3>
                         <span>⭐ ${nota}</span>
@@ -376,50 +407,152 @@ $sala = $salas[$slug];
                     <p>${comentario}</p>
                 `;
 
-                listaAvaliacoes.prepend(novaAvaliacao);
+            listaAvaliacoes.prepend(novaAvaliacao);
+        }
+
+        function carregarAvaliacoes() {
+            const avaliacoesSalvas = JSON.parse(localStorage.getItem(chaveStorage)) || [];
+
+            avaliacoesSalvas.forEach(avaliacao => {
+                criarAvaliacao(avaliacao.nome, avaliacao.comentario, avaliacao.nota);
+            });
+        }
+
+        btnAvaliar.addEventListener("click", () => {
+
+            const nome = document.getElementById("nomeInput").value.trim();
+            const comentario = document.getElementById("comentarioInput").value.trim();
+            const nota = document.getElementById("notaInput").value;
+
+            if (nome === "" || comentario === "") {
+                alert("Preencha nome e comentário!");
+                return;
             }
 
-            function carregarAvaliacoes() {
-                const avaliacoesSalvas = JSON.parse(localStorage.getItem(chaveStorage)) || [];
+            criarAvaliacao(nome, comentario, nota);
 
-                avaliacoesSalvas.forEach(avaliacao => {
-                    criarAvaliacao(avaliacao.nome, avaliacao.comentario, avaliacao.nota);
-                });
-            }
+            const avaliacoesSalvas = JSON.parse(localStorage.getItem(chaveStorage)) || [];
 
-            btnAvaliar.addEventListener("click", () => {
-
-                const nome = document.getElementById("nomeInput").value.trim();
-                const comentario = document.getElementById("comentarioInput").value.trim();
-                const nota = document.getElementById("notaInput").value;
-
-                if (nome === "" || comentario === "") {
-                    alert("Preencha nome e comentário!");
-                    return;
-                }
-
-                criarAvaliacao(nome, comentario, nota);
-
-                const avaliacoesSalvas = JSON.parse(localStorage.getItem(chaveStorage)) || [];
-
-                avaliacoesSalvas.push({
-                    nome: nome,
-                    comentario: comentario,
-                    nota: nota
-                });
-
-                localStorage.setItem(chaveStorage, JSON.stringify(avaliacoesSalvas));
-
-                document.getElementById("nomeInput").value = "";
-                document.getElementById("comentarioInput").value = "";
-                document.getElementById("notaInput").value = "5.0";
+            avaliacoesSalvas.push({
+                nome: nome,
+                comentario: comentario,
+                nota: nota
             });
 
-            carregarAvaliacoes();
+            localStorage.setItem(chaveStorage, JSON.stringify(avaliacoesSalvas));
 
+            document.getElementById("nomeInput").value = "";
+            document.getElementById("comentarioInput").value = "";
+            document.getElementById("notaInput").value = "5.0";
         });
+
+        carregarAvaliacoes();
+
+    });
+    </script>
+
+    <script>
+    let diaSelecionado = null;
+
+    document.querySelectorAll(".dia-reserva").forEach(botao => {
+        botao.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            document.querySelectorAll(".dia-reserva")
+                .forEach(item => item.classList.remove("selecionado"));
+
+            this.classList.add("selecionado");
+            diaSelecionado = this.textContent;
+        });
+    });
+
+    document.getElementById("btnAgendar").addEventListener("click", () => {
+        const horario = document.getElementById("horarioReserva").value;
+
+        if (!diaSelecionado) {
+            alert("Escolha um dia.");
+            return;
+        }
+
+        if (horario === "") {
+            alert("Escolha um horário.");
+            return;
+        }
+
+        document.getElementById("modalReserva").style.display = "flex";
+    });
+
+ document.getElementById("finalizarReserva").addEventListener("click", () => {
+    const nome = document.getElementById("nomeReserva").value.trim();
+    const cpf = document.getElementById("cpfReserva").value.trim();
+    const email = document.getElementById("emailReserva").value.trim();
+    const horario = document.getElementById("horarioReserva").value;
+
+    if (nome === "" || cpf === "" || email === "") {
+        alert("Preencha todos os campos.");
+        return;
+    }
+
+    const codigoReserva = "EC-" + Math.floor(10000 + Math.random() * 90000);
+
+    document.querySelector(".modal-box").innerHTML = `
+        <div class="comprovante-reserva">
+
+            <div class="icone-sucesso">✓</div>
+
+            <h2>Reserva Confirmada</h2>
+
+            <p class="sub-confirmacao">
+                Sua reserva foi registrada com sucesso no Espaço Conecta.
+            </p>
+
+            <div class="codigo-reserva">
+                Código da reserva
+                <strong>${codigoReserva}</strong>
+            </div>
+
+            <div class="resumo-reserva">
+                <div>
+                    <span>Responsável</span>
+                    <strong>${nome}</strong>
+                </div>
+
+                <div>
+                    <span>CPF</span>
+                    <strong>${cpf}</strong>
+                </div>
+
+                <div>
+                    <span>E-mail</span>
+                    <strong>${email}</strong>
+                </div>
+
+                <div>
+                    <span>Data</span>
+                    <strong>Dia ${diaSelecionado}</strong>
+                </div>
+
+                <div>
+                    <span>Horário</span>
+                    <strong>${horario}</strong>
+                </div>
+
+                <div>
+                    <span>Status</span>
+                    <strong class="status-confirmado">Confirmada</strong>
+                </div>
+            </div>
+
+            <button class="button-link" onclick="location.reload()">
+                FAZER NOVA RESERVA
+            </button>
+
+        </div>
+    `;
+});
     </script>
 
 </body>
 <script src="./src/js/perfil.js"></script>
+
 </html>

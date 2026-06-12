@@ -57,7 +57,7 @@ include '../backend/php/includes/navbar.inc.php';
             <div class="card-conteiner">
                 <h2>Salas de Reunião</h2>
                 <div class="button-card">
-                    <a href="">Acessar</a>
+                    <a href="./reservas.php">Acessar</a>
                 </div>
             </div>
         </div>
@@ -66,7 +66,7 @@ include '../backend/php/includes/navbar.inc.php';
             <div class="card-conteiner">
                 <h2>Salas Individuais</h2>
                 <div class="button-card">
-                    <a href="">Acessar</a>
+                    <a href="./reservas.php">Acessar</a>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@ include '../backend/php/includes/navbar.inc.php';
             <div class="card-conteiner">
                 <h2>Salas de Treinamento</h2>
                 <div class="button-card">
-                    <a href="">Acessar</a>
+                    <a href="./reservas.php">Acessar</a>
                 </div>
             </div>
         </div>
@@ -83,165 +83,122 @@ include '../backend/php/includes/navbar.inc.php';
 
     <!-- FILTROS -->
 
-    
-<div class="center-cartoes">
-    <div class="card-conteirner"> 
-        <div class="top-bar">
-           <input type="text" id="searchInput" placeholder="Localização">
-           <button id="btnPesquisar">Pesquisar</button>
+
+    <div class="center-cartoes">
+        <div class="card-conteirner">
+            <div class="top-bar">
+                <h1>ESPAÇOS RECOMENDADOS</h1>
+            </div>
+
+
+
+            <div class="card-sala">
+
+                <img src="../frontend/assets/img/Salatrabalho01.jpeg" alt="Sala de Treinamento" class="card-img">
+
+                <div class="card-info">
+                    <h3>Avenida dos Metalúrgicos, 1450 - Cidade Tiradentes, São Paulo</h3>
+
+                    <p>
+                        Espaço para locação, ideal para reuniões, eventos,
+                        workshops ou atividades profissionais.
+                    </p>
+
+                    <div class="preco">
+                        <span>Preço mínimo:</span>
+                        <strong>R$5,00</strong>
+                    </div>
+
+                    <div class="comodidades">
+
+                        <img src="./assets/img/ar-condicionado.svg" alt="">
+
+                        <img src="./assets/img/cafe.svg" alt="">
+
+                        <img src="./assets/img/guarda-volume.svg" alt="">
+
+                    </div>
+                </div>
+
+                <div class="box-btn">
+                    <a href="sala.php?sala=6" class="btn-buscar">Buscar</a>
+
+                </div>
+            </div>
+            <div class="card-sala">
+
+                <img src="../frontend/assets/img/SalaReunião05.png" alt="Sala de Treinamento" class="card-img">
+
+                <div class="card-info">
+                    <h3>Rua Luís Mateus, 1200 Cidade Tiradentes - São Paulo</h3>
+
+                    <p>
+                        Espaço para locação, ideal para reuniões, eventos,
+                        workshops ou atividades profissionais.
+                    </p>
+
+                    <div class="preco">
+                        <span>Preço mínimo:</span>
+                        <strong>R$5,00</strong>
+                    </div>
+
+                    <div class="comodidades">
+                        <img src="./assets/img/ar-condicionado.svg" alt="">
+
+                        <img src="./assets/img/cafe.svg" alt="">
+
+                        <img src="./assets/img/guarda-volume.svg" alt="">
+
+                    </div>
+                </div>
+
+                <div class="box-btn">
+                    <a href="sala.php?sala=3" class="btn-buscar">Buscar</a>
+
+                </div>
+
+            </div>
+            <div class="card-sala">
+
+                <img src="../frontend/assets/img/SalaReunião06.png" alt="Sala de Treinamento" class="card-img">
+
+                <div class="card-info">
+                    <h3>Avenida Carlos Caldeira Filho, 177 Jardim Ângela - São Paulo</h3>
+
+                    <p>
+                        Espaço para locação, ideal para reuniões, eventos,
+                        workshops ou atividades profissionais.
+                    </p>
+
+                    <div class="preco">
+                        <span>Preço mínimo:</span>
+                        <strong>R$5,00</strong>
+                    </div>
+
+                    <div class="comodidades">
+
+                        <img src="./assets/img/ar-condicionado.svg" alt="">
+
+                        <img src="./assets/img/cafe.svg" alt="">
+
+                        <img src="./assets/img/guarda-volume.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="box-btn">
+                    <a href="sala.php?sala=1" class="btn-buscar">Buscar</a>
+
+                </div>
+            </div>
         </div>
-   
-        
-        
-        <div class="card-sala">
-          
-          <img src="./assets/img/Sala1.png" alt="Sala de Treinamento" class="card-img">
-          
-          <div class="card-info">
-              <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
-          
-              <p>
-                  Espaço para locação, ideal para reuniões, eventos,
-                  workshops ou atividades profissionais.
-              </p>
-          
-              <div class="preco">
-                  <span>Preço mínimo:</span>
-                  <strong>R$5,00</strong>
-              </div>
-          
-              <div class="comodidades">
-          
-          <label class="switch">
-              <input type="checkbox">
-              <span class="slider">
-                  <img src="./assets/img/ar-condicionado.svg" alt="">
-              </span>
-          </label>
-          
-          <label class="switch">
-              <input type="checkbox" checked>
-              <span class="slider">
-                  <img src="./assets/img/cafe.svg" alt="">
-              </span>
-          </label>
-          
-          <label class="switch">
-              <input type="checkbox" checked>
-              <span class="slider">
-                  <img src="./assets/img/guarda-volume.svg" alt="">
-              </span>
-          </label>
-          
-          </div>
-          </div>
-          
-          <button class="btn-buscar">
-              Buscar
-          </button>
-       </div>
-        <div class="card-sala">
-          
-          <img src="./assets/img/Sala1.png" alt="Sala de Treinamento" class="card-img">
-          
-          <div class="card-info">
-              <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
-          
-              <p>
-                  Espaço para locação, ideal para reuniões, eventos,
-                  workshops ou atividades profissionais.
-              </p>
-          
-              <div class="preco">
-                  <span>Preço mínimo:</span>
-                  <strong>R$5,00</strong>
-              </div>
-          
-              <div class="comodidades">
-          
-          <label class="switch">
-              <input type="checkbox">
-              <span class="slider">
-                  <img src="./assets/img/ar-condicionado.svg" alt="">
-              </span>
-          </label>
-          
-          <label class="switch">
-              <input type="checkbox" checked>
-              <span class="slider">
-                  <img src="./assets/img/cafe.svg" alt="">
-              </span>
-          </label>
-          
-          <label class="switch">
-              <input type="checkbox" checked>
-              <span class="slider">
-                  <img src="./assets/img/guarda-volume.svg" alt="">
-              </span>
-          </label>
-          
-          </div>
-          </div>
-          
-          <button class="btn-buscar">
-              Buscar
-          </button>
-       </div>
-        <div class="card-sala">
-          
-          <img src="./assets/img/Sala1.png" alt="Sala de Treinamento" class="card-img">
-          
-          <div class="card-info">
-              <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
-          
-              <p>
-                  Espaço para locação, ideal para reuniões, eventos,
-                  workshops ou atividades profissionais.
-              </p>
-          
-              <div class="preco">
-                  <span>Preço mínimo:</span>
-                  <strong>R$5,00</strong>
-              </div>
-          
-              <div class="comodidades">
-          
-          <label class="switch">
-              <input type="checkbox">
-              <span class="slider">
-                  <img src="./assets/img/ar-condicionado.svg" alt="">
-              </span>
-          </label>
-          
-          <label class="switch">
-              <input type="checkbox" checked>
-              <span class="slider">
-                  <img src="./assets/img/cafe.svg" alt="">
-              </span>
-          </label>
-          
-          <label class="switch">
-              <input type="checkbox" checked>
-              <span class="slider">
-                  <img src="./assets/img/guarda-volume.svg" alt="">
-              </span>
-          </label>
-          
-          </div>
-          </div>
-          
-          <button class="btn-buscar">
-              Buscar
-          </button>
-       </div>
-   </div>
 
-</div>
+    </div>
 
-<footer>
-    <?php require_once "../backend/php/includes/footer.inc.php"; ?>
-</footer>
+    <footer>
+        <?php require_once "../backend/php/includes/footer.inc.php"; ?>
+    </footer>
 
 </body>
 <script src="./src/js/perfil.js"></script>
+
 </html>
