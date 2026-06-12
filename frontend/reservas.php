@@ -8,7 +8,29 @@
     }
     $logado = $_SESSION['email'];
 ?>
+<?php
 
+require_once "../backend/php/includes/config.php";
+
+$tipo = $_GET['tipo'] ?? '';
+$regiao = $_GET['regiao'] ?? '';
+
+$sql = "
+SELECT *
+FROM salas
+WHERE 1=1
+";
+
+if($tipo != ''){
+    $sql .= " AND tipo = '$tipo'";
+}
+
+if($regiao != ''){
+    $sql .= " AND regiao = '$regiao'";
+}
+
+$result = mysqli_query($conexao, $sql);
+?>
 
 
 <!DOCTYPE html>
@@ -118,207 +140,56 @@
         <!--------------------------------FOOTER------------------------------------>
     </section>
     <div class="center-cartoes">
-        <div class="card-conteirner">
+    <div class="card-conteirner">
 
-
+        <?php while($sala = mysqli_fetch_assoc($result)): ?>
 
             <div class="card-sala">
 
-                <img src="../frontend/assets/img/Salatrabalho01.jpeg" alt="Sala de Treinamento" class="card-img">
+                <img
+                src="../frontend/assets/img/default.jpg"
+                class="card-img">
 
                 <div class="card-info">
-                    <h3>Avenida dos Metalúrgicos, 1450 - Cidade Tiradentes, São Paulo</h3>
+
+                    <h3>
+                        <?= $sala['endereco'] ?>
+                    </h3>
 
                     <p>
-                        Espaço para locação, ideal para reuniões, eventos,
-                        workshops ou atividades profissionais.
+                        <?= $sala['descricao_topo'] ?>
                     </p>
 
                     <div class="preco">
-                        <span>Preço mínimo:</span>
-                        <strong>R$5,00</strong>
+                        <span>Tipo:</span>
+                        <strong>
+                            <?= $sala['tipo'] ?>
+                        </strong>
                     </div>
-
-                    <div class="comodidades">
-
-                        <img src="./assets/img/ar-condicionado.svg" alt="">
-
-                        <img src="./assets/img/cafe.svg" alt="">
-
-                        <img src="./assets/img/guarda-volume.svg" alt="">
-
-                    </div>
-                </div>
-
-                <div class="box-btn">
-                    <a href="sala.php?sala=6" class="btn-buscar">Buscar</a>
-
-                </div>
-            </div>
-            <div class="card-sala">
-
-                <img src="../frontend/assets/img/SalaReunião05.png" alt="Sala de Treinamento" class="card-img">
-
-                <div class="card-info">
-                    <h3>Rua Luís Mateus, 1200 Cidade Tiradentes - São Paulo</h3>
-
-                    <p>
-                        Espaço para locação, ideal para reuniões, eventos,
-                        workshops ou atividades profissionais.
-                    </p>
 
                     <div class="preco">
-                        <span>Preço mínimo:</span>
-                        <strong>R$5,00</strong>
+                        <span>Região:</span>
+                        <strong>
+                            <?= $sala['regiao'] ?>
+                        </strong>
                     </div>
 
-                    <div class="comodidades">
-                        <img src="./assets/img/ar-condicionado.svg" alt="">
-
-                        <img src="./assets/img/cafe.svg" alt="">
-
-                        <img src="./assets/img/guarda-volume.svg" alt="">
-
-                    </div>
                 </div>
 
                 <div class="box-btn">
-                    <a href="sala.php?sala=3" class="btn-buscar">Buscar</a>
 
-                </div>
-
-            </div>
-            <div class="card-sala">
-
-                <img src="../frontend/assets/img/SalaReunião06.png" alt="Sala de Treinamento" class="card-img">
-
-                <div class="card-info">
-                    <h3>Avenida Carlos Caldeira Filho, 177 Jardim Ângela - São Paulo</h3>
-
-                    <p>
-                        Espaço para locação, ideal para reuniões, eventos,
-                        workshops ou atividades profissionais.
-                    </p>
-
-                    <div class="preco">
-                        <span>Preço mínimo:</span>
-                        <strong>R$5,00</strong>
-                    </div>
-
-                    <div class="comodidades">
-
-                        <img src="./assets/img/ar-condicionado.svg" alt="">
-
-                        <img src="./assets/img/cafe.svg" alt="">
-
-                        <img src="./assets/img/guarda-volume.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="box-btn">
-                    <a href="sala.php?sala=1" class="btn-buscar">Buscar</a>
-
+                    <a
+                    href="sala.php?sala=<?= $sala['id'] ?>"
+                    class="btn-buscar">
+                        Buscar
+                    </a>
                 </div>
             </div>
-            <div class="card-sala">
-
-                <img src="../frontend/assets/img/Sala1.png" alt="Sala de Treinamento" class="card-img">
-
-                <div class="card-info">
-                    <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
-
-                    <p>
-                        Espaço para locação, ideal para reuniões, eventos,
-                        workshops ou atividades profissionais.
-                    </p>
-
-                    <div class="preco">
-                        <span>Preço mínimo:</span>
-                        <strong>R$5,00</strong>
-                    </div>
-
-                    <div class="comodidades">
-
-                        <img src="./assets/img/ar-condicionado.svg" alt="">
-
-                        <img src="./assets/img/cafe.svg" alt="">
-
-                        <img src="./assets/img/guarda-volume.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="box-btn">
-                    <a href="sala.php?sala=2" class="btn-buscar">Buscar</a>
-
-                </div>
-            </div>
-            <div class="card-sala">
-
-                <img src="../frontend/assets/img/Salaunica02.png" alt="Sala de Treinamento" class="card-img">
-
-                <div class="card-info">
-                    <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
-
-                    <p>
-                        Espaço para locação, ideal para reuniões, eventos,
-                        workshops ou atividades profissionais.
-                    </p>
-
-                    <div class="preco">
-                        <span>Preço mínimo:</span>
-                        <strong>R$5,00</strong>
-                    </div>
-
-                    <div class="comodidades">
-
-                        <img src="./assets/img/ar-condicionado.svg" alt="">
-
-                        <img src="./assets/img/cafe.svg" alt="">
-
-                        <img src="./assets/img/guarda-volume.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="box-btn">
-                    <a href="sala.php?sala=4" class="btn-buscar">Buscar</a>
-
-                </div>
-            </div>
-            <div class="card-sala">
-
-                <img src="../frontend/assets/img/Salatreinamento1.png"Sala de Treinamento" class="card-img">
-
-                <div class="card-info">
-                    <h3>São Paulo Travessa Borboleta Azul - Vila Gustavo</h3>
-
-                    <p>
-                        Espaço para locação, ideal para reuniões, eventos,
-                        workshops ou atividades profissionais.
-                    </p>
-
-                    <div class="preco">
-                        <span>Preço mínimo:</span>
-                        <strong>R$5,00</strong>
-                    </div>
-
-                    <div class="comodidades">
-
-                        <img src="./assets/img/ar-condicionado.svg" alt="">
-
-                        <img src="./assets/img/cafe.svg" alt="">
-
-                        <img src="./assets/img/guarda-volume.svg" alt="">
-                    </div>
-                </div>
-
-                <div class="box-btn">
-                    <a href="sala.php?sala=5" class="btn-buscar">Buscar</a>
-
-                </div>
-            </div>
-        </div>
-
+        <?php endwhile; ?>
     </div>
+</div>
+
+
     <footer>
         <?php require_once "../backend/php/includes/footer.inc.php"; ?>
     </footer>

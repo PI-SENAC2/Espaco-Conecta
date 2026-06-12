@@ -49,26 +49,49 @@ exit;
         <form method="POST">
 
     <div class="linha">
-        <div class="campo">
-            <label for="nome">Nome</label>
-            <input type="text" name="nome" id="nome" required>
-        </div>
-
-        <div class="campo">
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" maxlength="14" required>
-        </div>
+    <div class="campo">
+        <label for="nome">Nome</label>
+        <input 
+            type="text" 
+            name="nome" 
+            id="nome"
+            pattern="[A-Za-zÀ-ÿ\s]{3,100}"
+            title="Digite apenas letras e espaços (mínimo 3 caracteres)"
+            required>
     </div>
 
     <div class="campo">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
+        <label for="cpf">CPF</label>
+        <input 
+            type="text" 
+            name="cpf" 
+            id="cpf"
+            maxlength="14"
+            pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+            title="Digite o CPF no formato 000.000.000-00"
+            required>
     </div>
+</div>
 
-    <div class="campo">
-        <label for="senha">Senha</label>
-        <input type="password" name="senha" id="senha" required>
-    </div>
+<div class="campo">
+    <label for="email">Email</label>
+    <input 
+        type="email" 
+        name="email" 
+        id="email"
+        required>
+</div>
+
+<div class="campo">
+    <label for="senha">Senha</label>
+    <input 
+        type="password" 
+        name="senha" 
+        id="senha"
+        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$"
+        title="A senha deve conter no mínimo 8 caracteres, uma letra maiúscula, uma minúscula, um número e um caractere especial"
+        required>
+</div>
 
     <div class="termos-cadastrar">
         <label>

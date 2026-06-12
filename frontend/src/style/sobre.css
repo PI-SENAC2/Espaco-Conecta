@@ -678,7 +678,12 @@ header {
     transform: scale(1.05);
     transition: 0.3s;
 }
-
+.mensagem-sucesso {
+    display: none; /* escondida inicialmente */
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 15px;
+}
 /* ======================================
    FOOTER
 ====================================== */
