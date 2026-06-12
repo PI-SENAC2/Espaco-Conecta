@@ -19,6 +19,7 @@ $cpf = $_POST['cpf'];
 $result = mysqli_query($conexao, "INSERT INTO perfil(nome,cpf,email,senha)
 VALUES ('$nome','$cpf','$email','$senha')");
 header('Location: login.php');
+exit;
 }
 
 ?>
@@ -76,7 +77,7 @@ header('Location: login.php');
         </label>
     </div>
 
-    <input type="submit" name="submit" id="submit" value="Cadastrar">
+    <input type="submit" class="inputSubmit" name="submit" id="submit" value="Cadastrar">
 
 </form>
 
