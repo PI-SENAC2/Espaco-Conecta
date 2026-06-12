@@ -78,122 +78,298 @@ $result = mysqli_query($conexao, $sql);
                 </div>
             </div>
             <section class="pesquisa">
+
                 <!-- CALENDÁRIO -->
                 <div class="calendar">
-                    <div class="titulo">
-                        <div id="prev" class="btn"><i class="fa-solid fa-arrow-left"></i></div>
-                        <div id="month-year"></div>
-                        <div id="next" class="btn"><i class="fa-solid fa-arrow-right"></i></div>
-                    </div>
-                    <div class="weekdays">
-                        <div>Sun</div>
-                        <div>Mon</div>
-                        <div>Tue</div>
-                        <div>Wed</div>
-                        <div>Thu</div>
-                        <div>Fri</div>
-                        <div>Sat</div>
-                    </div>
-                    <div class="days" id="days"></div>
-                </div>
 
-                <!-- FILTRO + REGIÃO (estrutura corrigida) -->
-                <form method="GET" action="reservas.php">
-                    <div class="filtro">
-                        <h3>Tipo do espaço</h3>
-                        <div class="tipos">
-                            <label class="privado">
-                                <input type="radio" name="tipo" id="privado" value="Privado">
-                                <label for="privado" class="privado">
-                                    <h4>Privado</h4>
-                                    <p>Um ambiente reservado e confortável para quem busca foco,privacidade e máxima
-                                        produtividade.</p>
-                                </label>
-                                <input type="radio" name="tipo" id="grupo" value="Grupo">
-                                <label for="grupo" class="grupo">
-                                    <h4>Grupo</h4>
-                                    <p>Um espaço pensado para colaboração, criatividade e conexãoentre equipes.</p>
-                                </label>
+                    <div class="titulo">
+                        <div id="prev" class="btn">
+                            <i class="fa-solid fa-arrow-left"></i>
                         </div>
 
-                        <div class="regiao">
-                            <label for="regiao">Região</label>
-                            <select name="regiao" id="regiao">
-                                <option value="">Todas as regiões</option>
-                                <option value="Norte">Norte</option>
-                                <option value="Nordeste">Nordeste</option>
-                                <option value="Centro-Oeste">Centro-Oeste</option>
-                                <option value="Sudeste">Sudeste</option>
-                                <option value="Sul">Sul</option>
-                            </select>
+                        <div id="month-year"></div>
 
-                            <div class="botoes">
-                                <input type="submit" id="enviar" value="Buscar">
-                                <input type="reset" id="cancelar" value="Limpar filtros">
-                            </div>
+                        <div id="next" class="btn">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="weekdays">
+                        <div>Dom</div>
+                        <div>Seg</div>
+                        <div>Ter</div>
+                        <div>Qua</div>
+                        <div>Qui</div>
+                        <div>Sex</div>
+                        <div>Sáb</div>
+                    </div>
+
+                    <div class="days" id="days"></div>
+
+                </div>
+
+                <!-- FILTROS -->
+                <form method="GET" action="reservas.php" class="filtro">
+
+                    <input type="hidden" name="data" id="dataSelecionada">
+
+                    <h3>Tipo do espaço</h3>
+
+                    <div class="tipos">
+
+                        <input type="radio" name="tipo" id="privado" value="Privado">
+
+                        <label for="privado" class="card-tipo">
+                            <h4>Privado</h4>
+                            <p>
+                                Um ambiente reservado e confortável para quem busca foco,
+                                privacidade e produtividade.
+                            </p>
+                        </label>
+
+                        <input type="radio" name="tipo" id="grupo" value="Grupo">
+
+                        <label for="grupo" class="card-tipo">
+                            <h4>Grupo</h4>
+                            <p>
+                                Um espaço pensado para colaboração,
+                                criatividade e conexão entre equipes.
+                            </p>
+                        </label>
+
+                    </div>
+
+                    <div class="regiao">
+
+                        <label for="regiao">Região</label>
+
+                        <select name="regiao" id="regiao">
+                            <option value="">Todas as regiões</option>
+                            <option value="Norte">Norte</option>
+                            <option value="Nordeste">Nordeste</option>
+                            <option value="Centro-Oeste">Centro-Oeste</option>
+                            <option value="Sudeste">Sudeste</option>
+                            <option value="Sul">Sul</option>
+                        </select>
+
+                    </div>
+
+                    <div class="botoes">
+                        <button type="submit" id="enviar">
+                            Buscar Espaços
+                        </button>
+
+                        <a href="reservas.php" id="cancelar">
+                            Limpar
+                        </a>
+                    </div>
+
                 </form>
 
             </section>
         </section>
+        <?php
+$salas = [
+    "1" => [
+        "tipo" => "Grupo",
+        "regiao" => "Sudeste",
+        "endereco" => "Avenida Carlos Caldeira Filho, 177 Jardim Ângela - São Paulo",
+        "descricaoTopo" => "Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.",
+        "imagens" => ["SalaReunião06.png"]
+    ],
+    "2" => [
+        "tipo" => "Privado",
+        "regiao" => "Sul",
+        "endereco" => "Estrada do Campo Limpo, 1200 Campo Limpo - São Paulo",
+        "descricaoTopo" => "Sala executiva moderna, ideal para reuniões rápidas, entrevistas e atendimentos profissionais.",
+        "imagens" => ["Sala1.png"]
+    ],
+    "3" => [
+        "tipo" => "Grupo",
+        "regiao" => "Norte",
+        "endereco" => "Rua Luís Mateus, 1200 Cidade Tiradentes - São Paulo",
+        "descricaoTopo" => "Ambiente compartilhado para trabalho, estudos, networking e produtividade.",
+        "imagens" => ["SalaReunião05.png"]
+    ],
+    "4" => [
+        "tipo" => "Privado",
+        "regiao" => "Sudeste",
+        "endereco" => "Rua José Francisco dos Santos, 245 - Vila Carmosina, São Paulo - SP",
+        "descricaoTopo" => "Sala privativa ideal para trabalho individual, reuniões online, estudos e atendimento profissional.",
+        "imagens" => ["Salaunica02.png"]
+    ],
+    "5" => [
+        "tipo" => "Grupo",
+        "regiao" => "Centro-Oeste",
+        "endereco" => "Rua Antônio de Barros Neto, 188 - Cidade Tiradentes, São Paulo - SP",
+        "descricaoTopo" => "Um ambiente que conecta profissionalismo, oportunidade e transformação.",
+        "imagens" => ["Salatreinamento1.png"]
+    ],
+    "6" => [
+        "tipo" => "Grupo",
+        "regiao" => "Centro-Oeste",
+        "endereco" => "Avenida dos Metalúrgicos, 1450 - Cidade Tiradentes, São Paulo - SP",
+        "descricaoTopo" => "Ambiente privativo desenvolvido para quem precisa de conforto, tecnologia e produtividade.",
+        "imagens" => ["Salaunica01.png"]
+    ],
+];
 
-        
+$tipo = $_GET['tipo'] ?? '';
+$regiao = $_GET['regiao'] ?? '';
+$data = $_GET['data'] ?? '';
+
+$salasFiltradas = [];
+
+foreach ($salas as $id => $sala) {
+    if ($tipo != '' && $sala['tipo'] != $tipo) {
+        continue;
+    }
+
+    if ($regiao != '' && $sala['regiao'] != $regiao) {
+        continue;
+    }
+
+    $salasFiltradas[$id] = $sala;
+}
+?>
+
+        <div class="center-cartoes">
+            <div class="card-conteirner">
+
+
+                <?php if (count($salasFiltradas) > 0): ?>
+
+                <?php foreach ($salasFiltradas as $id => $sala): ?>
+
+                <div class="card-sala">
+
+                    <img src="../frontend/assets/img/<?= $sala['imagens'][0] ?>" alt="Sala disponível" class="card-img">
+
+                    <div class="card-info">
+
+                        <h3><?= $sala['endereco'] ?></h3>
+
+                        <p><?= $sala['descricaoTopo'] ?></p>
+
+                        <div class="preco">
+                            <span>Preço mínimo:</span>
+                            <strong>R$5,00</strong>
+                        </div>
+
+                        <div class="comodidades">
+                            <img src="./assets/img/ar-condicionado.svg" alt="Ar-condicionado">
+                            <img src="./assets/img/cafe.svg" alt="Café">
+                            <img src="./assets/img/guarda-volume.svg" alt="Guarda-volume">
+                        </div>
+
+                    </div>
+
+                    <div class="box-btn">
+                        <a href="sala.php?sala=<?= $id ?>&data=<?= $data ?>" class="btn-buscar">
+                            Buscar
+                        </a>
+                    </div>
+
+                </div>
+
+                <?php endforeach; ?>
+
+                <?php else: ?>
+
+                <p class="sem-resultados">
+                    Nenhum espaço encontrado com esses filtros.
+                </p>
+
+                <?php endif; ?>
+
+            </div>
+        </div>
+
         <!--------------------------------FOOTER------------------------------------>
     </section>
-    <div class="center-cartoes">
-    <div class="card-conteirner">
-
-        <?php while($sala = mysqli_fetch_assoc($result)): ?>
-
-            <div class="card-sala">
-
-                <img src="../frontend/assets/img/SalaReunião06.png" alt="Sala de Treinamento" class="card-img">
-
-                <div class="card-info">
-
-                    <h3>
-                        <?= $sala['endereco'] ?>
-                    </h3>
-
-                    <p>
-                        <?= $sala['descricao_topo'] ?>
-                    </p>
-
-                    <div class="preco">
-                        <span>Tipo:</span>
-                        <strong>
-                            <?= $sala['tipo'] ?>
-                        </strong>
-                    </div>
-
-                    <div class="preco">
-                        <span>Região:</span>
-                        <strong>
-                            <?= $sala['regiao'] ?>
-                        </strong>
-                    </div>
-
-                </div>
-
-                <div class="box-btn">
-
-                    <a
-                    href="sala.php?sala=<?= $sala['id'] ?>"
-                    class="btn-buscar">
-                        Buscar
-                    </a>
-                </div>
-            </div>
-        <?php endwhile; ?>
-    </div>
-</div>
 
 
     <footer>
         <?php require_once "../backend/php/includes/footer.inc.php"; ?>
     </footer>
 
-</body>
-<script src="./src/js/calendar.js"></script>
-<script src="./src/js/perfil.js"></script>
+    <script>
+    const days = document.getElementById("days");
+    const monthYear = document.getElementById("month-year");
 
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    const dataSelecionada = document.getElementById("dataSelecionada");
+
+    let currentDate = new Date();
+
+    function renderCalendar() {
+
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+
+        const firstDay = new Date(year, month, 1).getDay();
+        const lastDate = new Date(year, month + 1, 0).getDate();
+
+        const months = [
+            "Janeiro", "Fevereiro", "Março",
+            "Abril", "Maio", "Junho",
+            "Julho", "Agosto", "Setembro",
+            "Outubro", "Novembro", "Dezembro"
+        ];
+
+        monthYear.innerHTML = months[month] + " " + year;
+
+        days.innerHTML = "";
+
+        for (let i = 0; i < firstDay; i++) {
+            days.innerHTML += `<div class="fade"></div>`;
+        }
+
+        for (let i = 1; i <= lastDate; i++) {
+
+            const dataFormatada =
+                year + "-" +
+                String(month + 1).padStart(2, "0") + "-" +
+                String(i).padStart(2, "0");
+
+            days.innerHTML += `
+    <div class="dia" data-date="${dataFormatada}">
+        ${i}
+    </div>
+`;
+        }
+
+        document.querySelectorAll(".dia").forEach(dia => {
+
+            dia.addEventListener("click", function() {
+
+                document
+                    .querySelectorAll(".dia")
+                    .forEach(item => item.classList.remove("selecionado"));
+
+                this.classList.add("selecionado");
+
+                dataSelecionada.value = this.dataset.date;
+            });
+
+        });
+
+    }
+
+    prev.addEventListener("click", () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
+    });
+
+    next.addEventListener("click", () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+    });
+
+    renderCalendar();
+    </script>
+
+</body>
 </html>
