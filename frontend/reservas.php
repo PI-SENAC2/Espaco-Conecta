@@ -146,9 +146,7 @@ $result = mysqli_query($conexao, $sql);
 
             <div class="card-sala">
 
-                <img
-                src="../frontend/assets/img/default.jpg"
-                class="card-img">
+                <img src="../frontend/assets/img/SalaReunião06.png" alt="Sala de Treinamento" class="card-img">
 
                 <div class="card-info">
 
