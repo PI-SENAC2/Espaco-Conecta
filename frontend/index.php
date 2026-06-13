@@ -1,3 +1,8 @@
+<?php
+session_start();
+include '../backend/php/includes/navbar.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -16,9 +21,6 @@
 </head>
 
 <body>
-
-    <?php require_once "../backend/php/includes/navbar.inc.php"; ?>
-
     <!-- HERO (seção principal) -->
     <section id="home" class="hero">
         <div class="hero-content">
@@ -55,7 +57,7 @@
             <div class="card-conteiner">
                 <h2>Salas de Reunião</h2>
                 <div class="button-card">
-                    <a href="">Acessar</a>
+                    <a href="./reservas.php">Acessar</a>
                 </div>
             </div>
         </div>
@@ -64,7 +66,7 @@
             <div class="card-conteiner">
                 <h2>Salas Individuais</h2>
                 <div class="button-card">
-                    <a href="">Acessar</a>
+                    <a href="./reservas.php">Acessar</a>
                 </div>
             </div>
         </div>
@@ -73,7 +75,7 @@
             <div class="card-conteiner">
                 <h2>Salas de Treinamento</h2>
                 <div class="button-card">
-                    <a href="">Acessar</a>
+                    <a href="./reservas.php">Acessar</a>
                 </div>
             </div>
         </div>
@@ -81,134 +83,115 @@
 
     <!-- FILTROS -->
 
-    <div class="conteiner-filtros">
 
-        <main class="produtos" id="listaProdutos">
-
+    <div class="center-cartoes">
+        <div class="card-conteirner">
             <div class="top-bar">
-                <input type="text" id="searchInput" placeholder="Localização">
-                <button id="btnPesquisar">Pesquisar</button>
+                <h1>ESPAÇOS RECOMENDADOS</h1>
             </div>
 
-            <div class="colab-card">
-                <div class="card" data-espaco="individual" data-capacidade="1-2">
-                    <img src="./assets/img/Sala5.png">
-                    <div class="colab-titulo">
-                        <h4>Salas de Reunião</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-                        <button class="button-card" href="./sala.php">
-                            <a href="./Sala.php">Reservar</a> </button>
+
+
+            <div class="card-sala">
+
+                <img src="../frontend/assets/img/Salatrabalho01.jpeg" alt="Sala de Treinamento" class="card-img">
+
+                <div class="card-info">
+                    <h3>Avenida dos Metalúrgicos, 1450 - Cidade Tiradentes, São Paulo</h3>
+
+                    <p>
+                        Espaço para locação, ideal para reuniões, eventos,
+                        workshops ou atividades profissionais.
+                    </p>
+
+                    <div class="preco">
+                        <span>Preço mínimo:</span>
+                        <strong>R$5,00</strong>
+                    </div>
+
+                    <div class="comodidades">
+
+                        <img src="./assets/img/ar-condicionado.svg" alt="">
+
+                        <img src="./assets/img/cafe.svg" alt="">
+
+                        <img src="./assets/img/guarda-volume.svg" alt="">
+
                     </div>
                 </div>
 
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
+                <div class="box-btn">
+                    <a href="sala.php?sala=6" class="btn-buscar">Buscar</a>
 
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
                 </div>
-                
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
+            </div>
+            <div class="card-sala">
 
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+                <img src="../frontend/assets/img/SalaReunião05.png" alt="Sala de Treinamento" class="card-img">
 
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
+                <div class="card-info">
+                    <h3>Rua Luís Mateus, 1200 Cidade Tiradentes - São Paulo</h3>
+
+                    <p>
+                        Espaço para locação, ideal para reuniões, eventos,
+                        workshops ou atividades profissionais.
+                    </p>
+
+                    <div class="preco">
+                        <span>Preço mínimo:</span>
+                        <strong>R$5,00</strong>
                     </div>
-                </div>
-                
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
 
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
+                    <div class="comodidades">
+                        <img src="./assets/img/ar-condicionado.svg" alt="">
 
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
+                        <img src="./assets/img/cafe.svg" alt="">
+
+                        <img src="./assets/img/guarda-volume.svg" alt="">
+
                     </div>
                 </div>
 
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
+                <div class="box-btn">
+                    <a href="sala.php?sala=3" class="btn-buscar">Buscar</a>
 
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="card" data-espaco="reuniao" data-capacidade="3-5">
-                    <img src="./assets/img/SalaReunião03.png">
-
-                    <div class="colab-titulo">
-                        <h4>Sala Individual</h4>
-                        <p>Espaço para locação, ideal para reuniões, eventos, workshops ou atividades profissionais.</p>
-
-                        <button class="button-card">
-                            <a href="./Sala.php">Reservar</a>
-                        </button>
-                    </div>
                 </div>
 
             </div>
+            <div class="card-sala">
 
-            <script src="./src/js/pesquisa.js"></script>
-        </main>
+                <img src="../frontend/assets/img/SalaReunião06.png" alt="Sala de Treinamento" class="card-img">
+
+                <div class="card-info">
+                    <h3>Avenida Carlos Caldeira Filho, 177 Jardim Ângela - São Paulo</h3>
+
+                    <p>
+                        Espaço para locação, ideal para reuniões, eventos,
+                        workshops ou atividades profissionais.
+                    </p>
+
+                    <div class="preco">
+                        <span>Preço mínimo:</span>
+                        <strong>R$5,00</strong>
+                    </div>
+
+                    <div class="comodidades">
+
+                        <img src="./assets/img/ar-condicionado.svg" alt="">
+
+                        <img src="./assets/img/cafe.svg" alt="">
+
+                        <img src="./assets/img/guarda-volume.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="box-btn">
+                    <a href="sala.php?sala=1" class="btn-buscar">Buscar</a>
+
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer>
@@ -216,5 +199,6 @@
     </footer>
 
 </body>
+<script src="./src/js/perfil.js"></script>
 
 </html>

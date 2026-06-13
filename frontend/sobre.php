@@ -1,3 +1,7 @@
+<?php
+session_start();
+include '../backend/php/includes/navbar.inc.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,19 +174,30 @@
             </div>
         </div>
         <div class="formulario">
-            <div class="fundo">
-                <div class="formularios">
-                    <h2>ENTRE EM CONTATO</h2>
-                    <input type="text" placeholder="Nome">
-                    <input type="text" placeholder="Email">
-                    <textarea placeholder="Mensagem"></textarea>
-                    <a href="" class="enviar-button">ENVIAR</a>
-                </div>
-            </div>
+    <div class="fundo">
+        <form class="formularios" id="contatoForm">
+    <h2>ENTRE EM CONTATO</h2>
+
+    <input type="text" name="nome" placeholder="Nome" required>
+    <input type="email" name="email" placeholder="Email" required>
+
+    <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+
+    <button type="submit" class="enviar-button">ENVIAR</button>
+
+    <p id="mensagem-sucesso"
+   style="display:none;color:lime;font-size:15px;">
+   Mensagem enviada com sucesso!
+</p>
+</form>
+    </div>
+</div>
         </div>
         <!----------FORMULÁRIO---------->
     </section>
 
     <!----------FOOTER---------->
     <?php require_once "../backend/php/includes/footer.inc.php"; ?>
+    <script src="./src/js/sobre.js"></script>
+    <script src="./src/js/perfil.js"></script>
 </body>

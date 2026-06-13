@@ -22,25 +22,7 @@
         </div>
 
         <!-- REDES -->
-        <div class="footer-social">
-
-            <a href="#">
-                <img src="../frontend/assets/img/instagram.icon.svg" alt="Instagram">
-            </a>
-
-            <a href="#">
-                <img src="../frontend/assets/img/whatsapp.icon.svg" alt="Whatsapp">
-            </a>
-
-            <a href="#">
-                <img src="../frontend/assets/img/facebook.icon.svg" alt="Facebook">
-            </a>
-
-            <a href="#">
-                <img src="../frontend/assets/img/figma.icon.svg" alt="Figma">
-            </a>
-
-        </div>
+       
 
         <!-- LINHA -->
         <div class="conteiner-divisor">

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -28,16 +30,15 @@
 
         <h1>LOGIN</h1>
 
-        <form>
-
+        <form action="testLogin.php" method="POST">
             <div class="campo">
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="text" name="email" placeholder="Ex: espaco_conecta@gmail.com" required>
             </div>
 
             <div class="campo">
                 <label for="senha">Senha</label>
-                <input type="password" id="senha">
+                <input type="password" name="senha" placeholder="No máximo 12 digitos" required>
             </div>
 
             <div class="termos-login">
@@ -49,11 +50,11 @@
                 <a href="./cadastro.php">Cadastrar</a>
             </div>
 
-            
+            <input class="inputSubmit" id="submit" type="submit" name="submit" value="Entrar">
 
-</form>
+        </form>
 
-<a href="./index.php" class="btn-login">Acessar</a>
+
 
     </div>
 

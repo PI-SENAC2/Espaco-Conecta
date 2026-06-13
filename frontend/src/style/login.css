@@ -92,35 +92,31 @@ form {
 
 
 /* BOTÃO */
-.form-area button{
+.inputSubmit{
     width: 100%;
-    max-width: 375px;
-
     margin-top: 20px;
-    padding: 12px;
+    padding: 14px;
+
+    background-color: #D9D9D9;
+    color: #000;
 
     border: none;
     border-radius: 10px;
 
+    font-size: 20px;
+    font-weight: 700;
+
     cursor: pointer;
+    transition: all .3s ease;
 }
 
-button {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    font-size: 16px;
-    font-weight: 600;
-}
-
-button:hover {
+.inputSubmit:hover{
     background-color: #E0712B;
-    transform: scale(1.1);
-    transition: var(--primary-color) transform 0.2s ease;
-}
+    color: #FFF;
 
-button a {
-    color: var(--text-color);
-    text-decoration: none;
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 15px rgba(224,113,43,.4);
 }
 
 .link-msg{
@@ -136,25 +132,6 @@ form a {
     font-size: 12px;
     color: #aaa;
     text-decoration: none;
-}
-
-.btn-login{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    max-width: 375px;
-
-    margin-top: 20px;
-    padding: 12px;
-
-    border-radius: 10px;
-
-    background-color: var(--primary-color);
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
 }
 
 /* LADO DIREITO */
