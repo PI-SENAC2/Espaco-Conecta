@@ -12,7 +12,6 @@
 
 .menu-perfil{
     display: block;
-    
     position: absolute;
     top: 45px;
     right: 0;
@@ -49,6 +48,11 @@
     color: black;
 }
 
+.menu-perfil .btn{
+    display: block;
+    margin: 10px;
+}
+
 </style>
 <!-- NAVBAR -->
 
@@ -83,4 +87,24 @@
     </div>
 </div>
         </nav>
+        <script>
+console.log('script navbar carregado');
+
+const btn = document.getElementById('perfil-btn');
+const menu = document.getElementById('menu-perfil');
+
+console.log(btn);
+console.log(menu);
+
+menu.style.display = 'none';
+
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    menu.style.display =
+        menu.style.display === 'block'
+        ? 'none'
+        : 'block';
+});
+</script>
     </header>

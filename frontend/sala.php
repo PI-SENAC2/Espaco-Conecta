@@ -247,7 +247,7 @@ $sala = $salas[$slug];
 
                         <div class="avaliacoes-usuarios">
 
-                            <h2>Avaliações dos Hóspedes</h2>
+                            <h2>Avaliações</h2>
 
                             <div id="listaAvaliacoes" class="lista-avaliacoes">
 

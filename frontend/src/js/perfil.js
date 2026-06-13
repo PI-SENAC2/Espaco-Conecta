@@ -1,23 +1,19 @@
-const btnPerfil = document.getElementById("perfil-btn");
-const menuPerfil = document.getElementById("menu-perfil");
+document.addEventListener('DOMContentLoaded', () => {
+    const perfilBtn = document.getElementById('perfil-btn');
+    const menuPerfil = document.getElementById('menu-perfil');
 
-btnPerfil.addEventListener("click", function(e){
-    e.preventDefault();
+    console.log(perfilBtn);
+    console.log(menuPerfil);
 
-    if(menuPerfil.style.display === "block"){
-        menuPerfil.style.display = "none";
-    }else{
-        menuPerfil.style.display = "block";
-    }
-});
+    menuPerfil.style.display = 'none';
 
-document.addEventListener("click", function(e){
+    perfilBtn.addEventListener('click', (e) => {
+        e.preventDefault();
 
-    if(
-        !btnPerfil.contains(e.target) &&
-        !menuPerfil.contains(e.target)
-    ){
-        menuPerfil.style.display = "none";
-    }
-
+        if(menuPerfil.style.display === 'block'){
+            menuPerfil.style.display = 'none';
+        }else{
+            menuPerfil.style.display = 'block';
+        }
+    });
 });
