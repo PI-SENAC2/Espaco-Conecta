@@ -67,7 +67,7 @@
                 </ul>
             </div>
             <div class="nav-logo">
-                <a href="#home" id="logo">
+                <a href="./index.php" id="logo">
                     <img src="./assets/img/logo-espaço-conecta.svg" alt="lOGO D">
                 </a>
             </div>

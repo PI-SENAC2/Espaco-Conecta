@@ -141,11 +141,11 @@ $result = mysqli_query($conexao, $sql);
 
                     <div class="regiao">
 
-                        <label for="regiao">Região</label>
+                        <label for="regiao">Estados</label>
 
                         <select name="regiao" id="regiao">
-                            <option value="">Todas as regiões</option>
-                            <option value="Norte">Norte</option>
+                            <option value="">Todos os estados</option>
+                            <option value="Norte">São Paulo</option>
                             <option value="Nordeste">Nordeste</option>
                             <option value="Centro-Oeste">Centro-Oeste</option>
                             <option value="Sudeste">Sudeste</option>
